@@ -85,7 +85,7 @@ godXP:
   eldersSharingWisdom:
     text: "長者分享智慧"
   clearingRoads:
-    text: "清理道路"
+    text: "清除道路"
   combat:
     text: "戰鬥"
   clearingTopography:
@@ -284,7 +284,7 @@ module:
   projectile:
     text: "投射物"
   profile:
-    text: "輪廓"
+    text: "配置檔"
     
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Perk Module
@@ -1651,7 +1651,7 @@ console:
   
   panel:
     coitus:
-      text: "{mobName} 與 $WHI0{mateMobName}$WHI0交配！"
+      text: "{mobName} $WHI0與 {mateMobName} $WHI0交配！"
     isPregnant:
       text: "{mobName} $PIN1懷孕了！"
     object:
@@ -1664,7 +1664,7 @@ console:
       dismantled:
         text: "{buildingName} $YEL1被拆除。"
     autosave:
-      text: "$GRE1Autosave $WHI0-$GRE2 {time}"
+      text: "$GRE1自動存檔 $WHI0-$GRE2 {time}"
     save:
       text: "$GRE1存檔完成，花了 $WHI0-$GRE2 {time}"
     fullMapScreenshot:
@@ -1789,9 +1789,9 @@ console:
           frozen:
             text: "{mobName}{mobTitle}$RED1 凍死了！"
           byMob:
-            text: "{mobName}{mobTitle}$WHI0 被{killerMob}$WHI0擊殺！"
+            text: "{mobName}{mobTitle}$WHI0 被 {killerMob} $WHI0擊殺！"
           byBuilding:
-            text: "{mobName}{mobTitle}$WHI0 被{buildingName}$WHI0擊殺！"
+            text: "{mobName}{mobTitle}$WHI0 被 {buildingName} $WHI0擊殺！"
           byUnknown:
             text: "{mobName}{mobTitle}$WHI0 死了！"
           crashing:
@@ -1848,9 +1848,9 @@ console:
           0:
             text: "(他:她:它們)今天早上不應該起床。"
           1:
-            text: "That's a real shame..."
+            text: "真是個恥辱……"
           2:
-            text: "May (he:she:they) rest in pieces."
+            text: "願(他:她:他們)安息。"
           3:
             text: "...a glorious death!"
           4:
@@ -1995,7 +1995,7 @@ goal:
     header:
       text: "勝利"
     body:
-      text: "在 $GRE1在此世界的 $GRE1每個區域 $WHI0生存 $GRE1一年 $WHI0。"
+      text: "在 $GRE1世界 $WHI0的 $GRE1每個區域 $WHI0生存 $GRE1一年 $WHI0。"
 
   harvest:
     header:
@@ -2023,12 +2023,12 @@ goal:
 
   migration:
     header:
-      text: "轉移到新的居住地"
+      text: "遷移到新的居住地"
     body:
       single:
-        text: "轉移到 $GRE1一個新區域 $WHI0！"
+        text: "遷移到 $GRE1一個新區域 $WHI0！"
       multiple:
-        text: "轉移到 $GRE1{amount} 新區域 $WHI0！"
+        text: "遷移到 $GRE1{amount} 新區域 $WHI0！"
       
   sendVillagers:
     header:
@@ -2311,9 +2311,9 @@ mainMenuDeleteProfilePanel:
     'no':
       text: "不！"
     'yes':
-      text: "是的！"
+      text: "是！"
     yesConfirm:
-      text: "我說是的！"
+      text: "我說是！"
       
   header:
     text: "$ORA1你確定嗎？！"
@@ -3679,7 +3679,7 @@ playCastlePanel:
       hidePanelHeader:
         text: "切換面板顯示"
       hidePanel:
-        text: "隱藏此面板。如果在之後你需要建造一個營地，可右邊建造選單的 '特殊' 項目中找到它。"
+        text: "隱藏此面板。如果在之後你需要建造一個營地，可在右邊建造面板的 '特殊' 項目中找到它。"
 
   header:
     text: "$GRE1建立營地"
@@ -3741,9 +3741,9 @@ playLeftJobDescriptionPanel:
     canRepairRoads:
       text: "可修理道理"
     canDestroyClearTerrain:
-      text: "可摧毀/清理地形"
+      text: "可摧毀/清除地形"
     canDestroyClearRoads:
-      text: "可摧毀/清理道路"
+      text: "可摧毀/清除道路"
     canCreateLakes:
       text: "可創造湖泊"
     canTendToAndWaterFarms:
@@ -4251,7 +4251,7 @@ playPopulationListPanel:
     pregnant:
       text: "這 (充滿希望的女性) 會在幾天後分娩。"
     hasMateHeader:
-      text: "已婚"
+      text: "有配偶"
     hasMate:
       text: "此村民有配偶在此村莊的某處。"
     ownerHeader:
@@ -4531,7 +4531,7 @@ playSelectedMobPanel:
     bodyTemperature:
       text: "體溫過高會直接導致行動變慢，甚至會開始受傷。"
     hasMateHeader:
-      text: "已婚"
+      text: "有配偶"
     hasMate:
       text: "此生物有配偶在此村莊的某處。"
     ownerHeader:
@@ -4633,7 +4633,7 @@ playSelectedMobPanel:
       text: "$GRE1中毒，"
     dysentery:
       comment: "Do not remove the trailing comma and space. Will mess up formatting."
-      text: "$GRE1Has dysentery, "
+      text: "$GRE1痢疾，"
     onFire:
       comment: "Do not remove the trailing comma and space. Will mess up formatting."
       text: "$RED1著火，"
@@ -4843,7 +4843,7 @@ playSelectedObjectPanel:
   refiningSpeed:
     text: "$YEL1精煉速度"
   homeBonusesHeader:
-    text: "$CYA1房間加成"
+    text: "$CYA1房屋加成"
   sleepSpeedBoost:
     text: "$GRE0{amount}% $WHI0睡眠速度"
   happinessBoost:
@@ -4879,7 +4879,7 @@ playSelectedObjectUpgradePanel:
     globalBonuses:
       text: "$CYA1全域加成"
     homeBonuses:
-      text: "$CYA1房間加成"
+      text: "$CYA1房屋加成"
     defensiveTower:
       text: "防禦塔"
       
@@ -4991,7 +4991,7 @@ playSpellBar:
     header:
       text: "更改法術"
     tooltip:
-      text: "打開全部法術清單並在欄位 {slotNumber} 的法術。"
+      text: "打開全部法術清單並更改在欄位 {slotNumber} 的法術。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -5115,7 +5115,7 @@ playStatisticsPanel:
       buildings:
         text: "建築"
       drones:
-        text: "全部寄生"
+        text: "全部寄生僵屍"
       spawned:
         text: "生成怪物"
       killed:
@@ -5234,7 +5234,7 @@ playStatisticsPanel:
       buildings:
         text: "此地圖被腐化的建築總數。"
       drones:
-        text: "腐化中被寄生總數。"
+        text: "被腐化寄生的總數。"
       spawned:
         text: "每日生成的怪物總數。"
       killed:
@@ -5775,7 +5775,7 @@ playRightObjectDescriptionPanel:
   rangeGenerated:
     text: "建築範圍：$GRE1{amount}"
   desirability:
-    text: "嚮往：$GRE1{amount}"
+    text: "宜居：$GRE1{amount}"
   corruptionResistance:
     text: "腐化抗性：$GRE1{amount}"
   providedMigrationsPerDay:
@@ -6135,10 +6135,10 @@ worldMapGameModeConfigPanel:
   button:
     input:
       configName:
-        text: "設置名稱"
+        text: "配置檔名稱"
     tooltip:
       saveConfig:
-        text: "存檔設置"
+        text: "儲存配置檔"
     accept:
       text: "同意"
     back:
@@ -6220,7 +6220,7 @@ worldMapGameModeConfigPanel:
       keyChanceHeader:
         text: "發現鑰匙的機率"
       keyChance:
-        text: "發現鑰匙的機率。YEL1(1 in 1 - 50 或永不)"
+        text: "發現鑰匙的機率。$YEL1(1 in 1 - 50 或永不)"
     
     header:
       text: "$YEL0寶箱"
@@ -6264,26 +6264,26 @@ worldMapGameModeConfigPanel:
   other:
     tooltip:
       temperatureVarianceHeader:
-        text: "Temperature Variance"
+        text: "溫度變化"
       temperatureVariance:
-        text: "How much a season's average temperature can vary. $YEL1(0 - 20)"
+        text: "一個季節的平均溫度可以變化多少。$YEL1(0 - 20)"
       startingSeasonHeader:
         text: "開始季節"
       startingSeason:
         text: "遊戲開始時的季節。"
       dayLengthMultiplierHeader:
-        text: "Day Length Multiplier"
+        text: "一天的長度倍數"
       dayLengthMultiplier:
-        text: "Increases or decreases the overall time a day lasts. 1.5x is +50%, 0.5x is -50% $YEL1(0.1x - 30.0x)"
+        text: "增加或減少一天的時間長度。1.5x +50%, 0.5x -50% $YEL1(0.1x - 30.0x)"
         
     header:
       text: "$YEL0其它"
     temperatureVariance:
-      text: "Temperature Variance"
+      text: "溫度變化"
     startingSeason:
       text: "開始季節"
     dayLengthMultiplier:
-      text: "Day Length Multiplier"
+      text: "一天的長度倍數"
     
   weather:
     tooltip:
@@ -6339,7 +6339,7 @@ worldMapGameModeConfigPanel:
     header:
       text: "$YEL0月相"
     fullMoonInterval:
-      text: "血月頻率"
+      text: "滿月頻率"
     bloodMoonChance:
       text: "血月機率"
     bloodMoonDelay:
@@ -6385,7 +6385,7 @@ worldMapGameModeConfigPanel:
       
   loadConfig:
     header:
-      text: "$YEL0載入存檔"
+      text: "$YEL0載入配置"
     nightmare:
       text: "惡夢"
     survival:
@@ -6395,7 +6395,7 @@ worldMapGameModeConfigPanel:
     peaceful:
       text: "和平"
     configFileName:
-      text: "$YEL0存檔名稱"
+      text: "$YEL0配置檔名稱"
     configBlocked:
       text: "$YEL0你必須毀滅此世界才能修改這些設置！"
     
@@ -6403,9 +6403,9 @@ worldMapGameModeConfigPanel:
     never:
       text: "$GRE0永不"
     1inXk:
-      text: "$GRE01有 {amount}k"
+      text: "$GRE01到 {amount}k"
     1inX:
-      text: "$GRE01有 {amount}"
+      text: "$GRE01到 {amount}"
     none:
       text: "$GRE0無"
     xDays:
@@ -6457,19 +6457,19 @@ worldMapGameModeSelectPanel:
       
   description:
     nightmare:
-      text: "A nearly impossible game mode designed to challenge even the best players. Expect an unfair and ruthless experience. This mode is for the masochist in all of us.~~$RED0Do NOT pick this game mode. Seriously, just don't!"
+      text: "一個幾乎不可能的遊戲模式，專為喜歡挑戰困難的抖M玩家所設計。非常不公平與無情的遊戲體驗。被虐狂專屬模式。～～$RED0不要選擇這個模式。真的不要！"
     survival:
-      text: "The way the game is meant to be played. Unforgivingly brutal, with a steep learning curve.~~$RED0Expect to lose frequently!~~$GRE0Try out traditional mode if survival is too much for you."
+      text: "一場結局注定的遊戲。慘無人道，學習曲線陡峭的模式。～～$RED0經常的失敗！～～$GRE0如果生存模式對你來說太困難，試試傳統模式吧。"
     traditional:
-      text: "A traditional village simulator experience, with much less monsters.~~This mode is recommended if you want a more relaxed experience, but you want some monsters and light defense mechanics.~~$GRE0The most ideal game mode to learn how to play. But once you learn the ropes, switch to survival!"
+      text: "較少的怪物，更像一款村莊模擬遊戲。～～此模式建議想要輕鬆遊戲，又想要有一些怪物與簡單防禦機制的玩家。～～$GRE0學習如何遊玩的理想遊戲模式。一旦你學會了，建議遊玩生存模式！"
     peaceful:
-      text: "A mode with absolutely no monsters what so ever. Just worry about taking care of your village, and survive the passing seasons.~~$GRE0This mode is not recommended unless you're looking for a relaxed, laid back experience with no challenge what so ever."
+      text: "永遠不會有怪物的模式。只需要小心照顧村民與渡過每個季節。～～$GRE0不建議遊玩此模式，除非你只想輕鬆悠閒的遊戲體驗，而不想要其它的挑戰。"
     custom:
-      text: "A mode where you set all of the difficulty flags before playing. But once they're set, they can't be changed until you reset the game mode.~~$GRE0This mode is recommended for experienced players who want to experiment with the game's baseline difficulty."
+      text: "在開始遊玩前可以調整所有設定。一旦開始遊玩，除非重置此遊戲模式，否則不能更改。～～$GRE0對於想要體驗遊戲基礎難度且有經驗的玩家，建議遊玩此模式。"
     sandbox:
-      text: "No rules! Play around with the game mechanics, change the time of day, spawn in resources and monsters, generate particles. Do whatever you want and just have fun!~~Recommended if you're interested in playing around with the game mechanics.~~Not intended for serious gameplay of any kind."
+      text: "沒有規則！可遊玩遊戲機制，更改一天的時間，生成資源與怪物，產生粒子。作任何想做的事與開心遊玩！～～如果你喜歡研究遊戲機制，建議遊玩此模式。～～不適合認真玩遊戲的玩家。"
     selectGameMode:
-      text: "Select one of the six a game modes from the left. Each mode is independent from the other five and you can change modes whenever you'd like. If you make too many mistakes, or want a fresh start in any mode, you can reset a game mode by clicking the Doom World button.~~$GRE0If you are a new player, Traditional mode is highly recommended."
+      text: "在左邊選擇六種遊戲模式之一。每種模式都是獨立的，你可以隨時更改你想玩的模式。如果你犯了太多錯誤，或想要重新開始任何模式，你可以透過點擊毀滅世界來重置遊戲模式。～～$GRE0如果你是一個新手，強烈建議先遊戲傳統模式。"
   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
@@ -6669,7 +6669,7 @@ helpTip:
     welcomeTipsHeader:
       text: "提示！"
     welcomeTips:
-      text: "是時候開始了！由於這是你一第遊玩，你會在遊戲中獲得大量的提示。$RED1這個遊戲有一個陡峭的學習曲線$WHI0，你會需要這些提示的幫助！$GRE1這遊戲提示時會暫停$WHI0，所以請花點時間了解！～～你可以在設置選單關閉提示，但如果你從未玩過將不建議你關閉它！"
+      text: "是時候開始了！由於這是你第一次遊玩，你會在遊戲中獲得大量的提示。$RED1這個遊戲有一個陡峭的學習曲線$WHI0，你會需要這些提示的幫助！$GRE1這遊戲提示時會暫停$WHI0，所以請花點時間了解！～～你可以在設置選單關閉提示，但如果你從未玩過將不建議你關閉它！"
     harvestingResourcesHeader:
       text: "收獲資源"
     harvestingResources:
@@ -6681,7 +6681,7 @@ helpTip:
     workBuildingsHeader:
       text: "工作建築"
     workBuildings:
-      text: "The new {buildingName}$WHI0 your villagers have built offers your village {amount} $GRE1{mobJobName}$WHI0 job slots! If you want your villagers to change to that job, you will need to raise the desired amount of workers for it. You can do this in two places, the $GRE1left hand GUI's workforce tab, or click on the {buildingName}$GRE1 and use the bottom pop out GUI$WHI0. Then, $GRE1click the + or - buttons$WHI0 to adjust the amount of desired workers you want. $RED1If you don't have any available villagers, make sure to lower the desired workers for another job!$WHI0"
+      text: "村民建造好新的 {buildingName} $WHI0將提供 {amount} $GRE1{mobJobName} $WHI0職缺！如果你要村民們做那項工作，你需要增加工作工人數。你可以在兩個地方調整，一是左手邊的 $GRE1勞動力 $WHI0面板，或點擊 $GRE1{buildingName} $WHI0然後使用下方彈出的介面。接著點擊 $GRE1+ 或 - $WHI0來調整工人數量。$RED1如果你的沒有可用的村民，試著減少其它工作的工人。"
     buildingDamageHeader:
       text: "受損建築"
     buildingDamage:
@@ -6689,21 +6689,21 @@ helpTip:
     resouceManagementHeader:
       text: "資源管理"
     resouceManagement:
-      text: "The {buildingName}$WHI0 you just built can manufacture resources like $YEL1{resourceName} $WHI0but in order to get your villagers working on them $RED1you need to both assign {mobJobName} $RED1and assign the resources in the Resource Management tab on the left hand GUI.$WHI0 Setting a resource to $GRE1'Maintain'$WHI0 will try to keep at least that many of a resource in the village at all times, where as $GRE1'Make'$WHI0 will just immediately make that many for you. You can also set the value range over 500 for infinity, as well as control harvesting limits in the same manner."
+      text: "你剛剛建造好的 {buildingName} $WHI0可以製作資源，像是 $YEL1{resourceName} $WHI0但要讓你的村民開始工作，你需要在左手邊的 $RED1資源管理面板 $WHI0分配 $RED1{mobJobName}與資源。$WHI0設置一個資源 $GRE1'維持' $WHI0的數量，工人們會立即 $GRE1'製作'，試著將村莊中的資源保持在所設定的數量。這個數量可以設置超過 500 到無限，同時也可以限制收獲的數量。"
     energyHeader:
       text: "能量"
     energy:
-      text: "The {buildingName}$WHI0 that your villagers just completed uses energy. Buildings that use energy usually need to be fueled with essence. You can generate essence by feeding an $YEL1Essence Collector$WHI0 $GRE1crylithum$WHI0 that is refined in $YEL1Crystilleries$WHI0. Living things like monsters, animals and villagers will also drop some essence if they are killed, if you have an $YEL1Essence Collector$WHI0 the stray essence will be scooped up and delivered to buildings that can use it."
+      text: "你的村民剛剛建造完成的 {buildingName} 需要能量才能運作。使用能量的建築物通常需要精華作為燃料。你可以使用 $GRE1水晶錠 $WHI0補充 $YEL1精華收集器 $WHI0來產生能量，可在 $YEL1水晶加工廠 $WHI0精煉。活物被擊殺時也會掉落一些精華，像是怪物、動與村民，此時如果你有一個 $YEL1精華收集器 $WHI0收集掉落的能量，就能將能量輸送給建築物使用。"
     ammoHeader:
       text: "彈藥"
     ammo:   
-      text: "The {buildingName}$WHI0 that your villagers have just completed needs ammunition to function. You'll need to build an ammo manufacturing building to accompy it, like a $YEL1Bowyer$WHI0 or $YEL1Rock Tumbler$WHI0."
+      text: "你的村民剛剛建造完成的 {buildingName} 需要彈藥才能運作。你需要建造一個製作彈藥的建築來補充，像是 $YEL1製弓坊 $WHI0或 $YEL1石頭磨坊 $WHI0。"
     refineHeader:
       text: "精煉原料"
     refineNew:   
-      text: "Some buildings require refined materials, like $YEL1boards$WHI0, $YEL1stone$WHI0 or $YEL1crylithium$WHI0. The {buildingName}$WHI0 you just placed is one of them! If a building requires one of these resources and you have no means to manufacture it they'll do what they can, but the building will never get completed. You can refine most materials inside advanced work buildings, like the $YEL1Lumber Mill$WHI0 and $YEL1Stone Cuttery$WHI0. Both can be found under the refine category in your build tab."
+      text: "一些建築需要精煉過的原料，像是 $YEL1木板 $WHI0， $YEL1石板 $WHI0或 $YEL1水晶錠 $WHI0。你剛剛擺放的 {buildingName} 就是其中之一！如果建築需要其中某種資源，而你並沒有製作，村民們會盡力建造，但建築將永遠無法建造完成。你可以在高級的工作建築內精煉大多數的原料，像是 $YEL1木材加工坊 $WHI0與 $YEL1石頭加工廠 $WHI0。它們可以在建造面板的精煉類別下找到。"
     refineReclaim:   
-      text: "Some buildings require refined materials, like $YEL1boards$WHI0, $YEL1stone$WHI0 or $YEL1crylithium$WHI0. The {buildingName}$WHI0 you just tried to reclaim is one of them! If a building requires one of these resources and you have no means to manufacture it they'll do what they can, but the building will never get completed. You can refine most materials inside advanced work buildings, like the $YEL1Lumber Mill$WHI0 and $YEL1Stone Cuttery$WHI0. Both can be found under the refine category in your build tab."
+      text: "一些建築需要精煉過的原料，像是 $YEL1木板 $WHI0， $YEL1石板 $WHI0或 $YEL1水晶錠 $WHI0。你剛剛試圖占領的 {buildingName} 就是其中之一！如果建築需要其中某種資源，而你並沒有製作，村民們會盡力建造，但建築將永遠無法建造完成。你可以在高級的工作建築內精煉大多數的原料，像是 $YEL1木材加工坊 $WHI0與 $YEL1石頭加工廠 $WHI0。它們可以在建造面板的精煉類別下找到。"
     farmingHeader:
       text: "農場"
     farming:   
@@ -6711,107 +6711,107 @@ helpTip:
     buildingPriorityHeader:
       text: "建築優先度"
     buildingPriority:   
-      text: "Did you know you can adjust the building priorities? Just select the $YEL1'Building List'$WHI0 button on the $YEL1top right$WHI0 then click the $YEL1up or down arrows$WHI0 to rearrange what buildings have priority over others. Higher priority buildings will get built, dismantled and repaired and before others on the list."
+      text: "你知道可以調整建造的優先度嗎？只需要選擇 $YEL1右上 $WHI0的 $YEL1'造築清單' 並點擊 $YEL1上或下箭號 $WHI0就可以重新安排它們的順序。清單裡較高優先度的建築，將會優先建造、拆除或是修理。"
     noHomesHeader:
       text: "房屋"
     noHomes:   
-      text: "You're on day {day} and you have not built any $YEL1housing$WHI0, your villagers will need a place to live, or they will be become very unhappy. You also need homes so your villagers can mate, and hopefully have children someday."
+      text: "第 {day} 天了，而你還沒有建造任何 $YEL1房屋 $WHI0，你的村民們需要地方生活。否則他們會變的不開心。你也需要一些房屋讓村民們交配，期待有一天會生小孩。"
     noFarmsHeader:
       text: "農場"
     noFarms:   
-      text: "You're on day {day} and you have not built any $YEL1farms$WHI0, your villagers will need to eat eventually. Don't let them starve to death! Once you build some $YEL1farms$WHI0 and assign workers to them, you can instruct them to harvest some raw food and they'll bring it to the farm and plant. Once planted, they'll automatically harvest it once it's ready!"
+      text: "第 {day} 天了，而你還沒有建造任何 $YEL1農場 $WHI0，你的村民們需要吃飯。別讓他們餓死！一旦你建造一些 $YEL1農場 $WHI0並分配了工人，你可以叫他們收獲一些食材，他們會帶回農場並種植。成熟後他們自動收獲！"
     noWaterHeader:
       text: "水"
     noWater:   
-      text: "You're on day {day} and you have not built any $YEL1water sources$WHI0. Your villagers will need to drink water eventually. Don't let them die of thirst! Try to build a $YEL1Water Purifier$WHI0 and collect surface water, a $YEL1Well$WHI0 to automatically generate clean ground water or $YEL1Rain Catchers$WHI0 to collect rain water. Eventually, try to have more than one water source to survive the various conditions throughout the year. Don't forget to assign a few workers to them!"
+      text: "第 {day} 天了，而你還沒有建造任何 $YEL1水源 $WHI0，你的村民們需要喝水。別讓他們渴死！試著建造一個 $YEL1淨水器 $WHI0並收集水資源，$YEL1水井 $WHI0會自動的產生水或 $YEL1雨水收集器 $WHI0可收集雨水。最終，嘗試使用多個水源來滿足整年的各種需要。別忘了分配一些工人給它們！"
     noTowersHeader:
       text: "防禦塔"
     noTowers:   
-      text: "You're on day {day} and you have not built any $YEL1defenses$WHI0, without something to defend your village you may quickly get overwhelmed by monsters trying to eat your poor little mostly helpless villagers! Try building a Bowyer and Bow Tower to get some early defenses up and running."
+      text: "第 {day} 天了，而你還沒有建造任何 $YEL1防禦設施 $WHI0，沒有受到保護的村莊，很快將會被怪物吞沒，吃掉可憐又無助的村民！試著建造製弓坊與弓箭塔以便在早期保護村莊。"
     buildingSlotsHeader:
       text: "建築數"
     buildingSlots:   
-      text: "You have run out of building slot, in order to manage your ever growing village you will need to upgrade your $YEL1Camp$WHI0 or build some $YEL1Ancillaries$WHI0. You can upgrade your $YEL1Camp$WHI0 by clicking on it and then clicking the upgrade button on the bottom panel. Alternatively, if you'd rather build an $YEL1Ancillary$WHI0, you can find them in the Aid subcaregory on your build tab."
+      text: "你的建築數用完了，為了管理不斷成長的村莊，你需要升級 $YEL1營地 $WHI0建造一些 $YEL1補助建築$WHI0。你可以點擊建築，透過下方的方板並點擊升級按鈕來升級你的 $YEL1營地 $WHI0。另外，如果你想要建造一個 $YEL1補助建築 $WHI0可以在建造面板的市政中找到它。"
     lifeExpectancyHeader:
       text: "預期壽命"
     lifeExpectancy:   
-      text: "Villagers who have lived a hard life, won't live quite as long of one! Villager's life expectancy can drop if they are injured, starving, extremely unhappy, or just generally have a bad life. $YEL1Once their life expectancy drops, it is never coming back!$WHI0 So make sure you take care of your villagers so you can have a strong, healthy, long living work force!"
+      text: "過著艱苦生活的村民，壽命都不長！村民如果受傷、挨餓、非常不開心或過著悲慘的人生，預期壽命就會減少。$YEL1一旦預期壽命減少，將不會恢復！$WHI0所以一定要照顧好你的村民，你就會有一群強壯、健康、長壽的勞動力！"
     eldersHeader:
       text: "村民長者"
     elders:   
-      text: "Stay a while, and listen! {mobName} is an elder. When villagers get into their upper years, they will become elders and stop working. But in return, they will share their wisdom with anyone who takes the time to chat with them."
+      text: "停留一會，並聆聽！{mobName} 是一位長者。當村民的進入高年齡時，他們會變成長者並退休。但作為回報，他們會分享智慧給任何願意與他們聊天的人。"
     ghostsHeader:
       text: "幽魂"
     ghosts:   
-      text: "Sometimes, you can resurrect dead villagers! At $YEL1Dusk$WHI0 and $YEL1Night$WHI0 you will occasionally see some of your deceased villagers wandering around the village. If you notice one, you can zap it with the resurrect spell and try to bring him back!"
+      text: "有時候，你可以復活一些死亡的村民！在 $YEL1黃昏 $WHI0與 $YEL1夜晚 $WHI0你偶爾會看到一些在村子裡游蕩的已故村民。如果你注到了一個，你可以使用復活法術試圖將他帶回來。"
     villagerStarvingHeader:
       text: "飢餓"
     villagerStarvingMale:   
-      text: "{mobName}$WHI0 is starving! You better find that poor villager some food quick or he may die! Did you build a $YEL1farm$WHI0 or any $YEL1houses$WHI0 yet? Villagers get desperate when starving and find food on their own, even if it endangers them."
+      text: "{mobName} $WHI0正在挨餓！你最好快點找到那個可憐的村民並給他一些食物，否則他會死亡！你建造 $YEL1農場 $WHI0或任何 $YEL1房屋 $WHI0了嗎？村民挨餓時會感到絕望，並且即使是會陷入危險，也會自行尋找食物。"
     villagerStarvingFemale:   
-      text: "{mobName}$WHI0 is starving! You better find that poor villager some food quick or she may die! Did you build a $YEL1farm$WHI0 or any $YEL1houses$WHI0 yet? Villagers get desperate when starving and find food on their own, even if it endangers them."
+      text: "{mobName} $WHI0正在挨餓！你最好快點找到那個可憐的村民並給她一些食物，否則她會死亡！你有建造 $YEL1農場 $WHI0或任何 $YEL1房屋 $WHI0了嗎？村民挨餓時會感到絕望，並且即使是會陷入危險，也會自行尋找食物。"
     villagerDehydrationHeader:
-      text: "Dehydration"
+      text: "脫水"
     villagerDehydrationMale:   
-      text: "{mobName}$WHI0 is dying of thirst! You better find that poor villager some water quick or he may die! Did you build a $YEL1Water Purifier$WHI0, $YEL1Well$WHI0 or $YEL1Rain Catcher$WHI0 yet? Are they producing enough water? Maybe you need to build more!"
+      text: "{mobName} $WHI0即將渴死！你最好快點找到那個可憐的村民並給他一些水，否則他會死亡！你建造 $YEL1淨水器 $WHI0、$YEL1水井 $WHI0或 $YEL1雨水收集器 $WHI0了嗎？生產的水夠用？也許你需要建造更多！"
     villagerDehydrationFemale:   
-      text: "{mobName}$WHI0 is dying of thirst! You better find that poor villager some water quick or she may die! Did you build a $YEL1Water Purifier$WHI0, $YEL1Well$WHI0 or $YEL1Rain Catcher$WHI0 yet? Are they producing enough water? Maybe you need to build more!"
+      text: "{mobName} $WHI0即將渴死！你最好快點找到那個可憐的村民並給她一些水，否則她會死亡！你建造 $YEL1淨水器 $WHI0、$YEL1水井 $WHI0或 $YEL1雨水收集器 $WHI0了嗎？生產的水夠用？也許你需要建造更多！"
     villagerSleepyHeader:
-      text: "Exhaustion"
+      text: "虛脫"
     villagerSleepyNoHome:   
-      text: "{mobName}$WHI0 is starting to get sleepy. If your villagers are too tired and have no where to rest, they may end up sleeping outside."
+      text: "{mobName} $WHI0開始變困。如果你的村民太累或是沒有地方休息，他們最終會睡在戶外。"
     villagerSleepy:   
-      text: "{mobName}$WHI0 is starting to get sleepy. If your villagers are too tired and have no where to rest, they may end up sleeping outside. Luckily, {mobName}$WHI0 does have a home, so he should return there shortly for a snooze!"
+      text: "{mobName} $WHI0開始變困。如果你的村民太累或是沒有地方休息，他們最終會睡在戶外。幸運的是，{mobName} $WHI0有一個家，他會試著趕快回家睡覺！"
     villagerFreezingHeader:
-      text: "Freezing To Death"
+      text: "凍死"
     villagerFreezingNoHome:   
-      text: "{mobName}$WHI0 is freezing to death! If it gets too cold outside and your villagers don't have a home to go warm up in, they could die! Try getting enough homes for your villagers as soon as you can!"
+      text: "{mobName} $WHI0快凍死了！如果戶外太冷而你的村民沒有房屋可以在室內取暖，他們會死！試著盡你所能為村民建造足夠的房屋！"
     villagerFreezingMale:   
-      text: "{mobName}$WHI0 is freezing to death! If it gets too cold outside and your villagers don't have a home to go warm up in, they could die! Luckily, {mobName}$WHI0 does have a home, so he should try to return there shortly to warm up!"
+      text: "{mobName} $WHI0快凍死了！如果戶外太冷而你的村民沒有房屋可以在室內取暖，他們會死！幸運的是，{mobName} $WHI0有一個家，他會試著趕快回家取暖！"
     villagerFreezingFemale:   
-      text: "{mobName}$WHI0 is freezing to death! If it gets too cold outside and your villagers don't have a home to go warm up in, they could die! Luckily, {mobName}$WHI0 does have a home, so she should try to return there shortly to warm up!"
+      text: "{mobName} $WHI0快凍死了！如果戶外太冷而你的村民沒有房屋可以在室內取暖，她們會死！幸運的是，{mobName} $WHI0有一個家，她會試著趕快回家取暖！"
     villagerOverheatingHeader:
-      text: "Overheating"
+      text: "中暑"
     villagerOverheatingNoHome:   
-      text: "{mobName}$WHI0 is burning up in the heat! If it gets too hot outside and your villagers don't have a home to go cool down in, they could die of heat exhaustion! Try getting enough homes for your villagers as soon as you can!"
+      text: "{mobName} $WHI0快中暑了！如果室外太熱，而你的村民沒有家可以在室內消暑，他們會熱衰竭而死！試著盡你所能為村民建造足夠的房屋！"
     villagerOverheatingMale:   
-      text: "{mobName}$WHI0 is burning up in the heat! If it gets too hot outside and your villagers don't have a home to go cool down in, they could die of heat exhaustion! Luckily, {mobName}$WHI0 does have a home, so he should try to return there shortly to cool down!"
+      text: "{mobName} $WHI0快中暑了！如果室外太熱，而你的村民沒有家可以在室內消暑，他們會熱衰竭而死！幸運的事，{mobName} $WHI0有一個家，所以他會試著趕快回家消暑！"
     villagerOverheatingFemale:   
-      text: "{mobName}$WHI0 is burning up in the heat! If it gets too hot outside and your villagers don't have a home to go cool down in, they could die of heat exhaustion! Luckily, {mobName}$WHI0 does have a home, so she should try to return there shortly to cool down!"
+      text: "{mobName} $WHI0快中暑了！如果室外太熱，而你的村民沒有家可以在室內消暑，她們會熱衰竭而死！幸運的事，{mobName} $WHI0有一個家，所以她會試著趕快回家消暑！"
     matingHeader:
       text: "交配"
     matingDifferentGender:
-      text: "Did you notice that {mobName}$WHI0 has found a new mate, {mobMateName}$WHI0? If either one of them have a home and they're happy enough, they may try to go home and make a baby! They'll also visit each other often to boost their mood, or try to live in the same house whenever possible."
+      text: "你注意到 {mobName} $WHI0找到了新配偶，{mobMateName} $WHI0了嗎？如果他們其中一個有家，而且很快樂，他們會試著回家並生個孩子！他們會經常的互相見面增進關係，或試著生活在同一個房屋裡。"
     matingSameGender:   
-      text: "Did you notice that {mobName}$WHI0 has found a new mate, {mobMateName}$WHI0? If either one of them have a home and they're happy enough, they may try to go home and have some private fun time! They may not be very effective at reproducing like their straight counterparts but they'll still get a boost to their mood! They'll also visit each other often to boost their mood, or try to live in the same house whenever possible."
+      text: "你注意到 {mobName} $WHI0找到了新配偶，{mobMateName} $WHI0了嗎？如果他們其中一個有家，而且很快樂，他們會試著回家並享受一些私人的時光！也許不像其它的同伴一樣，很有效率的繁殖，但仍然會增進關係！他們會經常的互相見面對增進關係，或試著生活在同一個房屋裡。"
     pregnantHeader:
       text: "懷孕"
     pregnant:   
-      text: "{mobName}$WHI0 is pregnant! Soon, she will give birth to a new child who will eventually grow up to be another adult worker bee! Pregnant villagers consume more food and energy, and move around a little slower. So keep an eye on them."
+      text: "{mobName} $WHI0懷孕了！很快，她將會生出一個新兒童，而他將會成長為另一個工人！懷孕的村民消耗更多的食物與能量並移動的較慢。所以請時刻注意她們。"
     nomadHeader:
       text: "流浪者！"
     nomad:   
-      text: "$YEL1Nomads$WHI0 have come into your region, they are a friendly sort. If they can make their way to your village without being killed, they'll join you. If you want to increase your chances of getting more $YEL1Nomads$WHI0, build a large village with plenty of housing and defenses."
+      text: "$YEL1流浪者 $WHI0來到你的區域，他們是友善的。如果他們在到達你村莊前沒有被殺死，他們會加入你的村莊。如果你想要增加 $YEL1流浪者 $WHI0出現的機率，建造一個擁有充足房屋與防禦的大村莊吧。"
     essenceHeader:
       text: "精華"
     essence:   
-      text: "Have you noticed those sparkling green spots on the map when something dies or some of the terrain is destroyed? That's $GRE1Essence$WHI0 that has been released into the world. You can collect essence by waving your hand near it, and it will increase your influence bar faster, so you can cast spells. Essence is also the power source behind villager's magic buildings, like the $YEL1Fire Bolt tower$WHI0. You can collect stray essence by building an $YEL1Essence Collector$WHI0."
+      text: "當地圖上的某些東西死亡或是一些地形被破壞後，你是否注意到那些閃閃發光的綠色光點？那是 $GRE1精華 $WHI0被釋放到世界中。你可以其附近搖晃手來收集精華，然後它會快速地增加你的神力條，讓你可以施法。精華也是魔法建築的能量來源，像是 $YEL1火球塔 $WHI0。你可以建造 $YEL1精華收集器 $WHI0來收集儲存精華。"
     abandonedBuildingsHeader:
       text: "廢棄的建築"
     abandonedBuildings:   
-      text: "{buildingName}$WHI0 is an abandoned building, your villagers will need to repair it before they can use it. If the building is in range of your village You can click on the building, and then click the $GRE1reclaim button$WHI0 on the bottom GUI. "
+      text: "{buildingName} $WHI0是一個廢棄的建築，在使用它之前，需要村民修理。如果此建築在你的村莊範圍之內，你可以點擊建築物，然後點擊介面下方 $GRE1占領 $WHI0按鈕。"
     rainHeader:
       text: "下雨！"
     rain:   
-      text: "Whoa, it's raining! Rain will cause your villager's happiness to drop slowly and slow down their movement speed a bit, but it will also $GRE1water your crops, fill your rain collectors and put out fires!$WHI0 Just cross your fingers and hope the lightning bolts don't zap anything too important."
+      text: "哇，下雨了！雨會使村民的幸福度慢慢下降與降低移動速度，但也會 $GRE1灌溉農作物，填滿雨水收集器與滅火！$WHI0只需要祈禱閃電不會摧毀任何重要的東西。"
     snowHeader:
       text: "下雪！"
     snow:   
-      text: "Whoa, it's snowing! Snow will cause your villager's happiness to drop slowly and slow down their movement speed a bit. Be careful, snow also drops the current temperature, it could drop to freezing levels and kill off crops or hurt villagers who can't find a place to warm up."
+      text: "哇，下雪了！雪會使村民的幸福度慢慢下降與降低移動速度。請小心，雪也會使溫度快速下降，低到可以結凍與殺死作物，或是傷害沒有地方取暖的村民。"
     happinessLowHeader:
       text: "低幸福度"
     happinessLow:   
-      text: "Your villagers are extremely unhappy. You should consider giving them some down time. Happy villagers will work harder, and breed more often. Villagers are also more happy in general if they're well fed, have a home, and a mate."
+      text: "你的村民們相當不開心。你應該考慮讓他們休息一下。快樂的村民會更努力工作，與更容易繁殖。村民們如果吃飽、有家與配偶也會更開心。"
     timeDuskHeader:
       text: "夜晚"
     timeDusk:   
@@ -6819,39 +6819,39 @@ helpTip:
     corruptionHeader:
       text: "腐化！"
     corruption:   
-      text: "As you've probably already discovered, your villagers are not the only ones in this region! As time passes, $RED1the corruption$WHI0 will slowly spread and take over the map, increasing monster spawn rates and generally causing trouble. There are ways you can push back the corruption though. $GRE1Many buildings offer corruption resistance$WHI0, and high resistance will prevent the corruption from spreading, and can even sometimes push it back. Not all buildings can resist the corruption, be sure to check their stats."
+      text: "你可能已經發現，你的村民並不是此區域唯一一種生命！隨時間去過，$RED1腐化能量 $WHI0擴散到整個地圖，增加怪物生成速度並導致威脅。有些方法可以使腐化衰退。多數的建築有 $GRE1腐化抗性 $WHI0，而高抗性會阻止腐化擴散，甚至有時可以使它們衰退。並不是所有的建築都有腐化抗性，請仔細確認它們的狀時。"
     seasonAutumnHeader:
       text: "秋季"
     seasonAutumn:   
-      text: "It is now $ORA1Autumn$WHI0. $ORA1Autumn$WHI0 is a fairly light season and usually a good time to build up your housing and stockpile a large amount of $RED1food and water$WHI0 to survive the upcoming $CYA1Winter$WHI0."
+      text: "$ORA1秋季 $WHI0來臨。$ORA1秋季 $WHI0是一個輕鬆的季節，通常是建造房屋與準備 $RED1食物與水 $WHI0的好時機，以便迎接即將到來的 $CYA1冬季 $WHI0。"
     seasonWinterHeader:
       text: "冬季"
     seasonWinter:   
-      text: "$CYA1Winter$WHI0 has arrived! Winter is one of the hardest seasons to survive. Your farms will stop growing, as will most natural resources on the map. Hopefully you stocked up on food, water and have plenty of housing to keep your villagers from freezing to death!"
+      text: "$CYA1冬季 $WHI0來臨！冬季是最難生存的季節。你的農作物會停止成長，而大多數天然資源也是。希望你已準備了充足的食物、水與房屋避免村民凍死！"
     seasonSpringHeader:
       text: "春季"
     seasonSpring:   
-      text: "A plesant break from the ravages of $CYA1Winter$WHI0, $GRE1Spring$WHI0 has arrived! Spring is the easiest season to survive. You will find it very easy to grow food and replenish resources. Although the constant rain can upset villagers, and the lightning storms may damage buildings. So lookout! Don't forget to $RED1stock up on food and water$WHI0 before $YEL1Summer$WHI1 arrives!"
+      text: "經過嚴酷的 $CYA1冬季，終於可以愉快的休息一下，$GRE1春季 $WHI0來臨！春季是最容易生存的季節。你會發現可以很容易的補充食物與資源。雖然不停的下雨會讓村民感到不安，而且閃電風暴會傷害建築。請注意！別忘了在 $YEL1夏季 $WHI0來臨前，準備 $RED1食物與水！"
     seasonSummerHeader:
       text: "夏季"
     seasonSummer:   
-      text: "$YEL1Summer$WHI0 is here. Your villagers are going to have to work in blistering hot weather pretty often, and will have to go home to cool down frequently. Don't expect much rain, and expect substainally slower crop growth. Hopefully you stocked up on food and water during the $GRE1Spring$WHI0!"
+      text: "$YEL1夏天 $WHI0來臨。你的村民將不得不經常在炎熱的天氣裡工作，並且常回家消暑。別期望會常下雨，並預期作物成長緩慢。希望你在 $GRE1春季 $WHI0已準備了足夠的食物與水！"
     destroyTerrainHeader:
       text: "摧毀地形"
     destroyTerrain:   
-      text: "You can clear out terrain in the way quickly by using the $GRE1'Destroy Terrain'$WHI0 tool. Just $YEL1click on the button in the bottom right of the GUI and highlight what you want to remove$WHI0, and your builders will run over there and clear it out!"
+      text: "你可以使用 $GRE1'摧毀地型' 工具，快速的清除地形。只需要 $YEL1點擊介面右下方的按鈕 $WHI0，並高亮標記你想要清除的地方，你的工人將會前往清除！"
     cullisGateHeader:
       text: "庫里斯門"
     cullisGate:   
-      text: "Scattered around most maps are $YEL1Ancient Cullis Gates$WHI0. You can toss monsters, resources or even villagers into them, sacrificing them for some extra essence. But be careful though, $YEL1Cullis Gates$WHI0 tend to overload if used too much."
+      text: "散落在地圖周圍的 $YEL1古代庫里斯門 $WHI0。你可以將怪物、資源甚至是村民丟進去，犧牲他們獲得額外的精華。但請小心，$YEL1庫里斯門 使用太頻繁會超載。"
     speedControlsHeader:
       text: "暫停與速度控制"
     speedControls:   
-      text: "Did you know you can pause the game by pressing $GRE1{shortcutKey}$WHI0, or adjust the passage of time using the clock?"
+      text: "你知道按下 $GRE1{shortcutKey} $WHI0可以暫停遊戲嗎？，或使用時鐘調整時間流速？"
     dismantleHeader:
       text: "拆除建築"
     dismantle:
-      text: "You can dismantle buildings by clicking on the $YEL1Dismantle Buildings and Objects$WHI0 buttons on the bottom right of the GUI, and then clicking on the building you'd like to tear down. Once flagged to be dismantled your builders will destroy the building."
+      text: "你可以透過介面右下方的 $YEL1拆除建築與物件 $WHI0按鈕，並點擊建築物來拆除建築。一旦標記好要拆除的建築，你的建築工將會摧毀建築。"
       
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Influence Module
@@ -6957,7 +6957,7 @@ spell:
     name:
       text: "吸收精華"
     description:
-      text: "從空中吸收精華！請小心，無吸取的精華不能返還。"
+      text: "從空中吸收精華！請小心，被吸收的精華不能返還。"
   lightningBolt:
     name:
       text: "閃電"
@@ -7300,9 +7300,9 @@ mobName:
       text: "無頭僵屍"
   drone:
     single:
-      text: "寄生蟲"
+      text: "寄生僵屍"
     plural:
-      text: "寄生蟲"
+      text: "寄生僵屍"
   zombie:
     single:
       text: "殭屍"
@@ -7320,9 +7320,9 @@ mobName:
       text: "殭屍狗狗"
   doofyZombieDoggo:
     single:
-      text: "Doofy 殭屍"
+      text: "笨殭屍狗狗"
     plural:
-      text: "Doofy 殭屍狗狗"
+      text: "笨殭屍狗狗"
   zombieCatjeet:
     single:
       text: "貓人殭屍"
@@ -7355,9 +7355,9 @@ mobName:
       text: "幽魂狗狗"
   doofyGhostDoggo:
     single:
-      text: "Doofy 幽魂狗狗"
+      text: "笨幽魂狗狗"
     plural:
-      text: "Doofy 幽魂狗狗"
+      text: "笨幽魂狗狗"
   ghostCatjeet:
     single:
       text: "貓人幽魂"
@@ -7375,14 +7375,14 @@ mobName:
       text: "火元素"
   specter:
     single:
-      text: "Specter"
+      text: "邪靈"
     plural:
-      text: "Specters"
+      text: "邪靈"
   childSpecter:
     single:
-      text: "兒童 Specter"
+      text: "邪靈兒童"
     plural:
-      text: "兒童 Specters"
+      text: "邪靈兒童"
   nomadElder:
     single:
       text: "流浪長者"
@@ -7440,9 +7440,9 @@ mobName:
       text: "狗狗"
   doofyDoggo:
     single:
-      text: "Doofy 狗狗"
+      text: "笨狗狗"
     plural:
-      text: "Doofy 狗狗"
+      text: "笨狗狗"
   wildDoggo:
     single:
       text: "野生狗狗"
@@ -7450,9 +7450,9 @@ mobName:
       text: "野生狗狗"
   doofyWildDoggo:
     single:
-      text: "Doofy 野生狗狗"
+      text: "笨野生狗狗"
     plural:
-      text: "Doofy 野生狗狗"
+      text: "笨野生狗狗"
   stoneGolem:
     single:
       text: "石頭魔像"
@@ -7495,9 +7495,9 @@ mobName:
       text: "Goddo 魔像"
   courierGolem:
     single:
-      text: "Courier 魔像"
+      text: "運輸魔像"
     plural:
-      text: "Courier 魔像"
+      text: "運輸魔像"
   laborGolem:
     single:
       text: "工作魔像"
@@ -7726,7 +7726,7 @@ aiTask:
     eatingFood:
       text: "吃了 $YEL1{resourceName}"
     pathfindingBruteForce:
-      text: "清理路上的障礙物"
+      text: "清除路上的障礙物"
     recoveringHealth:
       text: "使用 $YEL1{resourceName} 恢復生命"
 
@@ -7770,15 +7770,15 @@ aiTask:
 
   clearTopographyFromRoadWork:
     pathfindToTopography:
-      text: "使用道路走向工作地點清理地形。"
+      text: "使用道路走向工作地點清除地形。"
     clearTopography:
-      text: "清理地形"
+      text: "清除地形"
 
   clearTopographyWork:
     pathfindToTopography:
-      text: "走向工作地點清理地形。"
+      text: "走向工作地點清除地形。"
     clearTopography:
-      text: "清理地形"
+      text: "清除地形"
       
   combatBuildings:
     pathfindToTarget:
@@ -8242,9 +8242,9 @@ aiTask:
       
   corruptionClearTopographyWork:
     pathfindToTopography:
-      text: "走向工作地點清理一些地形。"
+      text: "走向工作地點清除一些地形。"
     clearTopography:
-      text: "清理地形。"
+      text: "清除地形。"
       
   corruptionDeliverResourceInHand:
     pathfindToBuilding:
@@ -8362,7 +8362,7 @@ mobJob:
     single:
       text: "採石工"
     plural:
-      text: "採石礦工"
+      text: "採石工"
     description:
       text: "收集地圖上的石頭存到村莊裡。不管村莊是否有需要，他們都會持續的收集。"
 
@@ -8476,7 +8476,7 @@ mobJob:
     plural:
       text: "維修工"
     description:
-      text: "專門維護村莊的工人，他們可以幫忙拆除與修理建築，以及維護道路與清理地形。"
+      text: "專門維護村莊的工人，他們可以幫忙拆除與修理建築，以及維護道路與清除地形。"
 
   courierSupplier:
     single:
@@ -9522,17 +9522,17 @@ object:
         name:
           text: "簡易維護建築"
         description:
-          text: "工人可以修理與拆除建築，同時也可以維護道路與清理地形。"
+          text: "工人可以修理與拆除建築，同時也可以維護道路與清除地形。"
       base:
         name:
           text: "維護建築"
         description:
-          text: "增加拆除與修理建築、維護道路與清理地形、增加最大儲存量與鋪路工人職缺。"
+          text: "增加拆除與修理建築、維護道路與清除地形、增加最大儲存量與鋪路工人職缺。"
       established:
         name:
           text: "堅固維護建築"
         description:
-          text: "增加拆除與修理建築、維護道路與清理地形、增加最大儲存量與鋪路工人職缺。"
+          text: "增加拆除與修理建築、維護道路與清除地形、增加最大儲存量與鋪路工人職缺。"
     
     marketplace:
       makeshift:
@@ -9902,7 +9902,7 @@ object:
         name:
           text: "簡易鋪路小屋"
         description:
-          text: "工人可以建造與維護道路，清理地形與挖洞收集雨水給淨水器。"
+          text: "工人可以建造與維護道路，清除地形與挖洞收集雨水給淨水器。"
       base:
         name:
           text: "鋪路小屋"
@@ -10314,17 +10314,17 @@ stateBase:
     2:
       text: "If you have a well functioning village with plenty of housing, food and jobs, you may attract some nomads to join your village!"
     3:
-      text: "You can buy and sell resources at the marketplace. Build one!"
+      text: "你可以在市場購買與販賣資源。建造一個吧！"
     4:
-      text: "Increasing your population will also increase your influence bar."
+      text: "人口增加也會增加神力。"
     5:
-      text: "Fire elementals can't swim."
+      text: "游泳時不能使用火元素。"
     6:
       text: "小心照顧你的狗狗。"
     7:
-      text: "The outpost and barracks gain a small tower when upgraded to maximum."
+      text: "哨站與兵營升到最高級時會獲得一個小型防禦塔。"
     8:
-      text: "Good Doggos can help out the village sometimes."
+      text: "好狗狗們有時可以幫助村莊。"
     9:
       text: "Specters can walk through almost anything and are highly resistant to physical damage."
     10:
@@ -10332,7 +10332,7 @@ stateBase:
     11:
       text: "Villagers can die of old age! But they'll live a little longer if you take care of them."
     12:
-      text: "Don't forget to build water sources for villagers."
+      text: "別忘了為村民們建造水源。"
     13:
       text: "Press Shift+F2 to take a screen shot of the entire map, it will be placed in your screenShots folder in Rise to Ruins install directory."
     14:
@@ -10378,13 +10378,13 @@ stateBase:
     34:
       text: "You can take a screenshot by pressing F2, it'll be saved in the screenshots folder."
     35:
-      text: "You can hide the GUI by pressing F4."
+      text: "你可以按下 F4 隱藏介面。"
     36:
       text: "Game crash? There's crash logs in the logs folder. Send it to the developer!"
     37:
       text: "Many buildings require refined materials, check the requires of a building before you place it!"
     38:
-      text: "In-game tips are your friend, read them!"
+      text: "遊戲提示你是的好友友，請仔細閱讀！"
     39:
       text: "Villagers being swarmed by monsters? Cast recall or banish!"
     40:
@@ -10400,27 +10400,27 @@ stateBase:
     45:
       text: "Make sure you stockpile food for the winter!"
     46:
-      text: "Motivate Land is a lot less effective in colder weather."
+      text: "資源增生術在寒冷的季節效果較差。"
     47:
       text: "村民們不開心？別讓他們太累！"
     48:
       text: "The best time to use Motivate Land is when the weather is warm, and it's raining."
     49:
-      text: "Most towers can shoot over most walls. Use this to your advantage!"
+      text: "大多數的防禦塔都能射過圍牆。善用這項優勢！"
     50:
       text: "Running out of food in the winter? Stock up! In an emergency you can use the grab spell to pickup unharvested food outside your village."
     51:
-      text: "Did you know the grab spell can grab unharvested materials on the map? Handy when you need resources in a pinch."
+      text: "你知道抓取法術可以拾起地圖上未收獲的的原料嗎？當你在緊要關頭需要資源時很方便。"
     52:
-      text: "Villagers need homes to cool off in the summer, and warm up in the Winter."
+      text: "村民們需要房屋在夏天時可以消暑，冬天時可以保暖。"
     53:
       text: "Starving in the winter? Use the grab spell to grab food that's otherwise inaccessible."
     54:
-      text: "Labor Golems are really handy early game to haul around some extra resources."
+      text: "工人魔像可以在遊戲早期有效幫忙取得更多資源。"
     55:
       text: "春季通常是食物成長的最佳季節。"
     56:
-      text: "Food and trees are not the only thing that stop growing in the extreme hot or cold, crystals too!"
+      text: "極熱或極寒不只會使食物與樹木停止成長，水晶也是！"
     57:
       text: "Most towers can shoot over low walls, try building a monster maze!"
     58:
@@ -10432,11 +10432,11 @@ stateBase:
     61:
       text: "Roads decay slowly over time, make sure you have a few way-makers around to repair them!"
     62:
-      text: "雨水會讓道路加速損壞。。"
+      text: "雨水會讓道路加速損壞。"
     63:
       text: "Basic paths don't last very long, consider putting up a proper road system!"
     64:
-      text: "Running out of building slots? Upgrade your Camp or build some Ancillaries early."
+      text: "無法建造更多建築？升級你的營地或在早點建造補助建築。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Game Mode
