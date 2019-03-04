@@ -1670,7 +1670,7 @@ console:
     fullMapScreenshot:
       text: "整張地圖截圖儲存於 $GRE1{filePath}"
     screenshot:
-      text: "排照儲存於 $GRE1{filePath}"
+      text: "截圖儲存於 $GRE1{filePath}"
       
   banner:
     time:
@@ -1744,7 +1744,7 @@ console:
     migration:
       migrantsArrived:
         header:
-          text: "$GRE1{amount}$WHI0 移民抵達"
+          text: "$GRE1{amount} $WHI0移民抵達"
         subtitle:
           text: "來自 $YEL1{regionName}$WHI0！"
     mob:
@@ -1765,7 +1765,7 @@ console:
           text: "準備離開你的村莊！"
       nomadJoined:
         subtitle:
-          text: "加入你的村莊！!"
+          text: "加入你的村莊！"
       wildDoggoDomesticate:
         subtitle:
           text: "狗狗加入你的村莊！"
@@ -1778,13 +1778,13 @@ console:
           text: "真是太可惜了。"
       turnedIntoZombie:
         header:
-          text: "{mobName}$WHI0的屍體轉變成 $RED1{mobType}$WHI0！"
+          text: "{mobName} $WHI0的屍體轉變成 $RED1{mobType}$WHI0！"
         subtitle:
           text: "已不再安息。"
       death:
         title:
           comment: "Some mobs, like the doggo, need their title inputted into the death messages. This string will be inputted where {mobTitle} is in all death strings under the death header category."
-          text: "$WHI0一個 {mobType}"
+          text: "$WHI0{mobType}"
         header:
           frozen:
             text: "{mobName}{mobTitle}$RED1 凍死了！"
@@ -1852,73 +1852,73 @@ console:
           2:
             text: "願(他:她:他們)安息。"
           3:
-            text: "...a glorious death!"
+            text: "…光榮的死亡！"
           4:
-            text: "If only it could have been avoided."
+            text: "如果只有它本來可以避免。"
           5:
-            text: "No one liked (him:her:them) anyway."
+            text: "無論如何，沒有任何人喜歡(他:她:他們)。"
           6:
-            text: "What a terrible way to die!"
+            text: "這是什麼可怕的死法！"
           7:
-            text: "That's going to be a mess to cleanup."
+            text: "這裡變的髒亂需要清潔。"
           8:
-            text: "There are certainly better ways to die."
+            text: "肯定有更好的死法。"
           9:
-            text: "What an embarrassing thing to write on a tombstone."
+            text: "在墓碑上寫一個令人尷尬的事情。"
           10:
-            text: "Chances are, it was probably your fault."
+            text: "機會就是，它可能令你失敗。"
           11:
-            text: "(He'll:She'll:They'll) make a fine heap."
+            text: "(他:她:他們)將被埋葬。"
           12:
-            text: "(He:She:They) took one for the team..."
+            text: "(他:她:他們)為團隊犧牲了…"
           13:
-            text: "Sometimes you eat the bear and sometimes the bear eats you."
+            text: "有時你吃了熊，有時熊吃了你。"
           14:
-            text: "Another one bites the dust!"
+            text: "另一個犧牲者！"
           15:
             text: "我很報歉。我非常非常報歉。"
           16:
             text: "浪費！"
           17:
-            text: "(He:She:They) always had trouble with critical thinking..."
+            text: "(他:她:他們)總是往壞的方向思考…"
           18:
-            text: "Today was a good day to die!"
+            text: "今天是個死亡的好日子！"
           19:
-            text: "...some would call it 'Alternative survived'"
+            text: "…一些人稱它為'另類存活'"
           20:
-            text: "Tis but a scratch."
+            text: "這是割傷。"
           21:
-            text: "Tis but a flesh wound."
+            text: "這是外傷。"
           22:
-            text: "(He:She:They) didn't know about IDDQD."
+            text: "(他:她:他們)不認識 IDDQD。"
           23:
-            text: "(He:She:They) gave up the ghost."
+            text: "(他:她:他們)放棄了這個幽魂。"
           24:
-            text: "(He:She:They) was only one day from retirement."
+            text: "(他:她:他們)離退休只剩一天。"
           25:
-            text: "Just shows there are worse things to worry about than vaccines."
+            text: "這表示比疫苗更讓人擔心的事情。"
           26:
-            text: "(His:Her:Their) mother always told (him:her:them) not to do that."
+            text: "(他的:她的:他們的)母親總是告訴(他:她:他們)別那麼做。"
           27:
-            text: "Looks like it was a bad decision to get out of bed this morning."
+            text: "今早起床似乎是個遭糕的決定。"
           28:
-            text: "(He:She:They) died doing what (he:she:they) loved."
+            text: "(他:她:他們)死於(他:她:他們)熱愛的事物。"
           29:
-            text: "As was written in the prophecy."
+            text: "正如預言中所寫的那樣。"
           30:
-            text: "One of the lucky ones."
+            text: "幸運兒之一。"
           31:
-            text: "That wasn't supposed to happen."
+            text: "這不應該發生。"
           32:
-            text: "Plenty more where (he:she:they) came from, hopefully."
+            text: "(他:她:他們)來的地方充滿更多，希望。"
           33:
             text: "(他:她:它們)入土為安。"
           34:
-            text: "It was bound to happen sooner or later."
+            text: "它遲早會發生。"
           35:
             text: "別難過，死人是沒有任何感覺的。"
           36:
-            text: "Thoughts and prayers probably won't fix this one..."
+            text: "思想和祈禱可能無法解決這個問題…"
       
     migrantDepartBehavior:
       leaveRegion:
@@ -1960,7 +1960,7 @@ console:
           header:
             text: "$RED1元素風暴！"
           subtitle:
-            text: "身上別帶任何金屬條！"
+            text: "身上別帶任何金屬棒！"
         hailStorm:
           header:
             text: "$RED1冰雹風爆！"
@@ -2258,9 +2258,9 @@ worldMapSelectionButton:
   javaClass: "rtr.gui.buttons.GUIButtonWorldMapSelection.java"
   
   lostToCorruption:
-    text: "$RED1區域淪陷～腐化了！"
+    text: "$RED1區域淪陷~腐化了！"
   establishVillage:
-    text: "$GRE1可建立～新村莊！"
+    text: "$GRE1可建立~新村莊！"
       
   survivedDay:
     text: "$GRE1生存了 $WHI0{days} $GRE1天"
@@ -2455,7 +2455,7 @@ mainMenuMainMenuPanel:
   videoSheetName:
     text: "影片檔名稱"
   linesOfCode:
-    text: "代碼行數～{amount}"
+    text: "代碼行數~{amount}"
   buildVersion:
     text: "$CYA1建置 {version}"
     
@@ -2478,7 +2478,7 @@ mainMenuMainMenuPanel:
     subHeader:
       text: "$GRE1Raymond Doerr 正在直播！"
     body:
-      text: "Rise to Ruins 開發者正在 $YEL1Twitch $WHI0上直播！～$GRE1想要觀看嗎？"
+      text: "Rise to Ruins 開發者正在 $YEL1Twitch $WHI0上直播！~$GRE1想要觀看嗎？"
     button:
       goWatch:
         text: "前往觀看！"
@@ -2711,7 +2711,7 @@ mainMenuSelectProfilePanel:
   outdatedProfilePrefix:
     text: "(過期的) {profileName}"
   outdatedWarning:
-    text: "$PIN1此存檔已不再相同～請重新創建一個新的"
+    text: "$PIN1此存檔已不再相同~請重新創建一個新的"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Main Menu State
@@ -2836,7 +2836,7 @@ mainMenuUploadProfilePanel:
     sendingAttempt:
       text: "$RED0重試次數：{attemptCount}"
     sendingAttemptFailure:
-      text: "$RED0你的防火牆可能存在問題，～或你未連接到網路！"
+      text: "$RED0你的防火牆可能存在問題，~或你未連接到網路！"
     sendingFailure:
       text: "$RED0發送存檔時發生錯誤！請檢查你的網路連線與防火牆設置。"
     sendingSuccess:
@@ -2873,7 +2873,7 @@ mapEditorMainMenuPanel:
   header:
     text: "主選單"
   exitWarning:
-    text: "$GRE1你確定嗎？～$RED1你的地圖～不會存檔！"
+    text: "$GRE1你確定嗎？~$RED1你的地圖~不會存檔！"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Map Editor State
@@ -2980,7 +2980,7 @@ mapEditorPlayRightPanel:
       
     civics:
       ancillary:
-        text: "附屬建築"
+        text: "補助建築"
       clinic:
         text: "診所"
       courierStation:
@@ -3361,6 +3361,8 @@ mapEditorPlayRightPanel:
       
       emitParticles:
         text: "釋放粒子"
+      emitGroupParticles:
+        text: "釋放一群粒子"
       
     miscellaneous:
       comment: Sandbox Mode Only
@@ -3414,6 +3416,8 @@ mapEditorPlayRightPanel:
       
       particleType:
         text: "粒子類別"
+      particleGroup:
+        text: "粒子群"
       particleColor:
         text: "粒子顏色"
       particleAmount:
@@ -4070,7 +4074,7 @@ playLeftPanel:
         text: "庫存"
         
     regionLost:
-      text: "$RED0區域已淪陷腐化！～不能送出資源。"
+      text: "$RED0區域已淪陷腐化！~不能送出資源。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -4107,25 +4111,25 @@ playOverlay:
   
   slots:
     outOfAncillarySlotsNoCamp:
-      text: "補助建築欄位不足～建造一個 $GRE0營地！"
+      text: "補助建築欄位不足~建造一個 $GRE0營地！"
     outOfAncillarySlotsUpgrade:
-      text: "補助建築欄位不足～升級你的 $GRE0{castleName}"
+      text: "補助建築欄位不足~升級你的 $GRE0{castleName}"
     outOfAncillarySlots:
       text: "補助建築欄位不足！"
     outOfBuildingSlotsNoCamp:
-      text: "補助建築欄位不足～建造一個 $GRE0營地！"
+      text: "建築欄位不足~建造一個 $GRE0營地！"
     outOfBuildingSlotsUpgrade:
-      text: "補助建築欄位不足～升級你的 $GRE0{castleName}～$WHI0建造一個 $GRE0補助建築"
+      text: "建築欄位不足~升級你的 $GRE0{castleName}~$WHI0或是建造 $GRE0補助建築"
     outOfBuildingSlots:
       text: "建築欄位不足！"
   
   roads:
     canNotImprove:
-      text: "無法改善"
+      text: "不能升級"
     roadCostFree:
-      text: "{nextRoadName}～$GRE1花費：免費"
+      text: "{nextRoadName}~$GRE1花費：免費"
     roadCost:
-      text: "{nextRoadName}～$YEL1花費：1 {resourceName}"
+      text: "{nextRoadName}~$YEL1花費：1 {resourceName}"
   
   general:
     cancelAction:
@@ -4139,7 +4143,7 @@ playOverlay:
     nothingToGrab:
       text: "沒有東西可以抓取。"
     autobuild:
-      text: "按住 $GRE1{shortcutKey} $WHI0可自動建造～並無視建築範圍。"
+      text: "按住 $GRE1{shortcutKey} $WHI0可自動建造~並無視建築範圍。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -4702,7 +4706,7 @@ playSelectedObjectPanel:
     buildingResourceValueHeader:
       text: "建築資源價值"
     buildingResourceValue:
-      text: "建造此建築時所用資源的價值。拆除時只會反還 50% 的資源。"
+      text: "建造此建築時所用資源的價值。拆除時只會返還 50% 的資源。"
     hitPointsHeader:
       text: "血量"
     hitPoints:
@@ -4807,11 +4811,12 @@ playSelectedObjectPanel:
   dismantling:
     text: "$GRE1(拆除)"
   dismantlingWarning:
-    text: "$RED0你確定要拆除此建築？只會返還 $GRE150% $RED0的資源。～$RED1此動作不能取消"
+    text: "$RED0你確定要拆除此建築？只會返還 $GRE150% $RED0的資源。~$RED1此動作不能取消"
   staticTowerDamageOverride:
     text: "傷害"
   staticTowerDamageOverrideAmount:
     text: "$GRE1電 $RED0(3-8)"
+    revision: "1"
   chargedDamage:
     text: "充能傷害"
   damage:
@@ -4851,11 +4856,11 @@ playSelectedObjectPanel:
   healthRegenerationBoost:
     text: "$GRE0{amount} $WHI0生命恢復"
   reclaimMessage:
-    text: "點擊 $GRE1占領 $WHI0可重新建造～並使用此建築。"
+    text: "點擊 $GRE1占領 $WHI0可重新建造~並使用此建築。"
   reclaimMessageNoSlotsNoCamp:
-    text: "建築數不足。～建造一個 $GRE0營地 $WHI0或 $GRE0補助建築 $WHI0～來占領此建築。"
+    text: "建築數不足。~建造一個 $GRE0營地 $WHI0或 $GRE0補助建築 $WHI0~來占領此建築。"
   reclaimMessageNoSlots:
-    text: "建築數不足。～升級 $GRE0{castleName} $WHI0或 $GRE0補助建築 $WHI0～來占領此建築。"
+    text: "建築數不足。~升級 $GRE0{castleName} $WHI0或 $GRE0補助建築 $WHI0~來占領此建築。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -4928,6 +4933,7 @@ playSelectedObjectUpgradePanel:
     text: "$RED0{amount} $WHI0生命恢復"
   staticTowerDamageOverride:
     text: "傷害：$GRE1電 (3-8)"
+    revision: "1"
   chargedDamage:
     text: "充能傷害：$GRE1{damageType} (+{damageMinimum}-{damageMaximum})"
   damage:
@@ -5115,7 +5121,7 @@ playStatisticsPanel:
       buildings:
         text: "建築"
       drones:
-        text: "全部寄生僵屍"
+        text: "全部寄生殭屍"
       spawned:
         text: "生成怪物"
       killed:
@@ -5743,9 +5749,10 @@ playRightObjectDescriptionPanel:
   energy:
     text: "$YEL1{amount} 能量"
   staticTowerDamageOverride:
-    text: "傷害：$GRE1Electric (3-8)"
+    text: "傷害：$GRE1電(10-50)"
+    revision: "1"
   chargedDamage:
-    text: "裝彈傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
+    text: "充能傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
   damage:
     text: "傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
   unchargedDamage:
@@ -5947,7 +5954,7 @@ sharedSettingsPanel:
     edgeScrollingNotRecommended:
       text: "不建議邊緣滾動"
     requiresFullScreen:
-      text: "需要～全螢幕"
+      text: "需要~全螢幕"
     fixedResolution:
       text: "固定解析度"
     fullscreenWithoutBorderlessOnly:
@@ -6027,7 +6034,7 @@ sharedSettingsPanel:
     header:
       text: "$ORA1修改按鍵！"
     message:
-      text: "按下想要的熱鍵～$GRE1目前按鍵：{keyName}"
+      text: "按下想要的熱鍵~$GRE1目前按鍵：{keyName}"
 
   miscellaneous:
     comment: "Extra strings used in various parts of the panel."
@@ -6082,7 +6089,7 @@ worldMapCorruptionThreatBar:
     worldDayHeader:
       text: "世界天數"
     worldDay:
-      text: "加總了所有過去有活動的區域。這個統計數據被來計算整個世界的腐化威脅程度。"
+      text: "加總了所有過去有活動的區域。這個統計數據被用來計算整個世界的腐化威脅程度。"
     corruptionPowerHeader:
       text: "腐化能量"
     corruptionPower:
@@ -6457,19 +6464,19 @@ worldMapGameModeSelectPanel:
       
   description:
     nightmare:
-      text: "一個幾乎不可能的遊戲模式，專為喜歡挑戰困難的抖M玩家所設計。非常不公平與無情的遊戲體驗。被虐狂專屬模式。～～$RED0不要選擇這個模式。真的不要！"
+      text: "一個幾乎不可能的遊戲模式，專為喜歡挑戰困難的抖M玩家所設計。非常不公平與無情的遊戲體驗。被虐狂專屬模式。~~$RED0不要選擇這個模式。真的不要！"
     survival:
-      text: "一場結局注定的遊戲。慘無人道，學習曲線陡峭的模式。～～$RED0經常的失敗！～～$GRE0如果生存模式對你來說太困難，試試傳統模式吧。"
+      text: "一場結局注定的遊戲。慘無人道，學習曲線陡峭的模式。~~$RED0經常的失敗！~~$GRE0如果生存模式對你來說太困難，試試傳統模式吧。"
     traditional:
-      text: "較少的怪物，更像一款村莊模擬遊戲。～～此模式建議想要輕鬆遊戲，又想要有一些怪物與簡單防禦機制的玩家。～～$GRE0學習如何遊玩的理想遊戲模式。一旦你學會了，建議遊玩生存模式！"
+      text: "較少的怪物，更像一款村莊模擬遊戲。~~此模式建議想要輕鬆遊戲，又想要有一些怪物與簡單防禦機制的玩家。~~$GRE0學習如何遊玩的理想遊戲模式。一旦你學會了，建議遊玩生存模式！"
     peaceful:
-      text: "永遠不會有怪物的模式。只需要小心照顧村民與渡過每個季節。～～$GRE0不建議遊玩此模式，除非你只想輕鬆悠閒的遊戲體驗，而不想要其它的挑戰。"
+      text: "永遠不會有怪物的模式。只需要小心照顧村民與渡過每個季節。~~$GRE0不建議遊玩此模式，除非你只想輕鬆悠閒的遊戲體驗，而不想要其它的挑戰。"
     custom:
-      text: "在開始遊玩前可以調整所有設定。一旦開始遊玩，除非重置此遊戲模式，否則不能更改。～～$GRE0對於想要體驗遊戲基礎難度且有經驗的玩家，建議遊玩此模式。"
+      text: "在開始遊玩前可以調整所有設定。一旦開始遊玩，除非重置此遊戲模式，否則不能更改。~~$GRE0對於想要體驗遊戲基礎難度且有經驗的玩家，建議遊玩此模式。"
     sandbox:
-      text: "沒有規則！可遊玩遊戲機制，更改一天的時間，生成資源與怪物，產生粒子。作任何想做的事與開心遊玩！～～如果你喜歡研究遊戲機制，建議遊玩此模式。～～不適合認真玩遊戲的玩家。"
+      text: "沒有規則！可遊玩遊戲機制，更改一天的時間，生成資源與怪物，產生粒子。作任何想做的事與開心遊玩！~~如果你喜歡研究遊戲機制，建議遊玩此模式。~~不適合認真玩遊戲的玩家。"
     selectGameMode:
-      text: "在左邊選擇六種遊戲模式之一。每種模式都是獨立的，你可以隨時更改你想玩的模式。如果你犯了太多錯誤，或想要重新開始任何模式，你可以透過點擊毀滅世界來重置遊戲模式。～～$GRE0如果你是一個新手，強烈建議先遊戲傳統模式。"
+      text: "在左邊選擇六種遊戲模式之一。每種模式都是獨立的，你可以隨時更改你想玩的模式。如果你犯了太多錯誤，或想要重新開始任何模式，你可以透過點擊毀滅世界來重置遊戲模式。~~$GRE0如果你是一個新手，強烈建議先遊戲傳統模式。"
   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
@@ -6511,7 +6518,7 @@ worldMapGoalsPanel:
       text: "重置"
     
   warning: 
-    text: "$GRE1你確定嗎？這將會移除～目標，並必須重新解鎖。"
+    text: "$GRE1你確定嗎？這將會移除~目標，並必須重新解鎖。"
    
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
@@ -6553,7 +6560,7 @@ worldMapMapSelectPanel:
     header:
       text: "$YEL1新區域"
     noMigrants:
-      text: "$YEL1需要更多的移民～才能建立村莊！"
+      text: "$YEL1需要更多的移民~才能建立村莊！"
     migrantsEnRoute:
       text: "遷移中：$GRE1{amount}"
     migrantsRequired:
@@ -6563,7 +6570,7 @@ worldMapMapSelectPanel:
     header:
       text: "$RED1區域淪陷"
     lostRegion:
-      text: "$WHI0此區域淪陷～被腐化了！"
+      text: "$WHI0此區域淪陷~被腐化了！"
     
   existingRegion:
     header:
@@ -6665,11 +6672,11 @@ helpTip:
     welcomeCampHeader:
       text: "營地"
     welcomeCamp:
-      text: "歡迎來到你的第一個區域！首先你應該找地方設置你的 $YEL1Camp $WHI0！一個良好的發展地點應該有石頭、樹木、水晶、食物與水在附近。要設置你的營地，先按下 $GRE1'OK!' $WHI0關閉此提示與自動暫停，$GRE1然後選擇右邊正在閃爍的 '設置營地' 按鈕。～～$WHI0祝好運！"
+      text: "歡迎來到你的第一個區域！首先你應該找地方設置你的 $YEL1營地 $WHI0！一個良好的發展地點應該有石頭、樹木、水晶、食物與水在附近。要設置你的營地，先按下 $GRE1'好的！' $WHI0關閉此提示與自動暫停，$GRE1然後選擇右邊正在閃爍的 '設置營地' 按鈕。~~$WHI0祝好運！"
     welcomeTipsHeader:
       text: "提示！"
     welcomeTips:
-      text: "是時候開始了！由於這是你第一次遊玩，你會在遊戲中獲得大量的提示。$RED1這個遊戲有一個陡峭的學習曲線$WHI0，你會需要這些提示的幫助！$GRE1這遊戲提示時會暫停$WHI0，所以請花點時間了解！～～你可以在設置選單關閉提示，但如果你從未玩過將不建議你關閉它！"
+      text: "是時候開始了！由於這是你第一次遊玩，你會在遊戲中獲得大量的提示。$RED1這個遊戲有一個陡峭的學習曲線$WHI0，你會需要這些提示的幫助！$GRE1這遊戲提示時會暫停$WHI0，所以請花點時間了解！~~你可以在設置選單關閉提示，但如果你從未玩過將不建議你關閉它！"
     harvestingResourcesHeader:
       text: "收獲資源"
     harvestingResources:
@@ -7231,7 +7238,7 @@ mobName:
       
   article:
     comment: "This is used in a few rare cases where the game is referencing the mob as a common noun and not a proper noun. Like 'a Skeleton' instead of 'Bob Vance'. For example, 'Bob Vance is attacking a Skeleton' or 'a Skeleton is attacking Bob Vance'"
-    text: "一個 {mobName}"
+    text: "{mobName}"
       
   villageElder:
     single:
@@ -7295,14 +7302,14 @@ mobName:
       text: "血史萊姆"
   headless:
     single:
-      text: "無頭僵屍"
+      text: "無頭殭屍"
     plural:
-      text: "無頭僵屍"
+      text: "無頭殭屍"
   drone:
     single:
-      text: "寄生僵屍"
+      text: "寄生殭屍"
     plural:
-      text: "寄生僵屍"
+      text: "寄生殭屍"
   zombie:
     single:
       text: "殭屍"
@@ -7500,9 +7507,9 @@ mobName:
       text: "運輸魔像"
   laborGolem:
     single:
-      text: "工作魔像"
+      text: "工人魔像"
     plural:
-      text: "工作魔像"
+      text: "工人魔像"
   poisonWoodGolem:
     single:
       text: "毒木頭魔像"
@@ -8497,7 +8504,7 @@ objectOverlay:
   javaClass: "rtr.objects.ObjectBase.java" 
   
   requiredBuilding:
-    text: "$RED1需要～{buildingName}"
+    text: "$RED1需要~{buildingName}"
   requiredBuildingAdditional:
     comment: "This is used to join a list of required buildings, if more than one will meet the objects requirements."
     text: "$WHI0 或 $RED1{buildingName}"
@@ -10312,7 +10319,7 @@ stateBase:
     1:
       text: "流浪者們陷入麻煩？召回他們！"
     2:
-      text: "If you have a well functioning village with plenty of housing, food and jobs, you may attract some nomads to join your village!"
+      text: "如果你有一個功能完善的村莊以及擁有充足的房屋、食物與工作，將會吸引一些流浪者加入你的村莊！"
     3:
       text: "你可以在市場購買與販賣資源。建造一個吧！"
     4:
@@ -10326,95 +10333,96 @@ stateBase:
     8:
       text: "好狗狗們有時可以幫助村莊。"
     9:
-      text: "Specters can walk through almost anything and are highly resistant to physical damage."
+      text: "邪靈可以穿過幾乎任何障礙物並且對物理傷害有很高的抗性。"
     10:
-      text: "Corruption spreads slowly on the map, the more corruption and corrupted buildings on the map, the more monsters will spawn at night."
+      text: "腐化會在地圖上緩慢的擴散，隨著腐化區域與建築變多，夜晚生成的怪物也會變多。"
     11:
-      text: "Villagers can die of old age! But they'll live a little longer if you take care of them."
+      text: "村民年老時會死亡！但如果你小心地照顧他們，他們會活著比較長久。"
     12:
       text: "別忘了為村民們建造水源。"
     13:
-      text: "Press Shift+F2 to take a screen shot of the entire map, it will be placed in your screenShots folder in Rise to Ruins install directory."
+      text: "按下 Shift+F2 可以為整張地圖截圖，它將會儲放在 Rise to Ruins 安裝目錄下的 screenShots 資料夾。"
     14:
-      text: "You can hold left shift while using tools, like the brush, road placement, road, building and many others to lock the mouse axis and draw straight lines."
+      text: "使用工具時，像是筆刷、道路、建築或是許多其它工具，可以按著左 shift 鍵鎖定坐標來拉出一條直線。"
     15:
-      text: "Nomads will sometimes visit your region and try to become citizens of your village. You can increase the chance they'll appear by building a large village with plenty of housing and defenses."
+      text: "流浪者會不時的訪問你的區域，並試著加入你的村莊。你可以建造充足的房屋與防禦設施來增加他們出現的機率。"
     16:
-      text: "Essence can be sucked into your hand, increasing your influence bar."
+      text: "你的手可以吸收精華，並增加你的神力條。"
     17:
-      text: "You can adjust the amount of desired workers for a job by using the workforce tab on the left side of the GUI and pressing the plus and minus buttons for that job."
+      text: "你可以透過介面左側的勞動力面板，並點擊加或減按鈕來調整工人數量。"
     18:
-      text: "Villagers need food! Don't forget to build some farms."
+      text: "村民需要食物！別忘了建築一些農場。"
     19:
-      text: "Can't figure out how to play? Read the in-game tips!"
+      text: "不知道怎麼遊玩？請閱讀遊戲提示！"
     20:
-      text: "Skeletons can't catch on fire."
+      text: "骷髏不會著火。"
     21:
-      text: "Slimes like to split into more slimes, they can become a hassle real quick!"
+      text: "史萊姆會分裂成更多史萊姆，它們會很快的變成麻煩！"
     22:
-      text: "Having trouble surviving past day 3 or 4? Build some Bow Towers."
+      text: "生存到第三或第四天時遇到大麻煩？建造一些弓箭塔吧。"
     23:
-      text: "Trouble breeding? Give your villagers some free time, and plenty of housing."
+      text: "繁殖危機？讓你的村民有一些休息時間，並有充足的房屋。"
     24:
-      text: "You can pause the game by clicking on the clock or pressing the pause hotkey (Default: Spacebar)"
+      text: "你可以透過點擊時鐘或是按下熱鍵(預設：空白鍵)來暫停遊戲。"
     25:
-      text: "Try to create choke points in your village designs so monsters have trouble getting in."
+      text: "試著設計建造一個圍堵點，讓怪物無法輕易進入村莊。"
     26:
-      text: "Don't completely wall yourself in! You'll regret it."
+      text: "別用圍牆完全封住自己！你會後悔的！"
     27:
-      text: "There's always friendly fire, try not to accidentally hurt anyone."
+      text: "遊戲內會傷害到友方，盡量試著不要傷害到任何人。"
     28:
-      text: "Magic towers need essence, build Essence Collectors!"
+      text: "魔法防禦塔需要精華，建造精華收集器！"
     29:
-      text: "A Lumber Mill is needed to refine logs into boards, used for many advanced buildings."
+      text: "鋸木廠可以製作木板，可用於多種高級建築。"
     30:
-      text: "A Stone Cuttery is needed to refine rocks into stones, used for many advanced buildings."
+      text: "石材加工廠可以製作石板，可用於多種高級建築。"
     31:
-      text: "A Crystillery is needed to refine crystals into crylithum, a very important fuel source."
+      text: "水晶加工廠可以製作水晶錠，是一種很重要的燃料。"
     32:
-      text: "You can disable in-game tips in the settings menu."
+      text: "你可以在設置選單內關閉遊戲提示Y。"
     33:
-      text: "You can change hotkeys and various other settings in the settings menu."
+      text: "你可以在設置選單，更改熱鍵與各種其它設定。"
     34:
-      text: "You can take a screenshot by pressing F2, it'll be saved in the screenshots folder."
+      text: "你可以按下 F2 取得截圖，它會儲存在 screenshots 資料夾。"
     35:
       text: "你可以按下 F4 隱藏介面。"
     36:
-      text: "Game crash? There's crash logs in the logs folder. Send it to the developer!"
+      text: "遊戲崩潰？崩潰日誌記錄在 logs 目錄。將它寄給開發者！"
     37:
-      text: "Many buildings require refined materials, check the requires of a building before you place it!"
+      text: "多數建築需要精煉原料，在你建築造前請先確認需求！"
     38:
-      text: "遊戲提示你是的好友友，請仔細閱讀！"
+      text: "遊戲提示你是的好朋友，請仔細閱讀！"
     39:
-      text: "Villagers being swarmed by monsters? Cast recall or banish!"
+      text: "村民們被怪物包圍？施放召回或是驅逐法術！"
     40:
-      text: "Builders will only harvest materials if they need to build something. If you want to create a stockpile, build a harvesting building!"
+      text: "建築工只會收獲建造所需的原料。如果你想要儲存資源，請建造收獲用建築！"
     41:
-      text: "Farmers only need to be told what wild resources to gather, once they have a farm running they'll take care of it on their own."
+      text: "農夫只需要告訴他們那有野生資源可以收獲，在有農場的時候他們會自行的照顧並運作的很好。"
     42:
       text: "42"
+      optional: "true"
     43:
-      text: "Villagers may burst into flames randomly in the summer if they get too hot for too long."
+      text: "村民如果長時間待在極熱的環境中，可能會隨機的自燃起來。"
     44:
-      text: "Villagers sometimes freeze rock solid if they're extremely cold for a long period of time."
+      text: "村民如果長時間待在極寒的環境中，有時會凍的像石頭一樣硬。"
     45:
-      text: "Make sure you stockpile food for the winter!"
+      text: "確保冬季的食物存量！"
     46:
       text: "資源增生術在寒冷的季節效果較差。"
     47:
       text: "村民們不開心？別讓他們太累！"
     48:
-      text: "The best time to use Motivate Land is when the weather is warm, and it's raining."
+      text: "當天氣變暖和並且正在下雨，是使用資源增生術的最佳時機。"
     49:
       text: "大多數的防禦塔都能射過圍牆。善用這項優勢！"
     50:
-      text: "Running out of food in the winter? Stock up! In an emergency you can use the grab spell to pickup unharvested food outside your village."
+      text: "在冬季耗盡食物？儲存起來！緊急時你可以使用抓取法術，拾起村莊外未收獲的食物。"
     51:
       text: "你知道抓取法術可以拾起地圖上未收獲的的原料嗎？當你在緊要關頭需要資源時很方便。"
     52:
-      text: "村民們需要房屋在夏天時可以消暑，冬天時可以保暖。"
+      text: "村民們需要房屋在夏季時可以消暑，在冬季時可以保暖。"
     53:
-      text: "Starving in the winter? Use the grab spell to grab food that's otherwise inaccessible."
+      text: "在冬季挨餓？使用抓取法術收獲原本無法取得的食物。"
     54:
       text: "工人魔像可以在遊戲早期有效幫忙取得更多資源。"
     55:
@@ -10422,21 +10430,21 @@ stateBase:
     56:
       text: "極熱或極寒不只會使食物與樹木停止成長，水晶也是！"
     57:
-      text: "Most towers can shoot over low walls, try building a monster maze!"
+      text: "大多數的防禦塔都可以射過圍牆，試著建造一個怪物迷官吧！"
     58:
-      text: "Villagers warm up when they work, this is great in the Winter but terrible in the Summer."
+      text: "村民在工作時體溫會升高，這在冬季很好，但在夏季很可怕。"
     59:
-      text: "Want to move faster? Build a Way-Maker Shack and get some roads going!"
+      text: "想移動的更快？建造一個鋪路小屋與一些道路吧！"
     60:
-      text: "Over time, natural paths will pop up in areas your villagers walk around in often."
+      text: "隨著時間經過，天然的道路會出現在村民經常走過的區域。"
     61:
-      text: "Roads decay slowly over time, make sure you have a few way-makers around to repair them!"
+      text: "道路隨著時間會慢慢損壞，請確保你有一些鋪路工可以維護它們！"
     62:
       text: "雨水會讓道路加速損壞。"
     63:
-      text: "Basic paths don't last very long, consider putting up a proper road system!"
+      text: "基礎道路不會維持很久，請考慮升級道路系統！"
     64:
-      text: "無法建造更多建築？升級你的營地或在早點建造補助建築。"
+      text: "無法建造更多建築？升級你的營地或早點建造補助建築。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Game Mode
