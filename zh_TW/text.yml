@@ -136,6 +136,8 @@ godXP:
     text: "重新分配資源"
   refiningResources:
     text: "精煉資源"
+  processingResources:
+    text: "加工資源"
   sellingResources:
     text: "出售資源"
   storingResources:
@@ -1663,10 +1665,23 @@ console:
         text: "{buildingName} $WHI0建造好了。"
       dismantled:
         text: "{buildingName} $YEL1被拆除。"
-    autosave:
-      text: "$GRE1自動存檔 $WHI0-$GRE2 {time}"
     save:
-      text: "$GRE1存檔完成，花了 $WHI0-$GRE2 {time}"
+      region:
+        auto:
+          dataGather:
+            text: "$GRE1自動存檔：取得區域數據，耗時 $YEL2{time}"
+          dataWritten:
+            text: "$GRE1自動存檔：寫入區域數據，耗時 $YEL2{time} $GRE1，存檔編號 $YEL2{saveNumber}"
+        full:
+          text: "$GRE1完整存檔：取得與寫入區域數據，耗時 $GRE2{time}"
+      world:
+        auto:
+          dataGather:
+            text: "$GRE1自動存檔：取得世界數據，耗時 $YEL2{time}"
+          dataWritten:
+            text: "$GRE1自動存檔：寫入世界數據，耗時 $YEL2{time} $GRE1，存檔編號 $YEL2{saveNumber}"
+        full:
+          text: "$GRE1完整存檔：取得與寫入世界數據，耗時 $GRE2{time}"
     fullMapScreenshot:
       text: "整張地圖截圖儲存於 $GRE1{filePath}"
     screenshot:
@@ -1706,13 +1721,13 @@ console:
           text: "$GRE0黃昏來臨…"
         subtitle:
           peaceful:
-            comment: "No monsters will spawn, but you're in a game mode where they usually can."
+            comment: "沒有怪物生成，但在遊戲中它們通常會。"
             text: "一切看似平靜？"
           restless:
-            comment: "Monsters are starting to spawn."
+            comment: "怪物開始生成。"
             text: "怪物們似乎焦躁不安。"
           alwaysPeaceful:
-            comment: "Peaceful mode's subtitle, where no monsters ever spawn."
+            comment: "和平模式標題，沒有怪物生成。"
             text: "體悟心靈祥和。"
 
       nightArrived:
@@ -2014,7 +2029,16 @@ goal:
         text: "在 $GRE1任何區域 $WHI0製作 $GRE1{amount} {resourceName} $WHI0！"
       specific:
         text: "在 $GRE1{mapName} $WHI0製作 $GRE1{amount} {resourceName} $WHI0！"
-        
+
+  trash:
+    header:
+      text: "加工 {resourceName}"
+    body:
+      any:
+        text: "在 $GRE1任何區域 $WHI0加工 $GRE1{amount} {resourceName} $WHI0!"
+      specific:
+        text: "在 $GRE1{mapName} $WHI0加工 $GRE1{amount} {resourceName} $WHI0!"
+         
   survive:
     header:
       text: "生存"
@@ -2428,10 +2452,10 @@ mainMenuMainMenuPanel:
     back:
       text: "返回"
     scrubMapImages:
-      text: "清除地圖圖像"
+      text: "清除地圖影像"
       optional: "true"
-    generateMapSheet:
-      text: "產生地圖檔"
+    generateMobSheet:
+      text: "產生村民數據檔"
       optional: "true"
     runLineCounter:
       text: "運行線路計數器"
@@ -2595,15 +2619,6 @@ mapEditorNewMapPanel:
       text: "沙地(黑色)"
     sandRed:
       text: "沙地(紅色)"
-    mapSize:
-      large:
-        text: "大型"
-      medium:
-        text: "中型"
-      small:
-        text: "小型"
-      empty:
-        text: "空的"
         
   textInput:
     name:
@@ -2620,8 +2635,6 @@ mapEditorNewMapPanel:
       text: "$ORA1作者名稱"
     baseTerrain:
       text: "$ORA1地型"
-    size:
-      text: "$ORA1尺寸"
       
   mapExistsWarning:
     text: "$RED1已存在的地圖包 {mapPackName}"
@@ -2711,7 +2724,7 @@ mainMenuSelectProfilePanel:
   outdatedProfilePrefix:
     text: "(過期的) {profileName}"
   outdatedWarning:
-    text: "$PIN1此存檔已不再相同~請重新創建一個新的"
+    text: "$PIN1此存檔已不相同~請創建一個新存檔"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Main Menu State
@@ -2887,7 +2900,7 @@ mapEditorRegionalDataPanel:
   
   button:
     save:
-      text: "儲存"
+      text: "存檔"
       optional: "true"
       
   header:
@@ -2916,6 +2929,18 @@ mapEditorPlayRightPanel:
   javaClass2: "rtr.gui.states.playstate.RightPanel.java"
   
   button:
+    tooltip:
+      buildHeader:
+        text: "建造"
+      roadsAndDiggingHeader:
+        text: "道路與挖掘"
+      roadsAndDigging:
+        text: "需要鋪路小屋"
+      tilesHeader:
+        text: "方塊"
+      sandboxToolsHeader:
+        text: "沙盒工具"
+        
     navigation:
       back:
         text: "返回上頁"
@@ -2963,6 +2988,8 @@ mapEditorPlayRightPanel:
         text: "精煉"
       storage:
         text: "倉庫"
+      trash:
+        text: "垃圾"
       walls:
         text: "圍牆"
       special:
@@ -2989,10 +3016,10 @@ mapEditorPlayRightPanel:
         text: "維護建築"
       marketplace:
         text: "市場"
-      wayMakerShack:
-        text: "鋪路小屋"
       migrationWayStation:
         text: "遷移站"
+      wayMakerShack:
+        text: "鋪路小屋"
       
     defense:
       guardsAndGolems:
@@ -3130,28 +3157,55 @@ mapEditorPlayRightPanel:
       woodStorage:
         text: "木頭倉庫"
       
+    trash:
+      burner:
+        text: "焚化爐"
+      cubeEGolemCombobulator:
+        text: "垃圾魔像能量池"
+      landfill:
+        text: "垃圾場"
+      processor:
+        text: "處理站"
+      trashCan:
+        text: "垃圾筒"
+      trashyCubePile:
+        text: "垃圾堆"
+        
     walls:
-      woodFence:
-        text: "木牆"
-      woodFenceGateNS:
-        text: "木門(北/南)"
-      woodFenceGateWE:
-        text: "木門(西/東)"
+      curtainWall:
+        text: "城牆"
       stoneWallGateNS:
         text: "石門(北/南)"
       stoneWallGateWE:
         text: "石門(西/東)"
       stoneWall:
         text: "石牆"
-      curtainWall:
-        text: "城牆"
+      trashyCubeWall:
+        text: "垃圾方塊牆"
+      woodFence:
+        text: "木牆"
+      woodFenceGateNS:
+        text: "木門(北/南)"
+      woodFenceGateWE:
+        text: "木門(西/東)"
       
     special:
       camp:
         text: "營地"
       lootBox:
         text: "寶箱"
-      
+        
+    roadsAndDigging:
+      tooltip:
+        digHoleHeader:
+          text: "挖洞"
+        digHole:
+          text: "在地上挖洞，下雨時會填滿水。"
+        dismantleRoadsHeader:
+          text: "移除道路"
+        dismantleRoads:
+          text: "完整移除道路或小徑。"
+          
     tiles:
       bricks:
         text: "磚"
@@ -3273,6 +3327,10 @@ mapEditorPlayRightPanel:
         text: "石塊木板道路殘骸"
       cutStoneAndBoardRoad:
         text: "石塊木板道路"
+      digHole:
+        text: "挖洞"
+      dismantleRoads:
+        text: "移除道路"
       
     rock:
       blackRock:
@@ -3359,8 +3417,8 @@ mapEditorPlayRightPanel:
     particles:
       comment: Sandbox Mode Only
       
-      emitParticles:
-        text: "釋放粒子"
+      emitSingleParticles:
+        text: "釋放一個粒子"
       emitGroupParticles:
         text: "釋放一群粒子"
       
@@ -3387,7 +3445,7 @@ mapEditorPlayRightPanel:
       currentDay:
         text: "目前天數"
       timeOfDay:
-        text: "時段 "
+        text: "時段"
       season:
         text: "季節"
       advanceTime:
@@ -3665,6 +3723,70 @@ playBuildingListPanel:
   buildingPaused:
     text: "$YEL1(暫停)"
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Play State
+# Resource List Panel
+# rtr.gui.states.playstate.ResourceListPanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+playResourceListPanel:
+  comment: "Play State - Resource List Panel Bar"
+  javaClass: "rtr.gui.states.playstate.ResourceListPanel.java"
+  
+  button:
+    tooltip:
+      sortingHeader:
+        text: "排序"
+      sorting:
+        text: "切換總數顯示方式。"
+        
+  tooltip:
+    resourceCountAndStorageHeader:
+      text: "資源數量/儲存量"
+    resourceCountAndStorage:
+      text: "基於排序方式，顯示村莊中 {resourceNamePlural} 的數量，及還有多少剩餘空間可儲存 {resourceName}。"
+    totalGoldCoinsHeader:
+      text: "全部金幣"
+    totalGoldCoins:
+      text: "整個村莊擁有的金幣總數。"
+    totalWaterHeader:
+      text: "全部清水"
+    totalWater:
+      text: "儲存在所有建築中可飲用的清水總數，像是雨水收集器、房屋與水井。不包括髒水。"
+    totalDirtyWaterHeader:
+      text: "全部髒水"
+    totalDirtyWater:
+      text: "儲存在所有建築中不可飲用的髒水總數，像是農場與淨水器。不包括可飲用的清水。"
+    totalResourcesHeader:
+      text: "全部資源"
+    totalResources:
+      text: "整個村莊擁有的資源總數，基於左側面板的排序方式顯示。"
+    showResourceOnBarHeader:
+      text: "顯示 {resourceName}"
+    showResourceOnBar:
+      text: "顯示 {resourceName} 並將它的資源數顯示在上方面板。"
+    fullResourceOnBarHeader:
+      text: "面板塞滿了！"
+    hideResourceOnBarHeader:
+      text: "隱藏 {resourceName}"
+    hideResourceOnBar:
+      text: "隱藏 {resourceName} 並將資源數量顯示在上面的面板。"
+      
+  sort:
+    total:
+     text: "全部"
+    equip:
+      text: "裝備"
+    carry:
+      text: "持有"
+    ground:
+      text: "地上"
+    stored:
+      text: "庫存"
+      
+  header:
+    text: "資源清單"
+      
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
 # Castle Panel
@@ -4126,16 +4248,24 @@ playOverlay:
   roads:
     canNotImprove:
       text: "不能升級"
+    sameOrBetter:
+      text: "一樣或更好"
+    noRoadSelected:
+      text: "未選取道路"
     roadCostFree:
-      text: "{nextRoadName}~$GRE1花費：免費"
+      text: "$YEL1花費：$GRE1免費"
+      revision: "1"
     roadCost:
-      text: "{nextRoadName}~$YEL1花費：1 {resourceName}"
+      text: "$YEL1花費：$GRE1{amount} $YEL1{resourceName}"
+      revision: "1"
   
   general:
     cancelAction:
       text: "按下 $GRE1{shortcutKey} $WHI0或 $GRE1滑鼠中鍵 $WHI0可取消目前動作與返回選取模式。"
     unassignWork:
       text: "按住 $GRE1{shortcutKey} $YEL1取消分配。"
+    selectAllConnected:
+      text: "按住 $GRE1{shortcutKey} $YEL1選取全部已連結的。"
     deleteObjects:
       text: "按住 $GRE1{shortcutKey} $YEL1刪除物件。"
     castFree:
@@ -4474,6 +4604,10 @@ playResourceAndInfluenceBar:
         text: "更改顯示總數的方式。"
         
   tooltip:
+    resourceCountAndStorageHeader:
+      text: "資源數量/儲存量"
+    resourceCountAndStorage:
+      text: "基於排序方式，顯示村莊中的 {resourceNamePlural} 數量，及還有多少剩餘空間可儲存 {resourceName}。"
     totalGoldCoinsHeader:
       text: "全部金幣"
     totalGoldCoins:
@@ -4490,6 +4624,10 @@ playResourceAndInfluenceBar:
       text: "神力"
     totalInfluence:
       text: "全部可用來施法的神力。神力隨著時間會緩慢恢復，或是透過手動收集遺失在世界中的精華。增加村莊的人口數可以提高神力上限。"
+    corruptionThreatHeader:
+      text: "腐化威脅"
+    corruptionThreat:
+      text: "隨著腐化擴散威脅程度會增加。地圖上被腐化覆蓋的空間越多，就越不能控制，而此威脅就會越高。結果就是，除了怪物每日生成速度加快之外，還會有更多的怪物生成。"
   
   sort:
     total:
@@ -4530,6 +4668,10 @@ playSelectedMobPanel:
       text: "幸福度"
     happiness:
       text: "幸福度過低會影響工作效率與預期壽命。依照生物類型的不同可以透過滿足基本需求來提高，像是食物、飲水、居住空間社交與其它相關的統計訊息。"
+    trashHeader:
+      text: "垃圾量"
+    trash:
+      text: "儲存在生物體內的垃圾量。像是垃圾魔像會在此進度條滿的時候產生垃圾方塊。"
     bodyTemperatureHeader:
       text: "體溫"
     bodyTemperature:
@@ -4667,10 +4809,6 @@ playSelectedObjectPanel:
       text: "土地宜居程度"
     landDesirability:
       text: "此建築的建造範圍內所增加的宜居程度。當村民們沒有工作會自然的前往高宜居度的地方。"
-    corruptionResistanceHeader:
-      text: "腐化抗性"
-    corruptionResistance:
-      text: "此建築周圍的腐化抗性。腐化抗性會讓建築周圍的腐化倒退或停止。"
     providedDailyMigrationsHeader:
       text: "提供每日遷移數"
     providedDailyMigrations:
@@ -4788,7 +4926,8 @@ playSelectedObjectPanel:
       dismantleBuildingHeader:
         text: "拆除建築"
       dismantleBuilding:
-        text: "拆除此建築並返還一些資源。"
+        text: "拆除此建築並返還一些資源，但也會產生一些垃圾。"
+        revision: "1"
       buildingPriorityHeader:
         text: "建築優先度"
       buildingPriority:
@@ -4827,6 +4966,8 @@ playSelectedObjectPanel:
     text: "$CYA1全域加成"
   globalSpeed:
     text: "$GRE0{amount}% $WHI0全域速度"
+  processingTrashSpeed:
+    text: "$GRE0{amount}% $WHI0處理垃圾速度"
   buildingSpeed:
     text: "$GRE0{amount}% $WHI0建造速度"
   buildRoadSpeed:
@@ -4898,9 +5039,11 @@ playSelectedObjectUpgradePanel:
   energy:
     text: "$YEL1+{amount} 能量"
   globalSpeed:
-    text: "$GRE0+{amount}% $WHI0全域"
+    text: "$GRE0+{amount}% $WHI0全域速度"
   buildingSpeed:
     text: "$GRE0+{amount}% $WHI0建造速度"
+  processingTrashSpeed:
+    text: "$GRE0+{amount}% $WHI0處理垃圾速度"
   buildRoadSpeed:
     text: "$GRE0+{amount}% $WHI0道路建造速度"
   dismantlingSpeed:
@@ -4948,24 +5091,18 @@ playSelectedObjectUpgradePanel:
     text: "裝彈時間：$GRE1+{amount}"
   firingRange:
     text: "射程：$GRE1+{amount}"
-  canSpawnCreatures:
-    text: "可生成生物"
-  spawnsMob:
+  canSpawnGolems:
+    text: "可生成魔像數"
+  spawnsGolems:
     text: "生成 $GRE1{mobName}"
-  maximumSpawns:
-    text: "最大生成數：$GRE1+{amount}"
-  spawnNeedsResourcesAndEnergy:
+  maximumGolems:
+    text: "最大魔像數：$GRE1+{amount}"
+  combobulatorNeedsResourcesAndEnergy:
     text: "需要 $GRE1{resourceName} $WHI0 與 $GRE1+{amount} 能量 $WHI0才能生成"
-  spawnNeedsEnergy:
-    text: "需要 $GRE1+{amount} 能量 $WHI0才能生成"
-  spawnNeedsResources:
-    text: "需要 $GRE1{resourceName}$WHI0才能生成"
   rangeGenerated:
     text: "範圍增加：$GRE1+{amount}"
   desirability:
     text: "宜居成度：$GRE1+{amount}"
-  corruptionResistance:
-    text: "腐化抗性：$GRE1+{amount}"
   guardHousingCapacity:
     text: "守衛居住空間： $GRE1+{amount}"
   housingCapacity:
@@ -5375,6 +5512,10 @@ playSystemAndDataBar:
         text: "建築清單({shortcutKey})"
       buildingList:
         text: "檢視此村莊的所有建築物清單，與程定的建造順序。"
+      resourceListHeader:
+        text: "資源清單"
+      resourceList:
+        text: "檢視村莊所有資源的清單，並自訂上方的資源條。"
       populationListHeader:
         text: "人口清單({shortcutKey})"
       populationList:
@@ -5408,18 +5549,6 @@ playToolsBar:
         text: "拆除建築({shortcutKey})"
       dismantleBuildings:
         text: "拆除一個建築並返還一些建造資源。$RED1此動作不能取消！"
-      digHeader:
-        text: "挖洞({shortcutKey})"
-      dig:
-        text: "在地上挖洞，在下雨時會填滿水。"
-      createOrUpgradeRoadsHeader:
-        text: "建造或升級道路"
-      createOrUpgradeRoads:
-        text: "選擇開放的地板以建造道路，或升級已存在的道路與小徑。所有在道路與小徑上移動的生物會增加移動速度。"
-      dismantleRoadsHeader:
-        text: "拆除道路"
-      dismantleRoads:
-        text: "完整的移除道路與小徑。"
       destroyTerrainHeader:
         text: "摧毀地形"
       destroyTerrain:
@@ -5449,6 +5578,8 @@ playVillageEfficiencyPanel:
     text: "全域速度"
   weather:
     text: "天氣"
+  processTrash:
+    text: "處理垃圾"
   building:
     text: "建造"
   repairing:
@@ -5625,7 +5756,7 @@ sharedDebugData:
   javaClass: "rtr.gui.states.shared.DebugData.java"
   
   fps:
-    text: "$GRE1FPS：{fps}"
+    text: "$GRE1FPS: {fps}"
     optional: true
   totalRuntime:
     text: "$GRE1全部執行時間：{hours}:{minutes}:{seconds}"
@@ -5767,24 +5898,18 @@ playRightObjectDescriptionPanel:
     text: "裝彈時間：$GRE1{amount}"
   firingRange:
     text: "射程：$GRE1{amount}"
-  canSpawnCreatures:
-    text: "可生成生物"
-  spawnsMob:
+  canSpawnGolems:
+    text: "可生成魔像數"
+  spawnsGolems:
     text: "生成 $GRE1{mobName}"
-  maximumSpawns:
-    text: "最大生成數：$GRE1{amount}"
-  spawnNeedsResourcesAndEnergy:
+  maximumGolems:
+    text: "最大魔像數：$GRE1{amount}"
+  combobulatorNeedsResourcesAndEnergy:
     text: "需要 $GRE1{resourceName} $WHI0與 $GRE1{amount} 能量 $WHI0生成"
-  spawnNeedsEnergy:
-    text: "需要 $GRE1{amount} 能量 $WHI0生成"
-  spawnNeedsResources:
-    text: "需要 $GRE1{resourceName} $WHI0生成"
   rangeGenerated:
     text: "建築範圍：$GRE1{amount}"
   desirability:
     text: "宜居：$GRE1{amount}"
-  corruptionResistance:
-    text: "腐化抗性：$GRE1{amount}"
   providedMigrationsPerDay:
     text: "每天可提供移民：$GRE1{amount}"
   guardHousingCapacity:
@@ -5882,8 +6007,8 @@ sharedSettingsPanel:
       text: "強調/Alt 功能"
     erase:
       text: "刪除(地圖編輯器)"
-    objectGrab:
-      text: "物件捕捉(地圖編輯器)"
+    unassign:
+      text: "未分配"
     patch:
       text: "更新(地圖編輯器)"
     hole:
@@ -5961,12 +6086,6 @@ sharedSettingsPanel:
       text: "只限全螢幕無邊框"
     vSync:
       text: "垂直同步"
-    particles:
-      text: "粒子"
-    particlesRetro:
-      text: "復古"
-    particlesSmooth:
-      text: "平滑"
 
   performance:
     comment: "Performance column."
@@ -6077,37 +6196,6 @@ worldMapChestOpenPanel:
       
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
-# Corruption Threat Bar
-# rtr.gui.states.worldmap.CorruptionThreatBar.java
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-worldMapCorruptionThreatBar:
-  comment: "World Map State - Corruption Threat Bar"
-  javaClass: "rtr.gui.states.worldmap.CorruptionThreatBar.java"
-  
-  tooltip:
-    worldDayHeader:
-      text: "世界天數"
-    worldDay:
-      text: "加總了所有過去有活動的區域。這個統計數據被用來計算整個世界的腐化威脅程度。"
-    corruptionPowerHeader:
-      text: "腐化能量"
-    corruptionPower:
-      text: "這是下方能量條計算後的數值。正數表示威脅程度高於基準值，而負數是低於基準值。你可以透過完成目標來降低腐化能量，或遷移至其它區域。"
-    worldCorruptionThreatHeader:
-      text: "世界腐化威脅"
-    worldCorruptionThreat:
-      text: "這能量條愈長，你的村民將會面臨更多危險。在晚上會生成更多怪物、更強的怪物會出現的更早以及腐化擴散的速度更快。"  
-
-  worldDay:
-    text: "世界天數：$GRE1{day}"
-  globalCorruptionPowerGood:
-    text: "全域腐化能量：$GRE1{amount}" 
-  globalCorruptionPowerBad:
-    text: "全域腐化能量：+$YEL1{amount}"
-    
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# World Map State
 # Doom World Panel
 # rtr.gui.states.worldmap.DoomWorldPanel.java
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -6159,7 +6247,8 @@ worldMapGameModeConfigPanel:
       baseSpawnRateHeader:
         text: "基礎生成率"
       baseSpawnRate:
-        text: "整體的基礎生成率。愈低表示有愈多怪物！$YEL1(1 : 1 - 20,000，或沒有。)"
+        text: "整體的基礎生成率。越高表示有愈多怪物！$YEL1(1 : 1 - 10,000，或沒有。)"
+        revision: "1"
       boostedChanceMultiplierHeader:
         text: "提升機率倍數"
       boostedChanceMultiplier:
@@ -6168,10 +6257,18 @@ worldMapGameModeConfigPanel:
         text: "腐化開始天數"
       corruptionStartDay:
         text: "遊戲世界中第一個腐化點生成的天數。$YEL1(1 - 200，或永不。)"
-      spreadRateHeader:
-        text: "擴散速度"
-      spreadRate:
-        text: "腐化擴散的速度。愈低表示擴散的愈快！$YEL1(1 in 5k to 1 in 500k per update tick)"
+      corruptionDesiredAmountStartHeader:
+        text: "腐化欲望起始值"
+      corruptionDesiredAmountStart:
+        text: "在腐化欲望開始時，有多少的腐化方塊。越高表示擴散越快！$YEL1(64 - 8192)"
+      corruptionDesiredAmountPerDayHeader:
+        text: "每日腐化欲望"
+      corruptionDesiredAmountPerDay:
+        text: "每日增加多少腐化欲望。越高表示擴散越快！$YEL1(+64 - 8192 一天)"
+      corruptionDesiredAmountPerBuildingHeader:
+        text: "每個建築腐化欲望"
+      corruptionDesiredAmountPerBuilding:
+        text: "每個已建造完成的建築，會加速多少生成速度。越高表示擴散越快！$YEL1(+16 - 512 一天)"
       buildingRateHeader:
         text: "建造速度"
       buildingRate:
@@ -6184,14 +6281,6 @@ worldMapGameModeConfigPanel:
         text: "建築距離"
       buildingDensityRange:
         text: "建築距離受建築密度影響，設置上方的 '建築密度' 。$YEL1(8 - 128)"
-      permanentCorruptionAmountMaxHeader:
-        text: "最大永久腐化數"
-      permanentCorruptionAmountMax:
-        text: "方塊可被永久腐化的最大數。此數值應該要等於或高於上方的 '永久腐化起始值'。$YEL1(64 - 64512)"
-      permanentCorruptionMaxPerDayHeader:
-        text: "每日最大永久腐化"
-      permanentCorruptionMaxPerDay:
-        text: "每日可被永遠腐化的方塊數量。$YEL1(8 - 2048)"
       
     header:
       text: "$YEL0腐化"
@@ -6201,8 +6290,12 @@ worldMapGameModeConfigPanel:
       text: "提升機率倍數"
     corruptionStartDay:
       text: "腐化開始天數"
-    spreadRate:
-      text: "擴散速度"
+    corruptionDesiredAmountStart:
+      text: "腐化欲望起始值"
+    corruptionDesiredAmountPerDay:
+      text: "每日腐化欲望"
+    corruptionDesiredAmountPerBuilding:
+      text: "每個建築的腐化欲望"
     buildingRate:
       text: "建造速度"
     buildingDensity:
@@ -6278,10 +6371,6 @@ worldMapGameModeConfigPanel:
         text: "開始季節"
       startingSeason:
         text: "遊戲開始時的季節。"
-      dayLengthMultiplierHeader:
-        text: "一天的長度倍數"
-      dayLengthMultiplier:
-        text: "增加或減少一天的時間長度。1.5x +50%, 0.5x -50% $YEL1(0.1x - 30.0x)"
         
     header:
       text: "$YEL0其它"
@@ -6289,8 +6378,6 @@ worldMapGameModeConfigPanel:
       text: "溫度變化"
     startingSeason:
       text: "開始季節"
-    dayLengthMultiplier:
-      text: "一天的長度倍數"
     
   weather:
     tooltip:
@@ -6494,8 +6581,6 @@ worldMapGoalClaimPanel:
       
   godExperience: 
     text: "神力：$YEL0{amount}"
-  globalCorruptionPowerAmount:
-    text: "-{amount} 全域腐化能量"
   morePerks:
     text: "$YEL0加 {amount} ！"
     
@@ -6766,9 +6851,9 @@ helpTip:
     villagerSleepyHeader:
       text: "虛脫"
     villagerSleepyNoHome:   
-      text: "{mobName} $WHI0開始變困。如果你的村民太累或是沒有地方休息，他們最終會睡在戶外。"
+      text: "{mobName} $WHI0開始變睏。如果你的村民太累或是沒有地方休息，他們最終會睡在戶外。"
     villagerSleepy:   
-      text: "{mobName} $WHI0開始變困。如果你的村民太累或是沒有地方休息，他們最終會睡在戶外。幸運的是，{mobName} $WHI0有一個家，他會試著趕快回家睡覺！"
+      text: "{mobName} $WHI0開始變睏。如果你的村民太累或是沒有地方休息，他們最終會睡在戶外。幸運的是，{mobName} $WHI0有一個家，他會試著趕快回家睡覺！"
     villagerFreezingHeader:
       text: "凍死"
     villagerFreezingNoHome:   
@@ -6826,7 +6911,8 @@ helpTip:
     corruptionHeader:
       text: "腐化！"
     corruption:   
-      text: "你可能已經發現，你的村民並不是此區域唯一一種生命！隨時間去過，$RED1腐化能量 $WHI0擴散到整個地圖，增加怪物生成速度並導致威脅。有些方法可以使腐化衰退。多數的建築有 $GRE1腐化抗性 $WHI0，而高抗性會阻止腐化擴散，甚至有時可以使它們衰退。並不是所有的建築都有腐化抗性，請仔細確認它們的狀時。"
+      text: "你可能已經發現，你的村民並不是此區域唯一一種生命！隨時間去過，$RED1腐化能量 $WHI0擴散到整個地圖與感到威脅，如果你試著將其往回推的過火，會增加怪物生成速度並導致麻煩。有些方法可以使腐化衰退。你村莊的腐化抗性可以防止腐化擴散、甚至使它們衰退。但是，如果你貪心的想要占領全部的土地，你將會陷入大麻煩。"
+      revision: "1"
     seasonAutumnHeader:
       text: "秋季"
     seasonAutumn:   
@@ -6843,6 +6929,10 @@ helpTip:
       text: "夏季"
     seasonSummer:   
       text: "$YEL1夏天 $WHI0來臨。你的村民將不得不經常在炎熱的天氣裡工作，並且常回家消暑。別期望會常下雨，並預期作物成長緩慢。希望你在 $GRE1春季 $WHI0已準備了足夠的食物與水！"
+    trashHeader:
+      text: "垃圾"
+    trash:   
+      text: "到處都是垃圾！你必須作點什麼，否則 $YEL1垃圾史萊姆 $WHI0會開始生成！你可以建造 $YEL1垃圾場 $WHI0與 $YEL1垃圾桶 $WHI0清理地上的垃圾。你也有一些方法可以管理垃圾，像是 $YEL1焚化爐 $WHI0與 $YEL1處理站 $WHI0。一旦你掌握了一切，你會發現在村莊所管理的資源中，垃圾是一種強大的資源。"
     destroyTerrainHeader:
       text: "摧毀地形"
     destroyTerrain:   
@@ -7023,81 +7113,170 @@ tileSet:
   
   road:  
     path:
-      text: "道路"
+      name:
+        text: "道路"
+      description:
+        text: "生物經常行走的相同地方會產生天然的道路。略微提高移動速度。"
     logPathDebris:
-      text: "原木道路殘骸"
+      name:
+        text: "原木道路殘骸"
+      description:
+        text: "損壞的道路，鋪路工或維護工可以修理。如果沒有修理，時間久了會完全消失。"
     logPath:
-      text: "原木道路"
+      name:
+        text: "原木道路"
+      description:
+        text: "基礎道路會提高移動速度。"
     cobbleAndLogPathDebris:
-      text: "鵝卵石原木道路殘骸"
+      name:
+        text: "鵝卵石原木道路殘骸"
+      description:
+        text: "損壞的道路，鋪路工或維護工可以修理。如果沒有修理，時間久了會完全消失。"
     cobbleAndLogPath:
-      text: "鵝卵石原木道路"
+      name:
+        text: "鵝卵石原木道路"
+      description:
+        text: "良好的道路會提高移動速度。"
     cobbleAndBoardRoadDebris:
-      text: "鵝卵石木板道路殘骸"
+      name:
+        text: "鵝卵石木板道路殘骸"
+      description:
+        text: "損壞的道路，鋪路工或維護工可以修理。如果沒有修理，時間久了會完全消失。"
     cobbleAndBoardRoad:
-      text: "鵝卵石木板道路"
+      name:
+        text: "鵝卵石木板道路"
+      description:
+        text: "堅固良好的路道會顯著的提高移動速度。"
     cutStoneAndBoardRoadDebris:
-      text: "石塊木板道路殘骸"
+      name:
+        text: "石塊木板道路殘骸"
+      description:
+        text: "損壞的道路，鋪路工或維護工可以修理。如果沒有修理，時間久了會完全消失。"
     cutStoneAndBoardRoad:
-      text: "石塊木板道路"
+      name:
+        text: "石塊木板道路"
+      description:
+        text: "高級道路大大的加快移動速度。"
 
   terrain:
     treeStumps:
-      text: "樹墩"
+      name:
+        text: "樹墩"
+      description:
+        text: "以前被砍掉的樹木，最終還會生長回來。"
     trees:
-      text: "樹"
+      name:
+        text: "樹"
+      description:
+        text: "建造伐木廠採集與儲存原木，提供木材給村莊。建築工在建造需要木頭也會去伐木。"
     deadTrees:
-      text: "枯樹"
+      name:
+        text: "枯樹"
+      description:
+        text: "建造伐木廠採集與儲存原木，提供少量木材給村莊。建築工在建造需要木頭時也會去伐木。如果不管它最終會恢復生機。"
     rock:
-      text: "石頭"
+      name:
+        text: "石頭"
+      description:
+        text: "建造採石廠開採與儲存石頭，提供石材給村莊。建築工在建造需要石頭時也會去採石。"
+    rockCollected:
+      name:
+        text: "碎石"
+      description:
+        text: "開採過的石頭沒有任何價值。"
     sandstone:
-      text: "沙石"
-    redCrystals:
-      text: "紅水晶"
-    greenCrystals:
-      text: "綠水晶"
-    blueCrystals:
-      text: "藍水晶"
-    purpleCrystals:
-      text: "紫水晶"
+      name:
+        text: "沙石"
+      description:
+        text: "建造採石廠開採與儲存石頭，提供石材給村莊。建築工在建造需要石頭時也會去採石。"
+    sandstoneCollected:
+      name:
+        text: "碎沙石"
+      description:
+        text: "開採過的沙石沒有任何價值。"
+    crystals:
+      name:
+        text: "水晶"
+      description:
+        text: "建造水晶礦廠開採與儲存水晶，提供水晶給村莊。建築工在建造需要水得時也會去開採。"
+    crystalsCollected:
+      name:
+        text: "開採過的水晶"
+      description:
+        text: "開採過的水晶，最終會重新增生並可以再次開採。"
     potatoes:
-      text: "馬鈴薯"
+      name:
+        text: "馬鈴薯"
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     turnips:
-      text: "蕪菁"
+      name:
+        text: "蕪菁"
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     cactus:
-      text: "仙人掌"
+      name:
+        text: "仙人掌"
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     carrots:
-      text: "胡蘿蔔"
+      name:
+        text: "胡蘿蔔"
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     melons:
-      text: "蜜瓜"
+      name:
+        text: "蜜瓜"
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     bricks:
-      text: "磚"
+      name:
+        text: "磚"
     dirt:
-      text: "泥土"
+      name:
+        text: "泥土"
     flowers:
-      text: "花"
+      name:
+        text: "花"
     grass:
-      text: "草地"
+      name:
+        text: "草地"
     gravel:
-      text: "碎石"
+      name:
+        text: "碎石"
     lava:
-      text: "岩漿"
+      name:
+        text: "岩漿"
     sand:
-      text: "沙子"
+      name:
+        text: "沙子"
     tar:
-      text: "焦油"
+      name:
+        text: "焦油"
+      description:
+        text: "不能移除，並會大大降低移動速度。"
     tiles:
-      text: "方塊"
+      name:
+        text: "方塊"
     water:
-      text: "水"
+      name:
+        text: "水"
+      description:
+        text: "為村莊提供髒（不可飲用）水，農夫可以收集水來灌溉，而打水工可以運送水到淨水器生產飲用水。"
     mud:
-      text: "泥漿"
+      name:
+        text: "泥漿"
     ice:
-      text: "冰"
+      name:
+        text: "冰"
     frozenMud:
-      text: "凍泥漿"
+      name:
+        text: "凍泥漿"
     corruption:
-      text: "腐化"
+      name:
+        text: "腐化"
+      description:
+        text: "邪惡的東西，遠離它！"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Missile Module
@@ -7290,6 +7469,16 @@ mobName:
       text: "史萊姆"
     plural:
       text: "史萊姆"
+  smallTrashySlime:
+    single:
+      text: "小垃圾史萊姆"
+    plural:
+      text: "小垃圾史萊姆"
+  trashySlime:
+    single:
+      text: "垃圾史萊姆"
+    plural:
+      text: "垃圾史萊姆"
   smallBloodSlime:
     single:
       text: "小血史萊姆"
@@ -7510,6 +7699,11 @@ mobName:
       text: "工人魔像"
     plural:
       text: "工人魔像"
+  cubeEGolem:
+    single:
+      text: "垃圾魔像"
+    plural:
+      text: "垃圾魔像"
   poisonWoodGolem:
     single:
       text: "毒木頭魔像"
@@ -8041,6 +8235,14 @@ aiTask:
     sellLabor:
       text: "在 $YEL1{buildingName} 販賣工人"
       
+  makeTrashyCube:
+    pathfindToTrashOnGround:
+      text: "走向在上地上的 {resourceName}"
+    pathfindToBuilding:
+      text: "走向存放 {resourceName} 的 {buildingName}"
+    processTrash:
+      text: "處理 {resourceName} 製成方塊"
+      
   mateCoitus:
     awaitCoitusWaiting:
       text: "等待 {mobName} 交配。"
@@ -8110,6 +8312,12 @@ aiTask:
       text: "在農場種植作物"
     pathfindToExtraResource:
       text: "拾起額外的植物資源"
+  
+  processTrash:
+    pathfindToWork:
+      text: "在 {buildingName} 處理垃圾"
+    processTrash:
+      text: "處理垃圾"
       
   provisionerLeave:
     pathfindToLeaveCoordinates:
@@ -8203,11 +8411,21 @@ aiTask:
     pathfindToResource:
       text: "拾起地上的資源儲存進建築"
       
+  storeTrashInTrashCan:
+    pathfindToTrash:
+      text: "拾起地上的垃圾儲存進建築"
+      
   storeResourceInHand:
     pathfindToBuilding:
       text: "將資源存進 {buildingName}"
     pathfindToExtraResource:
       text: "拾起額外的資源存進 {buildingName}"
+  
+  storeTrashInTrashCanInHand:
+    pathfindToBuilding:
+      text: "將垃圾儲存進 {buildingName}"
+    pathfindToExtraTrash:
+      text: "拾起額外的垃圾到 {buildingName}"
       
   stuck:
     pathfindOffBlockedTerrain:
@@ -8238,6 +8456,8 @@ aiTask:
       text: "流浪到村莊"
   
   corruptionBuildingPlacement:
+    pathfindToTarget:
+      text: "走到一個新地方建造一棟新建築"
     create:
       text: "建造新建築"
       
@@ -8389,6 +8609,14 @@ mobJob:
     description:
       text: "將石頭製成石板，用於建造楚高級的建築。"
 
+  trasher:
+    single:
+      text: "清潔工"
+    plural:
+      text: "清潔工"
+    description:
+      text: "清理村莊中的垃圾，並運送到垃圾場、焚化爐或在處理站中處理垃圾。"
+      
   tumbler:
     single:
       text: "磨石工"
@@ -8552,6 +8780,7 @@ object:
           text: "營地"
         description:
           text: "新村莊的中心，提供建造數，工人與可儲存大多數的資源。"
+          revision: "1"
       largeCamp:
         name:
           text: "大型營地"
@@ -8660,7 +8889,7 @@ object:
       name:
         text: "古代光輝池"
       description:
-        text: "一種古老的舊池塘會吸引怪物。"
+        text: "一種古老的能量池，隨著時間經過會產生少量的精華。"
     
     armorsmithy:
       makeshift:
@@ -8865,6 +9094,23 @@ object:
         description:
           text: "增加弓與箭矢的製作速度，增加最大儲量與製工匠職缺。"
     
+    burner:
+      makeshift:
+        name:
+          text: "簡易焚化爐"
+        description:
+          text: "清潔工可以清理村莊中的垃圾，並緩慢的燒掉焚化爐中的垃圾，一旦能量滿了會釋放精華。"
+      base:
+        name:
+          text: "焚化爐"
+        description:
+          text: "增加焚化爐的燃燒速度，並提供更多的清潔工數量。"
+      established:
+        name:
+          text: "堅固焚化爐"
+        description:
+          text: "增加焚化爐的燃燒速度，並提供更多的清潔工數量。"
+    
     bulletTower:
       makeshift:
         name:
@@ -8919,7 +9165,8 @@ object:
         name:
           text: "簡易水晶魔像能量池"
         description:
-          text: "一種消耗能量與水量的建築，召喚可遠程攻擊的防禦性水晶魔像來保護村莊。"
+          text: "一種消耗能量與水量的建築，召喚可遠程攻擊的防禦性水晶魔像來保護村莊。需要穩定的能量，否則魔像會死亡。"
+          revision: "2"
       base:
         name:
           text: "水晶魔像能量池"
@@ -9012,6 +9259,24 @@ object:
           text: "堅固水晶加工廠"
         description:
           text: "增加製作水晶錠的速度，最大儲存量與水晶提煉工職缺"
+    
+    cubeEGolemCombobulator:
+      makeshift:
+        name:
+          text: "簡易垃圾魔像能量池"
+        description:
+          text: "消耗能量與鐵錠的建築，招喚可以製造垃圾方塊與建造垃圾結構的魔像。需要穩定的能量，否則魔像將會死亡。"
+          revision: "2"
+      base:
+        name:
+          text: "垃圾魔像能量池"
+        description:
+          text: "增加能量池可以招喚的垃圾魔像數量，同時提升新魔像的等級，但招喚新魔像需消耗更多能量。"
+      established:
+        name:
+          text: "堅固垃圾魔像能量池"
+        description:
+          text: "增加能量池可以招喚的垃圾魔像數量，同時提升新魔像的等級，但招喚新魔像需消耗更多能量。"
     
     cullisGate:
       name:
@@ -9209,7 +9474,8 @@ object:
         name:
           text: "簡易房屋"
         description:
-          text: "提供基本居住空間，可以升級為高容積、高品質或是兩者兼顧的房屋。時時確保每個人都有地方可住！"
+          text: "村莊的居住空間，村民可在此吃飯、睡覺、治療與恢復。時時確保每個人都有地方可住！"
+          revision: "1"
       baseHighOccupancy:
         name:
           text: "高容積房屋"
@@ -9235,6 +9501,7 @@ object:
           text: "普通房屋"
         description:
           text: "增加居住與儲存空間與舒適度。當你想為村民提供居住空間，又不想要高容積的缺點時，這是個好選擇。"
+          revision: "1"
       largeStandard:
         name:
           text: "大型普通房屋"
@@ -9333,19 +9600,22 @@ object:
       name:
         text: "腐化的墓地"
       description:
-        text: "建築在腐化地深處的腐化建築。"
+        text: "建築在腐化地深處的腐化建築。增加怪物在腐化區的生成速度。"
+        revision: "1"
     
     corruptedGraveyardMedium:
       name:
         text: "腐化的墓地"
       description:
-        text: "建築在腐化地深處的腐化建築。"
+        text: "建築在腐化地深處的腐化建築。增加怪物在腐化區的生成速度。"
+        revision: "1"
     
     corruptedGraveyardLarge:
       name:
         text: "腐化的墓地"
       description:
-        text: "建築在腐化地深處的腐化建築。"
+        text: "建築在腐化地深處的腐化建築。增加怪物在腐化區的生成速度。"
+        revision: "1"
     
     corruptedFireBowTower:
       name:
@@ -9375,25 +9645,29 @@ object:
       name:
         text: "腐化的火幻影鏢塔"
       description:
-        text: "一個小型防禦塔，會發出低級魔法與可以跨越。"
+        text: "一個小型的腐化防禦塔，會發出低級魔法與可以跨越。"
+        revision: "1"
     
     corruptedIcePhantomDartTower:
       name:
         text: "腐化的冰幻影鏢塔"
       description:
-        text: "一個小型防禦塔，會發出低級魔法與可以跨越。"
+        text: "一個小型的腐化防禦塔，會發出低級魔法與可以跨越。"
+        revision: "1"
     
     corruptedPoisonPhantomDartTower:
       name:
         text: "腐化的毒幻影鏢塔"
       description:
-        text: "一個小型防禦塔，會發出低級魔法與可以跨越。"
+        text: "一個小型的腐化防禦塔，會發出低級魔法與可以跨越。"
+        revision: "1"
     
     corruptedLightningPhantomDartTower:
       name:
         text: "腐化的電幻影鏢塔"
       description:
-        text: "一個小型防禦塔，會發出低級魔法與可以跨越。"
+        text: "一個小型的腐化防禦塔，會發出低級魔法與可以跨越。"
+        revision: "1"
     
     corruptedLargeFirePit:
       name:
@@ -9440,6 +9714,23 @@ object:
           text: "堅固廚房"
         description:
           text: "增加補給品的製作速度，增加最大儲存量與廚師職缺。"
+    
+    landfill:
+      makeshift:
+        name:
+          text: "簡易垃圾場"
+        description:
+          text: "清潔工可以清理村莊中的垃圾，並將大量的垃圾集中在村莊的某處。"
+      base:
+        name:
+          text: "垃圾場"
+        description:
+          text: "增加垃圾場的最大儲存量與清潔工數量。"
+      established:
+        name:
+          text: "堅固垃圾場"
+        description:
+          text: "增加垃圾場的最大儲存量與清潔工數量。"
     
     lumberMill:
       makeshift:
@@ -9491,6 +9782,23 @@ object:
           text: "堅固哨站"
         description:
           text: "增加哨站的守衛職缺並在哨站的頂端增加一個小型防禦塔。"
+          
+    processor:
+      makeshift:
+        name:
+          text: "簡易處理站"
+        description:
+          text: "提供清潔工可清理村莊中的垃圾，並允許他們處理垃圾與試著從垃圾中取得可利用的資源。"
+      base:
+        name:
+          text: "處理站"
+        description:
+          text: "增加垃圾處理的全域速度加成、增加最大儲存量與清潔工數量。"
+      established:
+        name:
+          text: "堅固處理站"
+        description:
+          text: "增加垃圾處理的全域速度加成、增加最大儲存量與清潔工數量。"
     
     phantomDartTower:
       makeshift:
@@ -9580,27 +9888,27 @@ object:
         name:
           text: "小型礦物倉庫"
         description:
-          text: "一個可儲存未加工或處理過的礦物的倉庫，像是鐵礦與鐵錠。"
+          text: "一個可儲存未加工或加工過的礦物的倉庫，像是鐵礦與鐵錠。"
       base:
         name:
           text: "礦物倉庫"
         description:
-          text: "增加未加工或處理過的礦物的儲存量。"
+          text: "增加未加工或加工過的礦物的儲存量。"
       large:
         name:
           text: "大型礦物倉庫"
         description:
-          text: "增加未加工或處理過的礦物的儲存量。"
+          text: "增加未加工或加工過的礦物的儲存量。"
       established:
         name:
           text: "堅固礦物倉庫"
         description:
-          text: "增加未加工或處理過的礦物的儲存量。"
+          text: "增加未加工或加工過的礦物的儲存量。"
       reinforced:
         name:
           text: "強化礦物倉庫"
         description:
-          text: "增加未加工或處理過的礦物的儲存量到最大值。"
+          text: "增加未加工或加工過的礦物的儲存量到最大值。"
     
     miningFacility:
       makeshift:
@@ -9843,7 +10151,8 @@ object:
         name:
           text: "簡易石頭魔像能量池"
         description:
-          text: "一個可召喚石頭魔像的建築，召喚速度慢與傷害高的防禦型魔像。"
+          text: "一個可召喚石頭魔像的建築，召喚速度慢與傷害高的防禦型魔像。需要穩定的能量，否則魔像會死亡。"
+          revision: "2"
       base:
         name:
           text: "石頭魔像能量池"
@@ -9887,6 +10196,29 @@ object:
         description:
           text: "增加工具製作的速度，增加最大儲存量與工具鐵匠職缺。"
     
+    trashCan:
+      makeshift:
+        name:
+          text: "簡易垃圾桶"
+        description:
+          text: "村莊中丟垃圾的地方。任何人都可以使用，但只有清潔工可以清空並將垃圾拿到焚化爐、處理站或是垃圾場。"
+      base:
+        name:
+          text: "垃圾桶"
+        description:
+          text: "增加垃圾桶可以儲存的最大數量。"
+      established:
+        name:
+          text: "堅固垃圾桶"
+        description:
+          text: "增加垃圾桶可以儲存的最大數量。"
+          
+    trashyCubePile:
+      name:
+        text: "垃圾方塊堆"
+      description:
+        text: "垃圾方塊堆起的大型結構。不能當作倉庫，重新獲得方塊的唯一方法是拆除或摧毀方塊堆。只能由垃圾魔像建造。"
+        
     waterPurifier:
       makeshift:
         name:
@@ -9943,7 +10275,8 @@ object:
         name:
           text: "簡易木頭魔像能量池"
         description:
-          text: "一個可召喚木頭魔像的建築，召喚速度與傷害適中的防禦型魔像。"
+          text: "一個可召喚木頭魔像的建築，召喚速度與傷害適中的防禦型魔像。需要穩定的能量，否則魔像會死亡。"
+          revision: "2"
       base:
         name:
           text: "木頭魔像能量池"
@@ -10037,6 +10370,11 @@ object:
         text: "木牆"
       description:
         text: "一種基礎的圍牆會使怪物繞路，大多數的防禦塔與遠程攻擊都可以射過。怪物們只會在找不到路可以進入村莊時攻擊它們。"
+    trashyCubeWall:
+      name:
+        text: "垃圾方塊牆"
+      description:
+        text: "一種垃圾圍牆，只能由垃圾魔像建造，大多數的防禦塔與遠程攻擊都可以射過。怪物們只會在找不到路可以進入村莊時攻擊它們。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Resource Module
@@ -10060,8 +10398,10 @@ resourceCategory:
     text: "工具"
   towerAmmo:
     text: "防禦塔彈藥"
-  weaponsandAmmo:
-    text: "武器與彈藥"
+  weapons:
+    text: "武器"
+  trash:
+    text: "垃圾"
   miscellaneous:
     text: "雜項"
        
@@ -10075,233 +10415,365 @@ resource:
   comment: "Resource Module - Names"
   javaClass: "rtr.resources.templates.*"
   
+  woodyTrash:
+    single:
+      text: "木材垃圾"
+    plural:
+      text: "木材垃圾"
+    description:
+      text: "可能還剩下一點用處的木材垃圾堆。使用處理站可處理它，或在焚化爐中燃燒它可以釋放精華。"
+      
   wood:
     single:
       text: "木頭"
     plural:
       text: "木頭"
+    description:
+      text: "製造多數物品的基礎資源，包括木板、工具與大多數的建築。"
 
   board:
     single:
       text: "木板"
     plural:
       text: "木板"
+    description:
+      text: "像木頭一樣，但更平坦。主要用於高級建築。"
+
+  rockyTrash:
+    single:
+      text: "石材垃圾"
+    plural:
+      text: "石材垃圾"
+    description:
+      text: "可能還剩下一點用處的石材垃圾堆。使用處理站可處理它，或在焚化爐中燃燒它可以釋放精華。"
 
   rock:
     single:
       text: "石頭"
     plural:
       text: "石頭"
+    description:
+      text: "製造多數物品的基礎資源，包括石板與大多數的建築。"
 
   cutStone:
     single:
       text: "石板"
     plural:
       text: "石板"
+    description:
+      text: "像石頭一樣，但是方型的。主要用於高級建築。"
 
   ironOre:
     single:
       text: "鐵礦"
     plural:
       text: "鐵礦"
+    description:
+      text: "生鐵需要熔煉成鐵錠才能使用。"
 
   ironIngot:
     single:
       text: "鐵錠"
     plural:
       text: "鐵錠"
+    description:
+      text: "用於製作工具、護甲與一些建築。"
 
   goldOre:
     single:
       text: "金礦"
     plural:
       text: "金礦"
+    description:
+      text: "原金需要熔煉成金錠才能使用。"
 
   goldIngot:
     single:
       text: "金錠"
     plural:
       text: "金錠"
+    description:
+      text: "金要用於製作金幣。"
 
   goldCoinSack:
     single:
       text: "金幣袋"
     plural:
       text: "金幣袋"
+    description:
+      text: "錢！可在市場裡買東西。"
 
+  crystallyTrash:
+    single:
+      text: "水晶垃圾"
+    plural:
+      text: "水晶垃圾"
+    description:
+      text: "可能還剩下一點用處的水晶垃圾堆。使用處理站可處理它，或在焚化爐中燃燒它可以釋放精華。"
+      
   crystal:
     single:
       text: "水晶"
     plural:
       text: "水晶"
+    description:
+      text: "製造多數物品的基礎資源，主要用於魔法建築。"
 
   crylithium:
     single:
       text: "水晶錠"
     plural:
       text: "水晶錠"
+    description:
+      text: "純化水晶用來作為多數魔法建築的能量來源，或是精華收集器的燃料。"
 
+  organicyTrash:
+    single:
+      text: "有機垃圾"
+    plural:
+      text: "有機垃圾"
+    description:
+      text: "可能還剩下一點用處的食物垃圾堆。使用處理站可處理它，或在焚化爐中燃燒它可以釋放精華。"
+      
   rawFood:
     single:
       text: "生食"
     plural:
       text: "生食"
+    description:
+      text: "可以吃的生食！"
 
   ration:
     single:
       text: "補給品"
     plural:
       text: "補給品"
+    description:
+      text: "保存期較長的打包食品！"
 
   ballistaeBolts:
     single:
       text: "箭矢"
     plural:
       text: "箭矢"
+    description:
+      text: "供防禦塔使用的箭矢，像是弓箭塔與強弩塔。"
 
   stoneBalls:
     single:
       text: "石球"
     plural:
       text: "石球"
+    description:
+      text: "供防禦塔使用的石球、像是散射塔、彈弓塔與砲塔。"
 
   ironSword:
     single:
       text: "鐵劍"
     plural:
       text: "鐵劍"
+    description:
+      text: "鋒利的鐵製武器，增加最大傷害。有效砍殺敵人。"
 
   woodSword:
     single:
       text: "木劍"
     plural:
       text: "木劍"
+    description:
+      text: "有點鋒利（嗯，削尖？）的木製武器，增加最大傷害。有敵攻擊敵人。"
 
   pickaxe:
     single:
       text: "鐵鎬"
     plural:
       text: "鐵鎬"
+    description:
+      text: "使用它的工人會增加工作速度，像是礦工、水晶礦工與切石工。"
 
   axe:
     single:
       text: "斧頭"
     plural:
       text: "斧頭"
+    description:
+      text: "使用它的工人會增加工作速度，像是鋸木工、製工匠與伐木工。"
 
   hoe:
     single:
       text: "鋤頭"
     plural:
       text: "鋤頭"
+    description:
+      text: "使用它的工人會增加工作速度，像是農夫。"
 
   hammer:
     single:
       text: "鐵錘"
     plural:
       text: "鐵錘"
+    description:
+      text: "使用它的工人會增加工作速度，像是建築工、水晶提煉工與鐵匠。"
 
   shovel:
     single:
       text: "鏟子"
     plural:
       text: "鏟子"
+    description:
+      text: "使用它的工人會增加工作速度，像是護具鐵匠、建築工、農夫與礦工。"
 
   leatherHelmet:
     single:
       text: "皮盔"
     plural:
       text: "皮盔"
+    description:
+      text: "單薄的護甲可減少受到的傷害。"
 
   leatherChest:
     single:
       text: "皮甲"
     plural:
       text: "皮甲"
+    description:
+      text: "單薄的護甲可減少受到的傷害。"
 
   ironHelmet:
     single:
       text: "鐵盔"
     plural:
       text: "鐵盔"
+    description:
+      text: "堅固的護甲可減少受到的傷害。"
 
   ironChestArmor:
     single:
       text: "鐵甲"
     plural:
       text: "鐵甲"
+    description:
+      text: "堅固的護甲可減少受到的傷害。"
 
   woodShield:
     single:
       text: "木盾"
     plural:
       text: "木盾"
+    description:
+      text: "有小機率使攻擊打偏的基礎防具。"
 
   ironShield:
     single:
       text: "鐵盾"
     plural:
       text: "鐵盾"
+    description:
+      text: "有機率使攻擊打偏的良好防具。"
 
   quiver:
     single:
       text: "箭袋"
     plural:
       text: "箭袋"
+    description:
+      text: "為手持弓提供彈藥"
 
   bow:
     single:
       text: "弓"
     plural:
       text: "弓"
+    description:
+      text: "在遠方射擊你不喜歡的事物。"
 
   silk:
     single:
       text: "絲線"
     plural:
       text: "絲線"
+    description:
+      text: "用於製作繃帶。"
 
   bandage:
     single:
       text: "繃帶"
     plural:
       text: "繃帶"
+    description:
+      text: "任何人都可以攜帶的緊急包紮物，如果受到嚴重傷害可以用來治療。"
 
   medkit:
     single:
       text: "醫療包"
     plural:
       text: "醫療包"
+    description:
+      text: "使用它的工人會增加工作速度，只能由醫生使用。"
 
   healingPotion:
     single:
       text: "治療藥水"
     plural:
       text: "治療藥水"
+    description:
+      text: "急救藥水可以快速恢復生命值。"
 
   dirtyWaterBucket:
     single:
-      text: "髒水瓶"
+      text: "髒水桶"
     plural:
-      text: "髒水瓶"
+      text: "髒水桶"
+    description:
+      text: "可用於灌溉農不可飲用的水，或是用淨水器中淨化。"
 
   waterBucket:
     single:
       text: "水桶"
     plural:
       text: "水桶"
+    description:
+      text: "可裝瓶的飲用水，或是倒進房屋與噴水池在需要時飲用。"
 
   waterBottle:
     single:
       text: "水瓶"
     plural:
       text: "水瓶"
+    description:
+      text: "瓶裝的飲用水，方便攜帶。"
 
   suspiciousKey:
     single:
       text: "可疑的鑰匙？！"
     plural:
       text: "可疑的鑰匙？！"
+    description:
+      text: "可打開什麼箱子呢？！"
+      
+  suspiciousyTrash:
+    single:
+      text: "可疑的垃圾？！"
+    plural:
+      text: "可疑的垃圾？！"
+    description:
+      text: "搞什麼鬼？"
+      
+  trashyTrash:
+    single:
+      text: "無用的垃圾"
+    plural:
+      text: "無用的垃圾"
+    description:
+      text: "完全無用，可在焚火爐中燃燒釋放精華，或先製成方塊燒的更有效率。"
+      
+  trashyCube:
+    single:
+      text: "垃圾方塊"
+    plural:
+      text: "垃圾方塊"
+    description:
+      text: "壓縮無用的垃圾，燃燒時可產生更多精華，或建造大型垃圾方塊與垃圾牆。"
     
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # State Base
