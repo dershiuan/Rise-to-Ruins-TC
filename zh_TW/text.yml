@@ -65,7 +65,7 @@ godXP:
   buildingsConstructed:
     text: "建築已建造"
   buildingsDismantled:
-    text: "建築已建造"
+    text: "建築已拆除"
   wallsDismantled:
     text: "牆已拆除"
   wallsConstructed:
@@ -158,6 +158,10 @@ godXP:
     text: "村民懷孕"
   livedFullLife:
     text: "充實的生活"
+  hunting:
+    text: "狩獵"
+  slaughteringAnimals:
+    text: "屠宰動物"
   
   # God Intervention
   castingSpells:
@@ -184,6 +188,12 @@ godXP:
     text: "將資源丟進庫里斯門"
   throwCreaturesInCullisGate:
     text: "將生物丟進庫里斯門"
+  breeding:
+    text: "繁殖"
+  animalImpregnated:
+    text: "動物懷孕"  
+  eggsLaid:
+    text: "產蛋"  
   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Module Base
@@ -1809,8 +1819,10 @@ console:
             text: "{mobName}{mobTitle}$WHI0 被 {buildingName} $WHI0擊殺！"
           byUnknown:
             text: "{mobName}{mobTitle}$WHI0 死了！"
-          crashing:
+          crushing:
             text: "{mobName}{mobTitle}$RED1 被壓死了！"
+          beingSlaughtered:
+            text: "{mobName}{mobTitle}$RED1 被屠宰了！"
           dehydration:
             text: "{mobName}{mobTitle}$RED1 脫水而亡！"
           blight:
@@ -2309,11 +2321,23 @@ mainMenuCredits:
     back:
       text: "返回"
   
+  creditLine:
+    fallenShogun:
+      text: "英文教程"
+    shade:
+      text: "建立紅沙生態系"
+    veldrin:
+      text: "其它次要與主要錯誤修復"
+
   header:
     developer:
       text: "$GRE1首席開發人員，程式人員和藝術家"
     music:
       text: "$GRE1原聲帶"
+    communityModerator:
+      text: "$GRE1社群模組作者"
+    contributors:
+      text: "$GRE1社群貢獻者"
     thanks:
       text: "$YEL1特別感謝所有來自 Patreons 與 Kickstarter 的支持者們！"
     patreons:
@@ -2333,18 +2357,18 @@ mainMenuDeleteProfilePanel:
   
   button:
     'no':
-      text: "不！"
+      text: "不要！"
     'yes':
-      text: "是！"
+      text: "是的！"
     yesConfirm:
-      text: "我說是！"
+      text: "我確定！"
       
   header:
     text: "$ORA1你確定嗎？！"
   body:
-    text: "你確定要刪除此存檔 $GRE1{profileName}$WHI0？ 你所有的遊戲進度將會消失！"
+    text: "確定要刪除此存檔 $GRE1{profileName} $WHI0？~所有的遊戲進度將會消失！"
   bodyConfirm:
-    text: "$RED1你真的確定嗎？所有的進度將會永遠消失！(那是很長的時間！)"
+    text: "$RED1你真的確定嗎？~所有的進度將會永遠消失！(那是很長的時間！)"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Main Menu State
@@ -2519,11 +2543,11 @@ mapEditorLoadMapDeleteWarningPanel:
   
   button:
     'no':
-      text: "不！"
+      text: "不要！"
     'yes':
-      text: "是！"
+      text: "是的！"
     yesConfirm:
-      text: "我說是！"
+      text: "我確定！"
     
   header:
     text: "$ORA1你確定嗎？！"
@@ -2563,11 +2587,11 @@ mapEditorNewMapDeleteWarningPanel:
   
   button:
     'no':
-      text: "不！"
+      text: "不要！"
     'yes':
-      text: "是！"
+      text: "是的！"
     yesConfirm:
-      text: "我說是！"
+      text: "我確定！"
     
   header:
     text: "$ORA1你確定嗎？！"
@@ -2738,11 +2762,11 @@ mainMenuSkirmishNewGameWarningPanel:
   
   button:
     'no':
-      text: "不！"
+      text: "不要！"
     'yes':
-      text: "是！"
+      text: "是的！"
     yesConfirm:
-      text: "我說是！"
+      text: "我確定！"
       
   header:
     text: "$ORA1你確定嗎？！"
@@ -2862,6 +2886,28 @@ mainMenuUploadProfilePanel:
   category:
     text: "問題類別"
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Main Menu State
+# Warning Panel
+# rtr.gui.states.mainmenu.WarningPanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+mainMenuWarningPanel:
+  comment: "Main Menu State - Warning Panel"
+  javaClass: "rtr.gui.states.mainmenu.WarningPanel.java"
+
+  header:
+    text: "$RED1警告 - 請仔細閱讀！"
+  body:
+    line1:
+      text: "你將要遊玩的 Rise to Ruins 版本，對存檔系統進行了大量的修改。由於你的存檔版本較舊，我建議你先備份存檔再繼續！這很簡單，你只需要開啟 Rise to Ruins 的安裝目錄，將 'profiles' 目錄複製到安全的地方。如果發生錯誤，你可以直接刪除損壞的存檔並將備份的存檔放回安裝目錄。 "
+    line2:
+      text: "此更新已經過大量玩家的存檔測試過。但你永遠不知道還會發生什麼小問題。如果你的存檔無法載入或是損毀，請透過官方的 Steam 討論區、discord 或 twitter 讓我們知道。你可以在主選單找到這些連結。"
+  button:
+    gotIt:
+      text: "了解！"
+    openInstallFolder:
+      text: "開啟安裝目錄"            
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Map Editor State
@@ -2881,7 +2927,7 @@ mapEditorMainMenuPanel:
     exitOnly:
       text: "直接退出"
     'yes':
-      text: "是！"
+      text: "是的！"
       
   header:
     text: "主選單"
@@ -2963,7 +3009,7 @@ mapEditorPlayRightPanel:
       particles:
         text: "粒子"
       miscellaneous:
-        text: "雜項"
+        text: "其它"
       
     build:
       ancient:
@@ -3022,18 +3068,14 @@ mapEditorPlayRightPanel:
         text: "鋪路小屋"
       
     defense:
-      guardsAndGolems:
-        text: "警衛與魔像"
+      golems:
+        text: "魔像"
       towers:
         text: "防禦塔"
       miscellaneous:
-        text: "雜項"
+        text: "其它"
       
-    guardsAndGolems:
-      barracks:
-        text: "兵營"
-      outpost:
-        text: "哨站"
+    golems:
       crystalGolemCombobulator:
         text: "水晶魔像能量池"
       stoneGolemCombobulator:
@@ -3070,16 +3112,26 @@ mapEditorPlayRightPanel:
         text: "充能塔"
       
     foodAndWater:
+      animalPen:
+        text: "牧場"
       bottler:
         text: "瓶裝廠"
+      cluckerCoop:
+        text: "雞舍"
       farm:
         text: "農場"
+      fishingHut:
+        text: "捕魚小屋"
       smallFountain:
         text: "小噴水池"
       largeFountain:
         text: "大噴水池"
       kitchen:
         text: "廚房"
+      outpost:
+        text: "哨站"
+      rangerLodge:
+        text: "遊俠小屋"
       rainCatcher:
         text: "雨水收集器"
       waterPurifier:
@@ -3678,11 +3730,11 @@ playBuildingListPanel:
     totalHomeOccupancyHeader:
       text: "全部居住空間"
     totalHomeOccupancy:
-      text: "目前已使用的居住空間，以及住家全部的可用空間。"
-    totalBarracksOccupancyHeader:
-      text: "全部兵營空間"
-    totalBarracksOccupancy:
-      text: "目前已使用的居住空間，以及兵營全部的可用空間。"
+      text: "目前已使用的居住空間，以及住家全部的居住空間。"
+    totalRangerLodgeOccupancyHeader:
+      text: "全部遊俠小屋空間"
+    totalRangerLodgeOccupancy:
+      text: "目前已使用的居住空間，以及遊俠小屋全部的居住空間。"
     totalWorkersHeader:
       text: "全部工人"
     totalWorkers:
@@ -3850,8 +3902,10 @@ playLeftJobDescriptionPanel:
       text: "可運送(用於建造)"
     canHarvestToStore:
       text: "可取得(用於儲存)"
-    canRefineManufacture:
+    canRefineOrManufacture:
       text: "可精煉/製作"
+    canSlaughter:
+      text: "可屠宰"
     canPlant:
       text: "可種植"
     canDeliverToCourierGolems:
@@ -4056,8 +4110,20 @@ playLeftPanel:
     tooltip:
       makeInfinityHeader:
         text: "無限製作"
+      makeInfinite:
+        text: "不管村莊是否有儲存空間，都會不停的製作 {resourceName}。"
+      makeStorageHeader:
+        text: "製作至儲存上限"
+      makeStorage:
+        text: "將會不停的製作 {resourceName}，僅在沒有儲存空間時停止。"
       maintainInfinityHeader:
-        text: "維持無限"
+        text: "無限維持"
+      maintainInfinity:
+        text: "不管村莊是否有儲存空間，都會不停維持 {resourceName}。"
+      maintainStorageHeader:
+        text: "維持至儲存上限"
+      maintainStorage:
+        text: "將會不停的維持 {resourceName}，僅在沒有儲存空間時停止。"
       requiresResource:
         text: "需要 {resourceName}"
   
@@ -4332,10 +4398,6 @@ playPopulationListPanel:
       text: "全部魔像"
     totalGolems:
       text: "目前在此村莊的魔像總數。"
-    averageHappinessHeader:
-      text: "平均幸福度"
-    averageHappiness:
-      text: "整個村莊的平均幸福度。"
     averageAgeHeader:
       text: "平均年齡"
     averageAge:
@@ -4443,10 +4505,10 @@ playPopulationTotalsPanel:
       text: "全部居住空間"
     totalHomeOccupancy:
       text: "已使用的居住空間，以及所有的居住空間總數。"
-    totalBarracksOccupancyHeader:
-      text: "全部兵營空間"
-    totalBarracksOccupancy:
-      text: "已使用的兵營空間，以及所有兵營空間總數。"
+    totalRangerLodgeOccupancyHeader:
+      text: "全部遊俠小屋空間"
+    totalRangerLodgeOccupancy:
+      text: "已使用的遊俠小屋空間，以及所有遊俠小屋空間總數。"
     totalAncillariesHeader:
       text: "全部補助建築"
     totalAncillaries:
@@ -4553,10 +4615,6 @@ playProblemPanel:
       text: "* $RED1{amount} 位村民中暑。"
     villagersOverHeatingPlural:
       text: "* $RED1{amount} 位村民中暑。"
-    villagersUnhappy:
-      text: "* $YEL1{amount} 位村民不開心。"
-    villagersUnhappyPlural:
-      text: "* $YEL1{amount} 位村民不開心。"
     villagersOnFire:
       text: "* $RED1{amount} 位村民著火。"
     villagersOnFirePlural:
@@ -4627,7 +4685,7 @@ playResourceAndInfluenceBar:
     corruptionThreatHeader:
       text: "腐化威脅"
     corruptionThreat:
-      text: "隨著腐化擴散威脅程度會增加。地圖上被腐化覆蓋的空間越多，就越不能控制，而此威脅就會越高。結果就是，除了怪物每日生成速度加快之外，還會有更多的怪物生成。"
+      text: "隨著腐化擴散威脅程度會增加。地圖上被腐化覆蓋的空間越多，就越不能控制，而此威脅就會越高。結果就是，除了每日穩定增加的怪物生成數之外，還會有更多的怪物生成。"
   
   sort:
     total:
@@ -4664,14 +4722,14 @@ playSelectedMobPanel:
       text: "口渴度"
     thirst:
       text: "口渴度過低，會受傷並脫水而死。在鬥戰、工作或是中暑時會耗消的更快。"
-    happinessHeader:
-      text: "幸福度"
-    happiness:
-      text: "幸福度過低會影響工作效率與預期壽命。依照生物類型的不同可以透過滿足基本需求來提高，像是食物、飲水、居住空間社交與其它相關的統計訊息。"
     trashHeader:
       text: "垃圾量"
     trash:
       text: "儲存在生物體內的垃圾量。像是垃圾魔像會在此進度條滿的時候產生垃圾方塊。"
+    eggHeader:
+      text: "產蛋進度"
+    egg:
+      text: "多久此動物會產下一顆蛋，此進度條在動物進食後會緩慢上升。一旦進度條滿了，此動物會立即產下一顆蛋。"
     bodyTemperatureHeader:
       text: "體溫"
     bodyTemperature:
@@ -4715,7 +4773,8 @@ playSelectedMobPanel:
     socialHeader:
       text: "社交"
     social:
-      text: "社交值太低會降低幸福度。如果周圍有其它生物可以聊天，他們會休息並進行有趣的社交活動。長者在聊天時會分享他們的智慧與經驗。"
+      text: "社交值太低時村民會尋找其它人進行互動。如果周圍有其它生物可以聊天，他們會休息並進行有趣的社交活動。長者在聊天時會分享他們的智慧與經驗。"
+      revision: "1"
     strengthHeader:
       text: "力量"
     strength:
@@ -4833,10 +4892,10 @@ playSelectedObjectPanel:
       text: "居住空間"
     occupancy:
       text: "此建築住了多少村民，以及最多可住幾個村民。"
-    barracksOccupancyHeader:
-      text: "兵營空間"
-    barracksOccupancy:
-      text: "此建築住了多少守衛，以及最多可住幾個守衛。"
+    rangerLodgeOccupancyHeader:
+      text: "遊俠小屋居住空間"
+    rangerLodgeOccupancy:
+      text: "此建築住了多少遊俠，以及最多可住幾個遊俠。"
     currentAndMaxStorageHeader:
       text: "目前 / 最大儲存量"
     currentAndMaxStorage:
@@ -4992,8 +5051,6 @@ playSelectedObjectPanel:
     text: "$CYA1房屋加成"
   sleepSpeedBoost:
     text: "$GRE0{amount}% $WHI0睡眠速度"
-  happinessBoost:
-    text: "$GRE0{amount} $WHI0幸福度加成"
   healthRegenerationBoost:
     text: "$GRE0{amount} $WHI0生命恢復"
   reclaimMessage:
@@ -5036,6 +5093,8 @@ playSelectedObjectUpgradePanel:
     text: "$WHI0 或 $RED0"
   maximumStorage:
     text: "最高儲存量：$GRE1+{amount}"
+  canStoreMoreOverflow:
+    text: "..與更多"
   energy:
     text: "$YEL1+{amount} 能量"
   globalSpeed:
@@ -5066,10 +5125,6 @@ playSelectedObjectUpgradePanel:
     text: "$GRE0{amount}% $WHI0睡眠速度"
   sleepSpeedMinus:
     text: "$RED0{amount}% $WHI0睡眠速度"
-  happinessBoostPlus:
-    text: "$GRE0+{amount} $WHI0幸福度加成"
-  happinessBoostMinus:
-    text: "$RED0{amount} $WHI0幸福度加成"
   healthRegenerationPlus:
     text: "$GRE0+{amount} $WHI0生命恢復"
   healthRegenerationMinus:
@@ -5103,8 +5158,8 @@ playSelectedObjectUpgradePanel:
     text: "範圍增加：$GRE1+{amount}"
   desirability:
     text: "宜居成度：$GRE1+{amount}"
-  guardHousingCapacity:
-    text: "守衛居住空間： $GRE1+{amount}"
+  rangerHousingCapacity:
+    text: "遊俠居住空間：$GRE1+{amount}"
   housingCapacity:
     text: "居住空間：$GRE1+{amount}"
   workersSlots:
@@ -5203,8 +5258,6 @@ playStatisticsPanel:
         text: "平均口渴度"
       averageEnergy:
         text: "平均能量值"
-      averageHappiness:
-        text: "平均幸福度"
     
     animals:
       total:
@@ -5223,8 +5276,6 @@ playStatisticsPanel:
         text: "平均口渴度"
       averageEnergy:
         text: "平均能量值"
-      averageHappiness:
-        text: "平均幸福度"
         
     buildings:
       totalBuildings:
@@ -5245,8 +5296,8 @@ playStatisticsPanel:
         text: "能量池"
       golems:
         text: "魔像"
-      guards:
-        text: "守衛"
+      rangers:
+        text: "遊俠"
       walls:
         text: "圍牆"
           
@@ -5340,8 +5391,6 @@ playStatisticsPanel:
         text: "此村莊的每日平均口渴度。"
       averageEnergy:
         text: "此村莊的每日平均能量值。"
-      averageHappiness:
-        text: "此村莊的每日平均幸福度。"
     
     animals:
       total:
@@ -5362,8 +5411,6 @@ playStatisticsPanel:
         text: "每日動物們平均的口渴度。"
       averageEnergy:
         text: "每日動物們平均的能量值。"
-      averageHappiness:
-        text: "每日動物們平均的幸福度。"
     
     monsters:
       totalCorruptionBar:
@@ -5410,8 +5457,8 @@ playStatisticsPanel:
         text: "所有的能量池與魔像總數"
       golems:
         text: "此村莊正在工作或守衛的魔像總數。"
-      guards:
-        text: "此村莊的守衛總數。"
+      rangers:
+        text: "此村莊的遊俠總數。"
       walls:
         text: "此村莊範圍內的所有圍牆總數。"
     
@@ -5552,7 +5599,8 @@ playToolsBar:
       destroyTerrainHeader:
         text: "摧毀地形"
       destroyTerrain:
-        text: "快速摧毀附近的任何地形，包括森林、樹墩，石頭，碎石、水與花朵。摧毀地形不會獲得任何資源。"
+        text: "快速摧毀附近的任何地形，包括森林、樹墩，石頭，碎石、水與花朵。摧毀地形會獲得少量資源與產生垃圾。"
+        revision: "1"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -5713,8 +5761,6 @@ sharedDataViewsPanel:
       text: "地圖方塊"
     range:
       text: "營地範圍"
-    perimeter:
-      text: "營地邊界"
     corruptionResistance:
       text: "腐化抗性"
     desirability:
@@ -5741,6 +5787,8 @@ sharedDataViewsPanel:
       text: "道路耐用度"
     villageThreatMap:
       text: "地圖的村莊威脅度"
+    threatenedTileMap:
+      text: "被腐化的。地圖方塊"
       
   header:
     text: "顯示數據"
@@ -5868,6 +5916,8 @@ playRightObjectDescriptionPanel:
       text: "可儲存"
     canRefineOrManufacture:
       text: "可精煉/製造"
+    canSlaughter:
+      text: "可屠宰"
     defensiveTower:
       text: "防禦塔"
     
@@ -5877,6 +5927,8 @@ playRightObjectDescriptionPanel:
     text: "$WHI0 或 $RED0"
   maximumStorage:
     text: "最大儲存量：$GRE1{amount}"
+  canStoreMoreOverflow:
+    text: "..與更多"
   energy:
     text: "$YEL1{amount} 能量"
   staticTowerDamageOverride:
@@ -5912,8 +5964,8 @@ playRightObjectDescriptionPanel:
     text: "宜居：$GRE1{amount}"
   providedMigrationsPerDay:
     text: "每天可提供移民：$GRE1{amount}"
-  guardHousingCapacity:
-    text: "守衛居住空間：$GRE1{amount}"
+  rangerHousingCapacity:
+    text: "遊俠居住空間：$GRE1{amount}"
   housingCapacity:
     text: "居住空間：$GRE1{amount}"
   workersSlots:
@@ -6041,8 +6093,6 @@ sharedSettingsPanel:
       text: "開採水晶"
     destroyTerrain:
       text: "摧毀地形"
-    nextTip:
-      text: "下個提示"
     axisLock:
       text: "坐標鎖定"
 
@@ -6177,8 +6227,6 @@ sharedTipsPanel:
   button:
     ok:
       text: "好的！"
-    nextTip:
-      text: "下個提示"
       
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
@@ -6563,7 +6611,7 @@ worldMapGameModeSelectPanel:
     sandbox:
       text: "沒有規則！可遊玩遊戲機制，更改一天的時間，生成資源與怪物，產生粒子。作任何想做的事與開心遊玩！~~如果你喜歡研究遊戲機制，建議遊玩此模式。~~不適合認真玩遊戲的玩家。"
     selectGameMode:
-      text: "在左邊選擇六種遊戲模式之一。每種模式都是獨立的，你可以隨時更改你想玩的模式。如果你犯了太多錯誤，或想要重新開始任何模式，你可以透過點擊毀滅世界來重置遊戲模式。~~$GRE0如果你是一個新手，強烈建議先遊戲傳統模式。"
+      text: "在左邊選擇六種遊戲模式之一。每種模式都是獨立的，你可以隨時更改你想玩的模式。如果你犯了太多錯誤，或想要重新開始任何模式，你可以透過點擊毀滅世界來重置遊戲模式。~~$GRE0如果你是新手，建議先遊玩傳統模式。"
   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
@@ -6736,7 +6784,143 @@ worldMapSystemPanel:
 helpTip:
   comment: "Help Module - Pop-up Help Tips"
   javaClass: "rtr.help.HelpModule.java"
-  
+
+  loadingTip:
+    welcomeBack:
+      text: "歡迎回來！這是一個提示。"
+    0:
+      text: "需要精煉資源的速度更快？建造更多建築吧。"
+    1:
+      text: "流浪者們陷入麻煩？召回他們！"
+    2:
+      text: "如果你有一個功能完善的村莊以及擁有充足的房屋、食物與工作，將會吸引一些流浪者加入你的村莊！"
+    3:
+      text: "你可以在市場購買與販賣資源。建造一個吧！"
+    4:
+      text: "人口增加也會增加神力。"
+    5:
+      text: "游泳時不能使用火元素。"
+    6:
+      text: "小心照顧你的狗狗。"
+    7:
+      text: "哨站與兵營升到最高級時會獲得一個小型防禦塔。"
+      revision: "1"
+    8:
+      text: "好狗狗們有時可以幫助村莊。"
+    9:
+      text: "邪靈可以穿過幾乎任何障礙物並且對物理傷害有很高的抗性。"
+    10:
+      text: "腐化會在地圖上緩慢的擴散，隨著腐化區域與建築變多，夜晚生成的怪物也會變多。"
+    11:
+      text: "村民年老時會死亡！但如果你小心地照顧他們，他們會活著比較長久。"
+    12:
+      text: "別忘了為村民們建造水源。"
+    13:
+      text: "按下 Shift+F2 可以為整張地圖截圖，它將會儲放在 Rise to Ruins 安裝目錄下的 screenShots 資料夾。"
+    14:
+      text: "使用工具時，像是筆刷、道路、建築或是許多其它工具，可以按著 左-shift 鍵鎖定坐標來拉出一條直線。"
+    15:
+      text: "流浪者會不時的訪問你的區域，並試著加入你的村莊。你可以建造充足的房屋與防禦設施來增加他們出現的機率。"
+    16:
+      text: "你的手可以吸收精華，並增加你的神力條。"
+    17:
+      text: "你可以透過介面左側的勞動力面板，並點擊加或減按鈕來調整工人數量。"
+    18:
+      text: "村民需要食物！別忘了建築一些農場。"
+    19:
+      text: "不知道怎麼遊玩？請閱讀遊戲提示！"
+    20:
+      text: "骷髏不會著火。"
+    21:
+      text: "史萊姆會分裂成更多史萊姆，它們會很快的變成麻煩！"
+    22:
+      text: "生存到第三或第四天時遇到大麻煩？建造一些弓箭塔吧。"
+    23:
+      text: "繁殖危機？讓你的村民有一些休息時間，並有充足的房屋。"
+    24:
+      text: "你可以透過點擊時鐘或是按下熱鍵(預設：空白鍵)來暫停遊戲。"
+    25:
+      text: "試著設計建造一個圍堵點，讓怪物無法輕易進入村莊。"
+    26:
+      text: "別用圍牆完全封住自己！你會後悔的！"
+    27:
+      text: "遊戲內會傷害到友方，盡量試著不要傷害到任何人。"
+    28:
+      text: "魔法防禦塔需要精華，建造精華收集器！"
+    29:
+      text: "鋸木廠可以製作木板，可用於多種高級建築。"
+    30:
+      text: "石材加工廠可以製作石板，可用於多種高級建築。"
+    31:
+      text: "水晶加工廠可以製作水晶錠，是一種很重要的燃料。"
+    32:
+      text: "你可以在設置選單內關閉遊戲提示。"
+    33:
+      text: "你可以在設置選單，更改熱鍵與各種其它設定。"
+    34:
+      text: "你可以按下 F2 取得截圖，它會儲存在 screenshots 資料夾。"
+    35:
+      text: "你可以按下 F4 隱藏介面。"
+    36:
+      text: "遊戲崩潰？崩潰日誌記錄在 logs 目錄。將它寄給開發者！"
+    37:
+      text: "多數建築需要精煉原料，在你建築造前請先確認需求！"
+    38:
+      text: "遊戲提示你是的好朋友，請仔細閱讀！"
+    39:
+      text: "村民們被怪物包圍？施放召回或是驅逐法術！"
+    40:
+      text: "建築工只會收獲建造所需的原料。如果你想要儲存資源，請建造收獲用建築！"
+    41:
+      text: "農夫只需要告訴他們那有野生資源可以收獲，在有農場的時候他們會自行的照顧並運作的很好。"
+    42:
+      text: "42"
+      optional: "true"
+    43:
+      text: "村民如果長時間待在極熱的環境中，可能會隨機的自燃起來。"
+    44:
+      text: "村民如果長時間待在極寒的環境中，有時會凍的像石頭一樣硬。"
+    45:
+      text: "確保冬季的食物存量！"
+    46:
+      text: "資源增生術在寒冷的季節效果較差。"
+    47:
+      text: "村民們不開心？別讓他們太累！"
+    48:
+      text: "當天氣變暖和並且正在下雨，是使用資源增生術的最佳時機。"
+    49:
+      text: "大多數的防禦塔都能射過圍牆。善用這項優勢！"
+    50:
+      text: "在冬季耗盡食物？儲存起來！緊急時你可以使用抓取法術，拾起村莊外未收獲的食物。"
+    51:
+      text: "你知道抓取法術可以拾起地圖上未收獲的的原料嗎？當你在緊要關頭需要資源時很方便。"
+    52:
+      text: "村民們需要房屋在夏季時可以消暑，在冬季時可以保暖。"
+    53:
+      text: "在冬季挨餓？使用抓取法術收獲原本無法取得的食物。"
+    54:
+      text: "工人魔像可以在遊戲早期有效幫忙取得更多資源。"
+    55:
+      text: "春季通常是食物成長的最佳季節。"
+    56:
+      text: "極熱或極寒不只會使食物與樹木停止成長，水晶也是！"
+    57:
+      text: "大多數的防禦塔都可以射過圍牆，試著建造一個怪物迷官吧！"
+    58:
+      text: "村民在工作時體溫會升高，這在冬季很好，但在夏季很可怕。"
+    59:
+      text: "想移動的更快？建造一個鋪路小屋與一些道路吧！"
+    60:
+      text: "隨著時間經過，天然的道路會出現在村民經常走過的區域。"
+    61:
+      text: "道路隨著時間會慢慢損壞，請確保你有一些鋪路工可以維護它們！"
+    62:
+      text: "雨水會讓道路加速損壞。"
+    63:
+      text: "基礎道路不會維持很久，請考慮升級道路系統！"
+    64:
+      text: "無法建造更多建築？升級你的營地或早點建造補助建築。"  
+
   tip:
     sandboxModeHeader:
       text: "沙盒模式！"
@@ -6749,7 +6933,7 @@ helpTip:
     worldMapWelcomeHeader:
       text: "歡迎！"
     worldMapWelcome:
-      text: "歡迎來到 Rise to Ruins。你可以在任何你喜歡的區域，點擊發光的框框，接著點擊 '建立村莊' 來發展你的第一個村莊。在一開始的時候會有一些免費的村民幫助你。你只能在地圖上選擇任一地點。建立完主要村莊後，你會從該地區擴展到連接到其它區域，因此請明智地選擇！現在，請專心發展你的第一個村莊！"
+      text: "歡迎來到 Rise to Ruins。~在任何你喜歡的區域，點擊發光的框框，接著點擊 '建立村莊' 來發展你的第一個村莊。初期會有一些免費的村民幫助你。你只能選擇地圖上的區域。建立村莊後，該地區會連接到相鄰區域，因此請慎選！現在，請專心發展你的第一個村莊！"
     worldMapMigrationHeader:
       text: "遷移！"
     worldMapMigration:
@@ -6757,11 +6941,11 @@ helpTip:
     welcomeCampHeader:
       text: "營地"
     welcomeCamp:
-      text: "歡迎來到你的第一個區域！首先你應該找地方設置你的 $YEL1營地 $WHI0！一個良好的發展地點應該有石頭、樹木、水晶、食物與水在附近。要設置你的營地，先按下 $GRE1'好的！' $WHI0關閉此提示與自動暫停，$GRE1然後選擇右邊正在閃爍的 '設置營地' 按鈕。~~$WHI0祝好運！"
+      text: "歡迎來到你的第一個區域！首先你應該找地方設置你的 $YEL1營地$WHI0！一個良好的發展地點應該有石頭、樹木、水晶、食物與水在附近。要設置你的營地，先按下 $GRE1'好的！' $WHI0關閉此提示與自動暫停，然後選擇右邊正在閃爍的 $GRE1'設置營地' $WHI0按鈕。~祝好運！"
     welcomeTipsHeader:
       text: "提示！"
     welcomeTips:
-      text: "是時候開始了！由於這是你第一次遊玩，你會在遊戲中獲得大量的提示。$RED1這個遊戲有一個陡峭的學習曲線$WHI0，你會需要這些提示的幫助！$GRE1這遊戲提示時會暫停$WHI0，所以請花點時間了解！~~你可以在設置選單關閉提示，但如果你從未玩過將不建議你關閉它！"
+      text: "開始了！第一次遊玩，你會在遊戲中獲得大量的提示。$RED1此遊戲有一個陡峭的學習曲線$WHI0，你會需要這些提示的幫助！$GRE1遊戲提示時會暫停$WHI0，所以請花點時間了解！在設置選單關閉提示，但如果你從未玩過將不建議你關閉它！"
     harvestingResourcesHeader:
       text: "收獲資源"
     harvestingResources:
@@ -6769,11 +6953,11 @@ helpTip:
     villageWorkersHeader:
       text: "工人"
     villageWorkers:
-      text: "建築內的工人，會按照序順完成已排定的工作。例如在 $YEL1市鎮中心 $WHI0的 $YEL1建築工 $WHI0可以建造、修理與拆除建築。他們也可以收獲原料，但僅限於他們所在建築物需要的原料。而像是在 $YEL1伐木廠 $WHI0的 $YEL1收獲工人 $WHI0會持續的收集原料並儲存起來。 $YEL1你可以在左手邊的 '勞動力' 面板中，查看整體的工作人數。"
+      text: "建築內的工人，會按照序順完成已排定的工作。例如在 $YEL1市鎮中心 $WHI0的 $YEL1建築工 $WHI0可以建造、修理與拆除建築。他們也可以收獲原料，但僅限於他們所在建築物需要的原料。而像是在 $YEL1伐木廠 $WHI0的 $YEL1收獲工人 $WHI0會持續的收集原料並儲存起來。你可以在左手邊的 $YEL1'勞動力' $WHI0面板中，查看整體的工作人數。"
     workBuildingsHeader:
       text: "工作建築"
     workBuildings:
-      text: "村民建造好新的 {buildingName} $WHI0將提供 {amount} $GRE1{mobJobName} $WHI0職缺！如果你要村民們做那項工作，你需要增加工作工人數。你可以在兩個地方調整，一是左手邊的 $GRE1勞動力 $WHI0面板，或點擊 $GRE1{buildingName} $WHI0然後使用下方彈出的介面。接著點擊 $GRE1+ 或 - $WHI0來調整工人數量。$RED1如果你的沒有可用的村民，試著減少其它工作的工人。"
+      text: "村民建造好新的 {buildingName} $WHI0將提供 $GRE1{amount} {mobJobName} $WHI0職缺！如果你要村民們做該項工作，你需要增加工作工人數。你可以在兩個地方調整，一是左手邊的 $GRE1勞動力 $WHI0面板，或點擊 {buildingName} $WHI0然後使用下方彈出的介面。接著點擊 $GRE1+ 或 $GRE1- $WHI0來調整工人數量。$RED1如果你的沒有可用的村民，試著減少其它工作的工人。"
     buildingDamageHeader:
       text: "受損建築"
     buildingDamage:
@@ -6781,33 +6965,35 @@ helpTip:
     resouceManagementHeader:
       text: "資源管理"
     resouceManagement:
-      text: "你剛剛建造好的 {buildingName} $WHI0可以製作資源，像是 $YEL1{resourceName} $WHI0但要讓你的村民開始工作，你需要在左手邊的 $RED1資源管理面板 $WHI0分配 $RED1{mobJobName}與資源。$WHI0設置一個資源 $GRE1'維持' $WHI0的數量，工人們會立即 $GRE1'製作'，試著將村莊中的資源保持在所設定的數量。這個數量可以設置超過 500 到無限，同時也可以限制收獲的數量。"
+      text: "你剛剛建造好的 {buildingName} $WHI0可以製作資源，像是 $YEL1{resourceName} $WHI0但要讓你的村民開始工作，你需要在左手邊的 $RED1資源管理面板 $WHI0分配 $RED1{mobJobName}與資源。$WHI0設置一個資源 $GRE1'維持' $WHI0的數量，工人們會立即 $GRE1'製作'$WHI0，試著將村莊中的資源保持在所設定的數量。這個數量可以設置超過 500 到你可儲存的最大數量，或無限可不停的生產資源。你也可以用同樣的方式控制收成上限。"
+      revision: "1"
     energyHeader:
       text: "能量"
     energy:
-      text: "你的村民剛剛建造完成的 {buildingName} 需要能量才能運作。使用能量的建築物通常需要精華作為燃料。你可以使用 $GRE1水晶錠 $WHI0補充 $YEL1精華收集器 $WHI0來產生能量，可在 $YEL1水晶加工廠 $WHI0精煉。活物被擊殺時也會掉落一些精華，像是怪物、動與村民，此時如果你有一個 $YEL1精華收集器 $WHI0收集掉落的能量，就能將能量輸送給建築物使用。"
+      text: "你的村民剛剛建造完成的 {buildingName} $WHI0需要能量才能運作。使用能量的建築物通常需要精華作為燃料。你可以使用 $GRE1水晶錠 $WHI0補充 $YEL1精華收集器 $WHI0來產生能量，可在 $YEL1水晶加工廠 $WHI0精煉。活物被擊殺時也會掉落一些精華，像是怪物、動物與村民，此時如果你有一個 $YEL1精華收集器 $WHI0收集掉落的能量，就能將能量輸送給建築物使用。"
     ammoHeader:
       text: "彈藥"
     ammo:   
-      text: "你的村民剛剛建造完成的 {buildingName} 需要彈藥才能運作。你需要建造一個製作彈藥的建築來補充，像是 $YEL1製弓坊 $WHI0或 $YEL1石頭磨坊 $WHI0。"
+      text: "你的村民剛剛建造完成的 {buildingName} $WHI0需要彈藥才能運作。你需要建造一個製作彈藥的建築來補充，像是 $YEL1製弓坊 $WHI0或 $YEL1磨石坊 $WHI0。"
     refineHeader:
       text: "精煉原料"
     refineNew:   
-      text: "一些建築需要精煉過的原料，像是 $YEL1木板 $WHI0， $YEL1石板 $WHI0或 $YEL1水晶錠 $WHI0。你剛剛擺放的 {buildingName} 就是其中之一！如果建築需要其中某種資源，而你並沒有製作，村民們會盡力建造，但建築將永遠無法建造完成。你可以在高級的工作建築內精煉大多數的原料，像是 $YEL1木材加工坊 $WHI0與 $YEL1石頭加工廠 $WHI0。它們可以在建造面板的精煉類別下找到。"
+      text: "一些建築需要精煉過的原料，像是 $YEL1木板$WHI0，$YEL1石板 $WHI0或 $YEL1水晶錠$WHI0。你剛剛建造的 {buildingName} $WHI0就是其中之一！如果建築需要其中某種資源，而你並沒有製作，村民們會盡力建造，但建築將永遠無法建造完成。你可以在高級的工作建築內精煉大多數的原料，像是 $YEL1木材加工坊 $WHI0與 $YEL1石頭加工廠$WHI0。它們可以在建造面板的精煉類別下找到。"
     refineReclaim:   
-      text: "一些建築需要精煉過的原料，像是 $YEL1木板 $WHI0， $YEL1石板 $WHI0或 $YEL1水晶錠 $WHI0。你剛剛試圖占領的 {buildingName} 就是其中之一！如果建築需要其中某種資源，而你並沒有製作，村民們會盡力建造，但建築將永遠無法建造完成。你可以在高級的工作建築內精煉大多數的原料，像是 $YEL1木材加工坊 $WHI0與 $YEL1石頭加工廠 $WHI0。它們可以在建造面板的精煉類別下找到。"
+      text: "一些建築需要精煉過的原料，像是 $YEL1木板$WHI0，$YEL1石板 $WHI0或 $YEL1水晶錠$WHI0。你剛剛試圖占領的 {buildingName} $WHI0就是其中之一！如果建築需要其中某種資源，而你並沒有製作，村民們會盡力建造，但建築將永遠無法建造完成。你可以在高級的工作建築內精煉大多數的原料，像是 $YEL1木材加工坊 $WHI0與 $YEL1石頭加工廠$WHI0。它們可以在建造面板的精煉類別下找到。"
     farmingHeader:
       text: "農場"
     farming:   
-      text: "你的村民建造了他們的第一個農場！一旦分配了工人，他們會需要 $GRE1野生植物與水 $WHI0開始耕作。你可以使用介面左下方的 $GRE1'收獲食物與水' $WHI0按鈕來取得這兩種資源。會自動的收獲與照料農場裡的食物！"
+      text: "你的村民建造了他們的第一個農場！一旦分配了工人，他們會需要 $GRE1野生植物 $WHI0與 $GRE1水 $WHI0開始耕作。你可以使用介面左下方的 $GRE1'收獲食物與水' $WHI0按鈕來取得這兩種資源。會自動的收獲與照料農場裡的食物！"
     buildingPriorityHeader:
       text: "建築優先度"
     buildingPriority:   
-      text: "你知道可以調整建造的優先度嗎？只需要選擇 $YEL1右上 $WHI0的 $YEL1'造築清單' 並點擊 $YEL1上或下箭號 $WHI0就可以重新安排它們的順序。清單裡較高優先度的建築，將會優先建造、拆除或是修理。"
+      text: "你知道可以調整建造的優先度嗎？只需要選擇 $YEL1右上 $WHI0的 $YEL1'造築清單' $WHI0並點擊 $YEL1上 $WHI0或 $YEL1下 $WHI0箭頭就可以重新安排它們的順序。清單裡較高優先度的建築，將會優先建造、拆除或是修理。"
     noHomesHeader:
       text: "房屋"
     noHomes:   
-      text: "第 {day} 天了，而你還沒有建造任何 $YEL1房屋 $WHI0，你的村民們需要地方生活。否則他們會變的不開心。你也需要一些房屋讓村民們交配，期待有一天會生小孩。"
+      text: "第 {day} 天了，而你還沒有建造任何 $YEL1房屋 $WHI0，你的村民們需要地方生活。你也需要一些房屋讓村民們交配，期待有一天會生小孩。"
+      revision: "1"
     noFarmsHeader:
       text: "農場"
     noFarms:   
@@ -6824,14 +7010,16 @@ helpTip:
       text: "建築數"
     buildingSlots:   
       text: "你的建築數用完了，為了管理不斷成長的村莊，你需要升級 $YEL1營地 $WHI0建造一些 $YEL1補助建築$WHI0。你可以點擊建築，透過下方的方板並點擊升級按鈕來升級你的 $YEL1營地 $WHI0。另外，如果你想要建造一個 $YEL1補助建築 $WHI0可以在建造面板的市政中找到它。"
+      revision: "1"
     lifeExpectancyHeader:
       text: "預期壽命"
     lifeExpectancy:   
-      text: "過著艱苦生活的村民，壽命都不長！村民如果受傷、挨餓、非常不開心或過著悲慘的人生，預期壽命就會減少。$YEL1一旦預期壽命減少，將不會恢復！$WHI0所以一定要照顧好你的村民，你就會有一群強壯、健康、長壽的勞動力！"
+      text: "過著艱苦生活的村民，壽命都不長！村民如果受傷、挨餓或過著悲慘的人生，預期壽命就會減少。$YEL1一旦預期壽命減少，將不會恢復！$WHI0所以一定要照顧好你的村民，你就會有一群強壯、健康、長壽的勞動力！"
+      revision: "1"
     eldersHeader:
       text: "村民長者"
     elders:   
-      text: "停留一會，並聆聽！{mobName} 是一位長者。當村民的進入高年齡時，他們會變成長者並退休。但作為回報，他們會分享智慧給任何願意與他們聊天的人。"
+      text: "停留一會，並聆聽！{mobName} $WHI0是一位長者。當村民的進入高年齡時，他們會變成長者並退休。但作為回報，他們會分享智慧給任何願意與他們聊天的人。"
     ghostsHeader:
       text: "幽魂"
     ghosts:   
@@ -6873,9 +7061,11 @@ helpTip:
     matingHeader:
       text: "交配"
     matingDifferentGender:
-      text: "你注意到 {mobName} $WHI0找到了新配偶，{mobMateName} $WHI0了嗎？如果他們其中一個有家，而且很快樂，他們會試著回家並生個孩子！他們會經常的互相見面增進關係，或試著生活在同一個房屋裡。"
+      text: "你注意到 {mobName} $WHI0找到了新配偶，{mobMateName} $WHI0了嗎？如果他們其中一個有家，他們會試著回家並生個孩子！他們會經常的互相見面增進關係，或試著生活在同一個房屋裡。"
+      revision: "1"
     matingSameGender:   
-      text: "你注意到 {mobName} $WHI0找到了新配偶，{mobMateName} $WHI0了嗎？如果他們其中一個有家，而且很快樂，他們會試著回家並享受一些私人的時光！也許不像其它的同伴一樣，很有效率的繁殖，但仍然會增進關係！他們會經常的互相見面對增進關係，或試著生活在同一個房屋裡。"
+      text: "你注意到 {mobName} $WHI0找到了新配偶，{mobMateName} $WHI0了嗎？如果他們其中一個有家，他們會試著回家並享受一些私人的時光！也許不像其它的同伴一樣，很有效率的繁殖，但仍然會增進關係！他們會經常的互相見面對增進關係，或試著生活在同一個房屋裡。"
+      revision: "1"
     pregnantHeader:
       text: "懷孕"
     pregnant:   
@@ -6895,15 +7085,13 @@ helpTip:
     rainHeader:
       text: "下雨！"
     rain:   
-      text: "哇，下雨了！雨會使村民的幸福度慢慢下降與降低移動速度，但也會 $GRE1灌溉農作物，填滿雨水收集器與滅火！$WHI0只需要祈禱閃電不會摧毀任何重要的東西。"
+      text: "哇，下雨了！雨會使村民的動作變慢，但也會 $GRE1灌溉農作物，填滿雨水收集器與滅火！$WHI0只需要祈禱閃電不會摧毀任何重要的東西。"
+      revision: "1"
     snowHeader:
       text: "下雪！"
     snow:   
-      text: "哇，下雪了！雪會使村民的幸福度慢慢下降與降低移動速度。請小心，雪也會使溫度快速下降，低到可以結凍與殺死作物，或是傷害沒有地方取暖的村民。"
-    happinessLowHeader:
-      text: "低幸福度"
-    happinessLow:   
-      text: "你的村民們相當不開心。你應該考慮讓他們休息一下。快樂的村民會更努力工作，與更容易繁殖。村民們如果吃飽、有家與配偶也會更開心。"
+      text: "哇，下雪了！雪會使村民的動作變慢。請小心，雪也會使溫度快速下降，低到可以結凍與殺死作物，或是傷害沒有地方取暖的村民。"
+      revision: "1"
     timeDuskHeader:
       text: "夜晚"
     timeDusk:   
@@ -6949,6 +7137,18 @@ helpTip:
       text: "拆除建築"
     dismantle:
       text: "你可以透過介面右下方的 $YEL1拆除建築與物件 $WHI0按鈕，並點擊建築物來拆除建築。一旦標記好要拆除的建築，你的建築工將會摧毀建築。"
+    overharvestingHeader:
+      text: "超收"
+    overharvesting:
+      text: "哇！慢點。$RED1地上有太多資源了$WHI0。你的倉庫夠用嗎？$RED1如果資源丟在地上太久，它們會腐敗變成垃圾並開始生成垃圾史萊姆$WHI0！如果想要將資源集中堆放，$YEL1你應該要建造一些倉庫$WHI0！在建造面板的 $YEL1倉庫 $WHI0標籤中。你也可以減少工人數量來降低收獲的速度，或在左邊的生產面板設定一個收獲量上限。"
+    decayingResourcesHeader:
+      text: "腐敗中資源"
+    decayingResources:
+      text: "$RED1地上大量的資源開始腐敗變成垃圾！$WHI0如果你無法維持資源不落地，會使村莊充滿垃圾並開始生成垃圾史萊姆！你應該建造一些倉庫來儲存資源，或不要收獲太多資源。如果已經引發了垃圾問題，確保建造一些 $YEL1垃圾場 $WHI0。"
+    wallAttackedHeader:
+      text: "圍牆正受到攻擊！"
+    wallAttacked:
+      text: "$RED1怪物攻擊你的 {buildingName} 並使你的防禦出現漏點！$WHI0如果進入村莊的主要入口過於擁擠，怪物會攻擊你的圍牆。你可以透過加厚圍牆來避面，或是讓進入村莊的入口變寬或短點。~當怪物數量增加，你的迷官也會變得更擁擠，促使它們攻擊圍牆。確保你的迷官不要太長、太緊密。給它們一些喘息空間，那麼它們將會持續的走進 $GRE1你 $WHI0為它們安排好的陷阱！"
       
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Influence Module
@@ -7231,7 +7431,7 @@ tileSet:
         text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     bricks:
       name:
-        text: "磚"
+        text: "磚塊"
     dirt:
       name:
         text: "泥土"
@@ -7257,7 +7457,7 @@ tileSet:
         text: "不能移除，並會大大降低移動速度。"
     tiles:
       name:
-        text: "方塊"
+        text: "地板"
     water:
       name:
         text: "水"
@@ -7504,17 +7704,17 @@ mobName:
       text: "殭屍"
     plural:
       text: "殭屍"
-  childZombie:
+  zombieChild:
     single:
-      text: "兒童殭屍"
+      text: "殭屍兒童"
     plural:
-      text: "兒童殭屍"
+      text: "殭屍兒童"
   zombieDoggo:
     single:
       text: "殭屍狗狗"
     plural:
       text: "殭屍狗狗"
-  doofyZombieDoggo:
+  zombieDoofyDoggo:
     single:
       text: "笨殭屍狗狗"
     plural:
@@ -7524,7 +7724,7 @@ mobName:
       text: "貓人殭屍"
     plural:
       text: "貓人殭屍"
-  catjeetChildZombie:
+  zombieCatjeetChild:
     single:
       text: "貓人殭屍兒童"
     plural:
@@ -7549,7 +7749,7 @@ mobName:
       text: "幽魂狗狗"
     plural:
       text: "幽魂狗狗"
-  doofyGhostDoggo:
+  ghostDoofyDoggo:
     single:
       text: "笨幽魂狗狗"
     plural:
@@ -7634,21 +7834,81 @@ mobName:
       text: "狗狗"
     plural:
       text: "狗狗"
-  doofyDoggo:
-    single:
-      text: "笨狗狗"
-    plural:
-      text: "笨狗狗"
   wildDoggo:
     single:
       text: "野生狗狗"
     plural:
       text: "野生狗狗"
-  doofyWildDoggo:
+  doofyDoggo:
     single:
-      text: "笨野生狗狗"
+      text: "笨狗狗"
     plural:
-      text: "笨野生狗狗"
+      text: "笨狗狗"
+  wildDoofyDoggo:
+    single:
+      text: "野生笨狗狗"
+    plural:
+      text: "野生笨狗狗"
+  beefalo:
+    single:
+      text: "牛牛"
+    plural:
+      text: "牛牛"
+  wildBeefalo:
+    single:
+      text: "野生牛牛"
+    plural:
+      text: "野生牛牛"
+  zombieBeefalo:
+    single:
+      text: "殭屍牛牛"
+    plural:
+      text: "殭屍牛牛"
+  entler:
+    single:
+      text: "糜鹿"
+    plural:
+      text: "糜鹿"
+  wildEntler:
+    single:
+      text: "野生糜鹿"
+    plural:
+      text: "野生糜鹿"
+  zombieEntler:
+    single:
+      text: "殭屍糜鹿"
+    plural:
+      text: "殭屍糜鹿"
+  rous:
+    single:
+      text: "水豚"
+    plural:
+      text: "水豚"
+  wildRous:
+    single:
+      text: "野生水豚"
+    plural:
+      text: "野生水豚"
+  zombieRous:
+    single:
+      text: "殭屍水豚"
+    plural:
+      text: "殭屍水豚"
+  clucker:
+    single:
+      text: "小雞"
+    plural:
+      text: "小雞"
+  wildClucker:
+    single:
+      text: "野生小雞"
+    plural:
+      text: "野生小雞"
+  zombieClucker:
+    single:
+      text: "殭屍小雞"
+    plural:
+      text: "殭屍小雞"
   stoneGolem:
     single:
       text: "石頭魔像"
@@ -7910,6 +8170,8 @@ damageCauseName:
     text: "自然因素"
   childBirth:
     text: "兒童出生"
+  beingSlaughtered:
+    text: "被屠宰"
     
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Mob AI
@@ -7938,6 +8200,28 @@ aiTask:
         text: "走到空曠的地方丟棄手上的資源"
       dropping:
         text: "將資源丟到地上"
+
+  animalWanderBehavior:  
+    pathfindToWaypoint:
+      text: "尋找安全地點定居"
+      
+  attemptBreed:  
+    pathfindToMate:
+      text: "與伴侶約會"
+      
+  beingSlaughtered:  
+    beSlaughtered:
+      text: "被屠宰！"
+      
+  captureAnimals:  
+    huntingAnimals:
+      text: "狩獵動物"
+    chaseAnimal:
+      text: "追逐 {mobName}$WHI0！"
+         
+  captureAnimalsInHand:  
+    pathfindToBuilding:
+      text: "將 {mobName} 捉到 {buildingName}"    
         
   birth:  
     findSafeLocation:
@@ -7967,7 +8251,12 @@ aiTask:
 
   clearoutResourceFromBuilding:
     pathfindToBuilding:
-      text: "找到 $WHI0在{buildingName} 的 $YEL1{resourceName}"
+      text: "清除 $WHI0在{buildingName} 的 $YEL1{resourceName}"
+      revision: "1"
+
+  clearResourcesFromRoad:
+    pathfindToResource:
+      text: "清除 $WHI0道路的 $YEL1{resourceName}"
 
   clearTopographyFromRoadWork:
     pathfindToTopography:
@@ -7982,6 +8271,8 @@ aiTask:
       text: "清除地形"
       
   combatBuildings:
+    fleeTarget:
+      text: "逃離 {buildingName}"
     pathfindToTarget:
       text: "攻擊 {buildingName}"
       
@@ -8161,30 +8452,6 @@ aiTask:
     grabbed:
       text: "由上帝自己掌握！"
       
-  guardPatrolFrontLine:
-    pathfindToWaypoint:
-      text: "在前線巡邏"
-      
-  guardPatrolPerimeter:
-    pathfindToWaypoint:
-      text: "巡邏周圍"
-      
-  guardPatrolVillage:
-    pathfindToWaypoint:
-      text: "巡邏村莊"
-      
-  guardPost:
-    pathfindToBuilding:
-      text: "在 {buildingName} 擔任守衛"
-    posting:
-      text: "在 {buildingName} 擔任守衛"
-    pathfindToNewPostPosition:
-      text: "在 {buildingName} 擔任守衛"
-      
-  guardSummoned:
-    pathfindToSummons:
-      text: "跑向並保護 {mobName}"
-      
   harvestFarmWork:
     pathfindToResource:
       text: "走向農場收獲食物"
@@ -8333,6 +8600,18 @@ aiTask:
     pathfindToWorkBuilding:
       text: "走向 {buildingName} 離開工作。"
       
+  rangerPatrolFrontLine:
+    pathfindToWaypoint:
+      text: "在前線巡邏"
+      
+  rangerPatrolVillage:
+    pathfindToWaypoint:
+      text: "在村莊巡邏"
+      
+  rangerSummoned:
+    pathfindToSummons:
+      text: "跑向並保護 {mobName}"
+
   redistributeResources:
     pathfindToBuilding:
       text: "配分在 {buildingNameSource} 的資源到 {buildingNameDestination}"
@@ -8389,6 +8668,16 @@ aiTask:
     pathfindToExtraResource:
       text: "拾起額外的植物資源"
       
+  slaughterAnimal:
+    chaseAnimal:
+      text: "將 {mobName} 捉去屠宰！"
+      
+  slaughterAnimalInHand:
+    pathfindToBuilding:
+      text: "將 {mobName} 捉到 {buildingName} 屠宰！"
+    slaughterAnimal:
+      text: "屠宰 {mobName}！"
+
   sleepOutside:
     findSafeLocation:
       text: "尋找安全的戶外睡覺地點"
@@ -8663,7 +8952,8 @@ mobJob:
     plural:
       text: "護甲鐵匠"
     description:
-      text: "在護甲鐵匠鋪製作護甲給村民們，提高他們的自保能力。通常需要鍛造廠供應鐵錠。"
+      text: "在護甲鐵匠鋪製作護甲給村民們，提高他們的自保能力。通常需要鍛造廠供應鐵錠，或屠宰動物取得生皮。"
+      revision: "1"
 
   toolsmith:
     single:
@@ -8671,7 +8961,7 @@ mobJob:
     plural:
       text: "工具鐵匠"
     description:
-      text: "在工具鐵匠鋪製作工具與武器給村民們，提高他們的自保能力與工作效率。通常需要鍛造廠供應鐵錠。"
+      text: "在工具鐵匠鋪製作工具與武器給村民們，提高他們的自保能力與工作效率。通常需要鍛造廠供應鐵錠，或木材加工廠供應木板。"
 
   waterMaster:
     single:
@@ -8689,13 +8979,13 @@ mobJob:
     description:
       text: "將水裝進瓶子裡，讓村民們在工作時可以方便攜帶。"
 
-  guard:
+  ranger:
     single:
-      text: "守衛"
+      text: "遊俠"
     plural:
-      text: "守衛"
+      text: "遊俠"
     description:
-      text: "保護村莊，並獲得防禦與攻擊加成。"
+      text: "在白天狩獵動物，在晚上保護村莊。如果村莊有空間，會將動物帶回來飼養。獲得防禦與攻擊加成。"
 
   provisioner:
     single:
@@ -8896,7 +9186,8 @@ object:
         name:
           text: "簡易護甲鐵匠鋪"
         description:
-          text: "工人可以將鐵錠製作成護甲給村民。需要鍛造廠將鐵礦製成鐵錠。"
+          text: "工人可以將鐵錠製作成護甲給村民。需要鍛造廠生產鐵錠，與牧場和廚房生產生皮。"
+          revision: "1"
       base:
         name:
           text: "護甲鐵匠鋪"
@@ -8935,6 +9226,23 @@ object:
         description:
           text: "增加建築可以儲存的彈藥量到最大值。"
     
+    animalPen:
+      makeshift:
+        name:
+          text: "簡易牧場"
+        description:
+          text: "遊俠可以捕捉動物，然後在廚房屠宰取得肉與其它原料。捉到的動物，會繁殖！"
+      base:
+        name:
+          text: "牧場"
+        description:
+          text: "增加牧場的容量。"
+      established:
+        name:
+          text: "堅固牧場"
+        description:
+          text: "增加牧場的容量到最大值。"
+
     attractTower:
       makeshift:
         name:
@@ -9011,23 +9319,6 @@ object:
         description:
           text: "增加最大能量與射速。"
     
-    barracks:
-      makeshift:
-        name:
-          text: "簡易兵營"
-        description:
-          text: "提供守衛居住空間，可以保護與巡邏村莊，以能量與幸福為代價提供比普通房屋更快的生命恢復速度。"
-      base:
-        name:
-          text: "兵營"
-        description:
-          text: "增加守衛數、儲存空間與生命恢復加成。"
-      established:
-        name:
-          text: "堅固兵營"
-        description:
-          text: "在兵營中增加一座小型弓箭塔，同時增加守衛數、儲存空間與生命恢復加成。"
-    
     bottler:
       makeshift:
         name:
@@ -9044,7 +9335,7 @@ object:
           text: "堅固瓶裝廠"
         description:
           text: "增加裝瓶速度、最大儲存量與瓶裝工職缺。"
-    
+
     bowTower:
       makeshift:
         name:
@@ -9160,6 +9451,23 @@ object:
         description:
           text: "增加製作繃帶與醫療包的速度，增加最大儲存量與醫生職缺。"
     
+    cluckerCoop:
+      makeshift:
+        name:
+          text: "簡易雞舍"
+        description:
+          text: "遊俠可以捕捉小雞，在廚房可以屠宰取得肉與其它原料。捉到的動物，會繁殖！"
+      base:
+        name:
+          text: "雞舍"
+        description:
+          text: "增加雞舍容量。"
+      established:
+        name:
+          text: "堅固雞舍"
+        description:
+          text: "增加雞舍容量到最大值。"
+
     crystalGolemCombobulator:
       makeshift:
         name:
@@ -9395,6 +9703,23 @@ object:
       description:
         text: "基礎光源，但照明範圍更廣！也會增加可建造的範圍！怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
     
+    fishingHut:
+      makeshift:
+        name:
+          text: "簡易捕魚小屋"
+        description:
+          text: "(無說明)"
+      base:
+        name:
+          text: "捕魚小屋"
+        description:
+          text: "(無說明)"
+      established:
+        name:
+          text: "堅固捕魚小屋"
+        description:
+          text: "(無說明)"
+
     foodStorage:
       small:
         name:
@@ -9771,17 +10096,17 @@ object:
         name:
           text: "簡易哨站"
         description:
-          text: "守衛巡邏的遠端哨站，同時可以保護村莊。別到處設置很威險！"
+          text: "遊俠巡邏的遠端哨站，同時可以保護村莊。別到處設置很危險！"
       base:
         name:
           text: "哨站"
         description:
-          text: "增加哨站的守衛職缺。"
+          text: "增加哨站的遊俠職缺。"
       established:
         name:
           text: "堅固哨站"
         description:
-          text: "增加哨站的守衛職缺並在哨站的頂端增加一個小型防禦塔。"
+          text: "增加哨站的遊俠職缺並在哨站的頂端增加一個小型防禦塔。"
           
     processor:
       makeshift:
@@ -9954,6 +10279,24 @@ object:
         description:
           text: "增加雜物的儲存量到最大值。"
     
+    rangerLodge:
+      makeshift:
+        name:
+          text: "簡易遊俠小屋"
+        description:
+          text: "提供遊俠職缺與居住空間，他們會保護村莊與狩獵動物，而在能量消耗方面，也會提供比普通房屋更快的生命值恢復速度。"
+          revision: "1"
+      base:
+        name:
+          text: "遊俠小屋"
+        description:
+          text: "增加遊俠職缺、儲存空間與生命恢復加成。"
+      established:
+        name:
+          text: "遊俠小屋"
+        description:
+          text: "在小屋的頂端增加一座小型箭塔，同時增加遊俠職缺、儲存空間與生命恢復加成。"
+
     slingTower:
       makeshift:
         name:
@@ -9970,19 +10313,19 @@ object:
           text: "堅固彈弓塔"
         description:
           text: "增加最大傷害、射速與彈藥儲存量。"
-      fire:
+      exploding:
         name:
-          text: "火彈弓塔"
+          text: "爆炸彈弓塔"
         description:
-          text: "增加火炎傷害，但會消耗能量。如果能量耗盡，它仍然可以持續射出石球，直到彈藥耗盡。"
+          text: "增加爆炸火炎傷害，但會消耗能量。如果能量耗盡，它仍然可以持續射出石球，直到彈藥耗盡。"
       lightning:
         name:
-          text: "電彈弓塔"
+          text: "閃電彈弓塔"
         description:
           text: "增加閃電傷害，但會消耗能量。如果能量耗盡，它仍然可以持續射出石球，直到彈藥耗盡。"
       ice:
         name:
-          text: "電彈弓塔"
+          text: "冰冷彈弓塔"
         description:
           text: "增加冰冷傷害，但會消耗能量。如果能量耗盡，它仍然可以持續射出石球，直到彈藥耗盡。"
     
@@ -10115,17 +10458,17 @@ object:
     rockTumbler:
       makeshift:
         name:
-          text: "簡易石頭磨坊"
+          text: "簡易磨石坊"
         description:
           text: "工人可以製作彈藥，供彈弓或石頭類防禦塔使用，像是砲塔、彈弓塔與散射塔。"
       base:
         name:
-          text: "石頭磨坊"
+          text: "磨石坊"
         description:
           text: "增加製作彈藥的速度，增加最大儲存量與磨石工職缺。"
       established:
         name:
-          text: "堅固石頭磨坊"
+          text: "堅固磨石坊"
         description:
           text: "增加製作彈藥的速度，增加最大儲存量與磨石工職缺。"
     
@@ -10184,7 +10527,7 @@ object:
         name:
           text: "簡易鐵匠鋪"
         description:
-          text: "工人可以使用鐵錠為村民製作工具，增加他們的工作效率。需要鍛造廠製作鐵錠。"
+          text: "工人可以使用鐵錠與木板為村民製作工具，增加他們的工作效率。需要鍛造廠製作鐵錠。"
       base:
         name:
           text: "鐵匠鋪"
@@ -10388,8 +10731,12 @@ resourceCategory:
   
   armor:
     text: "護甲"
+  byproduct:
+    text: "副產品"
   raw:
     text: "原料"
+  foodAndWater:
+    text: "飲食"
   recovery:
     text: "恢復"
   refined:
@@ -10403,7 +10750,7 @@ resourceCategory:
   trash:
     text: "垃圾"
   miscellaneous:
-    text: "雜項"
+    text: "其它"
        
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Resource Module
@@ -10535,13 +10882,13 @@ resource:
     description:
       text: "可能還剩下一點用處的食物垃圾堆。使用處理站可處理它，或在焚化爐中燃燒它可以釋放精華。"
       
-  rawFood:
+  rawVegetable:
     single:
-      text: "生食"
+      text: "生蔬菜"
     plural:
-      text: "生食"
+      text: "生蔬菜"
     description:
-      text: "可以吃的生食！"
+      text: "可以吃的生蔬菜！"
 
   ration:
     single:
@@ -10581,7 +10928,7 @@ resource:
     plural:
       text: "木劍"
     description:
-      text: "有點鋒利（嗯，削尖？）的木製武器，增加最大傷害。有敵攻擊敵人。"
+      text: "有點鋒利（很好，裂了？）的木製武器，增加最大傷害。有敵攻擊敵人。"
 
   pickaxe:
     single:
@@ -10655,11 +11002,11 @@ resource:
     description:
       text: "堅固的護甲可減少受到的傷害。"
 
-  woodShield:
+  leatherShield:
     single:
-      text: "木盾"
+      text: "皮盾"
     plural:
-      text: "木盾"
+      text: "皮盾"
     description:
       text: "有小機率使攻擊打偏的基礎防具。"
 
@@ -10774,149 +11121,62 @@ resource:
       text: "垃圾方塊"
     description:
       text: "壓縮無用的垃圾，燃燒時可產生更多精華，或建造大型垃圾方塊與垃圾牆。"
-    
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# State Base
-# Loading Messages
-# rtr.states.StateBase.java
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-     
-stateBase:
-  comment: "Loading Messages"
-  javaClass: "rtr.states.StateBase.java"
-  
-  loadingMessage:
-    0:
-      text: "需要精煉資源的速度更快？建造更多建築吧。"
-    1:
-      text: "流浪者們陷入麻煩？召回他們！"
-    2:
-      text: "如果你有一個功能完善的村莊以及擁有充足的房屋、食物與工作，將會吸引一些流浪者加入你的村莊！"
-    3:
-      text: "你可以在市場購買與販賣資源。建造一個吧！"
-    4:
-      text: "人口增加也會增加神力。"
-    5:
-      text: "游泳時不能使用火元素。"
-    6:
-      text: "小心照顧你的狗狗。"
-    7:
-      text: "哨站與兵營升到最高級時會獲得一個小型防禦塔。"
-    8:
-      text: "好狗狗們有時可以幫助村莊。"
-    9:
-      text: "邪靈可以穿過幾乎任何障礙物並且對物理傷害有很高的抗性。"
-    10:
-      text: "腐化會在地圖上緩慢的擴散，隨著腐化區域與建築變多，夜晚生成的怪物也會變多。"
-    11:
-      text: "村民年老時會死亡！但如果你小心地照顧他們，他們會活著比較長久。"
-    12:
-      text: "別忘了為村民們建造水源。"
-    13:
-      text: "按下 Shift+F2 可以為整張地圖截圖，它將會儲放在 Rise to Ruins 安裝目錄下的 screenShots 資料夾。"
-    14:
-      text: "使用工具時，像是筆刷、道路、建築或是許多其它工具，可以按著左 shift 鍵鎖定坐標來拉出一條直線。"
-    15:
-      text: "流浪者會不時的訪問你的區域，並試著加入你的村莊。你可以建造充足的房屋與防禦設施來增加他們出現的機率。"
-    16:
-      text: "你的手可以吸收精華，並增加你的神力條。"
-    17:
-      text: "你可以透過介面左側的勞動力面板，並點擊加或減按鈕來調整工人數量。"
-    18:
-      text: "村民需要食物！別忘了建築一些農場。"
-    19:
-      text: "不知道怎麼遊玩？請閱讀遊戲提示！"
-    20:
-      text: "骷髏不會著火。"
-    21:
-      text: "史萊姆會分裂成更多史萊姆，它們會很快的變成麻煩！"
-    22:
-      text: "生存到第三或第四天時遇到大麻煩？建造一些弓箭塔吧。"
-    23:
-      text: "繁殖危機？讓你的村民有一些休息時間，並有充足的房屋。"
-    24:
-      text: "你可以透過點擊時鐘或是按下熱鍵(預設：空白鍵)來暫停遊戲。"
-    25:
-      text: "試著設計建造一個圍堵點，讓怪物無法輕易進入村莊。"
-    26:
-      text: "別用圍牆完全封住自己！你會後悔的！"
-    27:
-      text: "遊戲內會傷害到友方，盡量試著不要傷害到任何人。"
-    28:
-      text: "魔法防禦塔需要精華，建造精華收集器！"
-    29:
-      text: "鋸木廠可以製作木板，可用於多種高級建築。"
-    30:
-      text: "石材加工廠可以製作石板，可用於多種高級建築。"
-    31:
-      text: "水晶加工廠可以製作水晶錠，是一種很重要的燃料。"
-    32:
-      text: "你可以在設置選單內關閉遊戲提示Y。"
-    33:
-      text: "你可以在設置選單，更改熱鍵與各種其它設定。"
-    34:
-      text: "你可以按下 F2 取得截圖，它會儲存在 screenshots 資料夾。"
-    35:
-      text: "你可以按下 F4 隱藏介面。"
-    36:
-      text: "遊戲崩潰？崩潰日誌記錄在 logs 目錄。將它寄給開發者！"
-    37:
-      text: "多數建築需要精煉原料，在你建築造前請先確認需求！"
-    38:
-      text: "遊戲提示你是的好朋友，請仔細閱讀！"
-    39:
-      text: "村民們被怪物包圍？施放召回或是驅逐法術！"
-    40:
-      text: "建築工只會收獲建造所需的原料。如果你想要儲存資源，請建造收獲用建築！"
-    41:
-      text: "農夫只需要告訴他們那有野生資源可以收獲，在有農場的時候他們會自行的照顧並運作的很好。"
-    42:
-      text: "42"
-      optional: "true"
-    43:
-      text: "村民如果長時間待在極熱的環境中，可能會隨機的自燃起來。"
-    44:
-      text: "村民如果長時間待在極寒的環境中，有時會凍的像石頭一樣硬。"
-    45:
-      text: "確保冬季的食物存量！"
-    46:
-      text: "資源增生術在寒冷的季節效果較差。"
-    47:
-      text: "村民們不開心？別讓他們太累！"
-    48:
-      text: "當天氣變暖和並且正在下雨，是使用資源增生術的最佳時機。"
-    49:
-      text: "大多數的防禦塔都能射過圍牆。善用這項優勢！"
-    50:
-      text: "在冬季耗盡食物？儲存起來！緊急時你可以使用抓取法術，拾起村莊外未收獲的食物。"
-    51:
-      text: "你知道抓取法術可以拾起地圖上未收獲的的原料嗎？當你在緊要關頭需要資源時很方便。"
-    52:
-      text: "村民們需要房屋在夏季時可以消暑，在冬季時可以保暖。"
-    53:
-      text: "在冬季挨餓？使用抓取法術收獲原本無法取得的食物。"
-    54:
-      text: "工人魔像可以在遊戲早期有效幫忙取得更多資源。"
-    55:
-      text: "春季通常是食物成長的最佳季節。"
-    56:
-      text: "極熱或極寒不只會使食物與樹木停止成長，水晶也是！"
-    57:
-      text: "大多數的防禦塔都可以射過圍牆，試著建造一個怪物迷官吧！"
-    58:
-      text: "村民在工作時體溫會升高，這在冬季很好，但在夏季很可怕。"
-    59:
-      text: "想移動的更快？建造一個鋪路小屋與一些道路吧！"
-    60:
-      text: "隨著時間經過，天然的道路會出現在村民經常走過的區域。"
-    61:
-      text: "道路隨著時間會慢慢損壞，請確保你有一些鋪路工可以維護它們！"
-    62:
-      text: "雨水會讓道路加速損壞。"
-    63:
-      text: "基礎道路不會維持很久，請考慮升級道路系統！"
-    64:
-      text: "無法建造更多建築？升級你的營地或早點建造補助建築。"
+      
+  capturedAnimal:
+    single:
+      text: "捉到的動物"
+    plural:
+      text: "捉到的動物"
+    description:
+      text: "一隻被捉動到的動物！"
+      
+  rawHide:
+    single:
+      text: "生皮"
+    plural:
+      text: "生皮"
+    description:
+      text: "生皮可製作皮甲。"
+      
+  feather:
+    single:
+      text: "皮革"
+    plural:
+      text: "皮革"
+    description:
+      text: "皮革可以加功，像是製作箭袋。"
+               
+  egg:
+    single:
+      text: "雞蛋"
+    plural:
+      text: "雞蛋"
+    description:
+      text: "雞蛋可以用來料理，或是煮熟後食用。"
+      
+  boiledEgg:
+    single:
+      text: "熟蛋"
+    plural:
+      text: "熟蛋"
+    description:
+      text: "熟蛋，可以吃！"
+      
+  rawMeat:
+    single:
+      text: "生肉"
+    plural:
+      text: "生肉"
+    description:
+      text: "美味的生肉。你可以煮熟，或是你喜歡很生的牛排，也可以直接吃掉。"
+
+  cookedMeat:
+    single:
+      text: "熟肉"
+    plural:
+      text: "熟肉"
+    description:
+      text: "美味的熟肉。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Game Mode
