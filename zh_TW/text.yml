@@ -1735,7 +1735,7 @@ console:
             text: "一切看似平靜？"
           restless:
             comment: "怪物開始生成。"
-            text: "怪物們似乎焦躁不安。"
+            text: "怪物們似乎開始躁動。"
           alwaysPeaceful:
             comment: "和平模式標題，沒有怪物生成。"
             text: "體悟心靈祥和。"
@@ -8078,7 +8078,7 @@ damageTypeName:
   ice:
     text: "冰冷"
   electric:
-    text: "元素"
+    text: "閃電"
   poison:
     text: "中毒"
   poisoned:
@@ -8096,7 +8096,7 @@ damageTypeName:
   magicFire:
     text: "火魔法"
   magicElectric:
-    text: "元素魔法"
+    text: "電魔法"
   magicIce:
     text: "冰魔法"
   water:
@@ -9667,12 +9667,12 @@ object:
         name:
           text: "電球塔"
         description:
-          text: "增加火炎傷害，並轉換大量傷害為閃電傷害。"
+          text: "增加閃電傷害，並轉換大量傷害為閃電傷害。"
       ice:
         name:
           text: "冰球塔"
         description:
-          text: "增加火炎傷害，並轉換大量傷害為冰冷傷害。"
+          text: "增加冰冷傷害，並轉換大量傷害為冰冷傷害。"
     
     farm:
       makeshift:
