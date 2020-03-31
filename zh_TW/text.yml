@@ -340,6 +340,16 @@ perkType:
     text: "最大負重"
   fertility:
     text: "生育能力"
+  ghostAppearanceChance:
+    text: "幽魂出現機率"
+  villagerColdResistance:
+    text: "村民的冰冷抗性"
+  villagerHeatResistance:
+    text: "村民的炎熱抗性"
+  villagerLifespans:
+    text: "村民壽命"
+  wiserElders:
+    text: "智者長老"    
   improvedStorage:
     text: "改進儲存"
   efficientHousing:
@@ -390,6 +400,22 @@ perkType:
     text: "水晶魔像容量"
   crystalGolemChargeTime:
     text: "水晶魔像充能時間"
+  buildingSlots:
+    text: "建築數量"
+  ancillarySlots:
+    text: "輔助建築數量"
+  marketRestockAmount:
+    text: "市場補貨量"
+  marketCatjeetCapacity:
+    text: "市場貓人數量"
+  essenceCollectorCapacity:
+    text: "精華收集器容量"
+  efficientTrashBurning:
+    text: "焚化垃圾效率"
+  buildingHealth:
+    text: "建築生命值"
+  increasedCullisGateStability:
+    text: "增加庫里斯門穩定性"
   attractTowerRange:
     text: "吸引塔射程"
   attractTowerFireRate:
@@ -452,16 +478,164 @@ perkType:
     text: "靜電塔能量值"
   towerStorage:
     text: "防禦塔容量"
-  spellCost:
-    text: "法術值"
   holyGolemLevel:
     text: "神聖魔像等級"
   laborGolemLevel:
-    text: "勞工魔像等級"
-  holyGolemDuration:
-    text: "神聖魔像持續時間"
-  laborGolemDuration:
-    text: "勞工魔像持續時間"
+    text: "工人魔像等級"
+  holyGolemSpeed:
+    text: "神聖魔像速度"
+  laborGolemMaximumCarriedResources:
+    text: "工人魔像可搬運資源的最大值"
+  moreInfluencePerVillager:
+    text: "每個村民產生更多神力"
+  increasedInfluenceGeneration:
+    text: "增加神力的產生速度"
+  banishSpellCost:
+    text: "驅逐法術花費"
+  banishSpellCooldown:
+    text: "驅逐法術冷卻"
+  banishSpellDuration:
+    text: "驅逐法術持續時間"
+  banishSpellRadius:
+    text: "驅逐法術範圍"
+  charmSpellCost:
+    text: "迷魅法術花費"
+  charmSpellCooldown:
+    text: "迷魅法術冷卻"
+  coldAuraSpellCost:
+    text: "冰冷光環法術花費"
+  coldAuraSpellCooldown:
+    text: "冰冷光環法術冷卻"
+  coldAuraSpellDuration:
+    text: "冰冷光環法術持續時間"
+  coldAuraSpellRadius:
+    text: "冰冷光環法術範圍"
+  conjureMaterialSpellCost:
+    text: "變出原料法術花費"
+  conjureMaterialSpellAmount:
+    text: "變出原料法術數量"
+  constructSpellCost:
+    text: "建造法術花費"
+  constructSpellCooldown:
+    text: "建造法術冷卻"
+  constructSpellDuration:
+    text: "建造法術持續時間"
+  constructSpellRadius:
+    text: "建造法術範圍"
+  dissolveSpellCost:
+    text: "分解法術花費"
+  dissolveSpellCooldown:
+    text: "分解法術冷卻"
+  dissolveSpellDuration:
+    text: "分解法術持續時間"
+  dissolveSpellRadius:
+    text: "分解法術範圍"
+  divineBlessingSpellCost:
+    text: "神聖的祝福法術花費"
+  divineBlessingSpellCooldown:
+    text: "神聖的祝福法術冷卻"
+  earthquakeSpellCost:
+    text: "地震法術花費"
+  earthquakeSpellCooldown:
+    text: "地震法術冷卻"
+  flameSpellCost:
+    text: "火炎法術花費"
+  godTowerSpellCost:
+    text: "神塔法術花費"
+  godWallSpellCost:
+    text: "神牆法術花費"
+  harvestSpellCost:
+    text: "收獲法術花費"
+  harvestSpellCooldown:
+    text: "收獲法術冷卻"
+  harvestSpellDuration:
+    text: "收獲法術持續時間"
+  harvestSpellRadius:
+    text: "收獲法術範圍"
+  healingAuraSpellCost:
+    text: "治療光環法術花費"
+  healingAuraSpellCooldown:
+    text: "治療光環法術冷卻"
+  healingAuraSpellDuration:
+    text: "治療光環法術持續時間"
+  healingAuraSpellRadius:
+    text: "治療光環法術範圍"
+  holyPotatoesSpellCost:
+    text: "神聖馬鈴薯法術花費"
+  holyPotatoesSpellCooldown:
+    text: "神聖馬鈴薯法術冷卻"
+  holyPotatoesSpellDuration:
+    text: "神聖馬鈴薯法術持續時間"
+  holyPotatoesSpellRadius:
+    text: "神聖馬鈴薯法術範圍"
+  holyWoodSpellCost:
+    text: "神聖木材法術花費"
+  holyWoodSpellCooldown:
+    text: "神聖木材法術冷卻"
+  holyWoodSpellDuration:
+    text: "神聖木材法術持續時間"
+  holyWoodSpellRadius:
+    text: "神聖木材法術範圍"
+  illuminateSpellCost:
+    text: "照明法術花費"
+  illuminateSpellDuration:
+    text: "照明法術持續時間"
+  illuminateSpellRadius:
+    text: "照明法術範圍"
+  lightningBoltSpellCost:
+    text: "閃電球法術花費"
+  magicBoltsSpellCost:
+    text: "魔法球法術花費"
+  magicBoltsSpellCount:
+    text: "魔法球法術數量"
+  mendSpellCost:
+    text: "修理法術花費"
+  mendSpellDuration:
+    text: "修理法術持續時間"
+  mendSpellRadius:
+    text: "修理法術範圍"
+  meteorSpellCost:
+    text: "隕石法術花費"
+  meteorSpellAmount:
+    text: "隕石法術數量"
+  motivateLandSpellCost:
+    text: "資源增生法術花費"
+  motivateLandSpellCooldown:
+    text: "資源增生法術冷卻"
+  motivateLandSpellDuration:
+    text: "資源增生法術持續時間"
+  motivateLandSpellRadius:
+    text: "資源增生法術範圍"
+  recallSpellCost:
+    text: "召回法術花費"
+  recallSpellCooldown:
+    text: "召回法術冷卻"
+  recallSpellDuration:
+    text: "召回法術持續時間"
+  recallSpellRadius:
+    text: "召回法術範圍"
+  regenerationSpellCost:
+    text: "恢復法術花費"
+  regenerationSpellDuration:
+    text: "恢復法術持續時間"
+  ressurectSpellCost:
+    text: "復活法術花費"
+  ressurectSpellCooldown:
+    text: "復活法術冷卻"
+  resurrectSpellSuccessChance:
+    text: "復活法術成功機率"
+  stormSpellCost:
+    text: "風暴法術花費"
+  stormSpellCooldown:
+    text: "風暴法術冷卻"
+  holyGolemSpellCost:
+    text: "神聖魔像法術花費"
+  holyGolemSpellCooldown:
+    text: "神聖魔像法術冷卻"
+  laborGolemSpellCost:
+    text: "工人魔像法術花費"
+  laborGolemSpellCooldown:
+    text: "工人魔像法術冷卻"
   nomadAppearanceRate:
     text: "流浪者出現率"
   nomadAmount:
@@ -474,10 +648,10 @@ perkType:
     text: "資源衰減率"
   moreLootinLootBoxes:
     text: "寶箱有更多物品"
-  spellDamage:
-    text: "法術傷害"
-  towerDamage:
-    text: "防禦塔傷害"
+  toolDurability:
+    text: "工具耐久值"
+  foodAndWaterValue:
+    text: "食物和水的存量"
     
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Perk Module
@@ -489,6 +663,11 @@ perk:
   comment: "Perk Module - Perk Names"
   javaClass: "rtr.PerkModule.java"
   
+  # This is used for perk descriptions that reduce seconds for things like cooldowns and durations
+  # For example; "-1.5 Seconds Banish Cooldown"
+  seconds:
+    text: "秒"
+ 
   farellesConstitution:
     text: "Farelle's Constitution"
     optional: "true"
@@ -723,6 +902,81 @@ perk:
   rainsFlower:
     text: "Rain's Flower"
     optional: "true"
+  sylmansCurse:
+    text: "Sylman's Curse"
+    optional: "true"
+  bustersFearlessness:
+    text: "Buster's Fearlessness"
+    optional: "true"
+  chaucersDespair:
+    text: "Chaucer's Despair"
+    optional: "true"
+  zuulsPosession:
+    text: "Zuul's Posession"
+    optional: "true"
+  hadesDeal:
+    text: "Hades' Deal"
+    optional: "true"
+  bawnsFire:
+    text: "Bawn's Fire"
+    optional: "true"
+  roachsFortitude:
+    text: "Roach's Fortitude"
+    optional: "true"
+  ornnsHearth:
+    text: "Ornn's Hearth"
+    optional: "true"
+  yuukisBlood:
+    text: "Yuuki's Blood"
+    optional: "true"
+  albertanAdvantage:
+    text: "Albertan Advantage"
+    optional: "true"
+  eirsConditioning:
+    text: "Eir's Conditioning"
+    optional: "true"
+  dragonsHeart:
+    text: "Dragon's Heart"
+    optional: "true"
+  darwinsLaw:
+    text: "Darwin's Law"
+    optional: "true"
+  yomisBody:
+    text: "Yomi's Body"
+    optional: "true"
+  demideusSkin:
+    text: "Demideus' Skin"
+    optional: "true"
+  jornkersHealthcare:
+    text: "Jornker's Healthcare"
+    optional: "true"
+  golkarasFountain:
+    text: "Golkaras' Fountain"
+    optional: "true"
+  elishasProvidence:
+    text: "Elisha's Providence"
+    optional: "true"
+  poncesPotion:
+    text: "Ponce's Potion"
+    optional: "true"
+  drMcCoysScotch:
+    text: "Dr. McCoy's Scotch"
+    optional: "true"
+  dadsJoke:
+    text: "Dad's Joke"
+    optional: "true"
+  timsTestimony:
+    text: "Tim's Testimony"
+    optional: "true"
+  jornkersBrain:
+    text: "Jornker's Brain"
+    optional: "true"
+  bismarksShame:
+    text: "Bismark's Shame"
+    optional: "true"
+  jornkersSarcasm:
+    text: "Jornker's Sarcasm"
+    optional: "true" 
   eldsResourcefulness:
     text: "Eld's Resourcefulness"
     optional: "true"
@@ -1062,6 +1316,123 @@ perk:
   ramseysAccumulation:
     text: "Ramsey's Accumulation"
     optional: "true"
+  mynesCraft:
+    text: "Mynes' Craft"
+    optional: "true"
+  rosBlocks:
+    text: "Ros' Blocks"
+    optional: "true"
+  dwarvenIngenuity:
+    text: "Dwarven Ingenuity"
+    optional: "true"
+  greellasCapacity:
+    text: "Greellas' Capacity"
+    optional: "true"
+  harmvisTerritory:
+    text: "Harmvi's Territory"
+    optional: "true"
+  areasArea:
+    text: "Area's Area"
+    optional: "true"
+  alexeysStacking:
+    text: "Alexey's Stacking"
+    optional: "true"
+  dwarvenTools:
+    text: "Dwarven Tools"
+    optional: "true"
+  brainsrasVolume:
+    text: "Brainsra's Volume"
+    optional: "true"
+  hermibinsonsTurf:
+    text: "Hermibinson's Turf"
+    optional: "true"
+  midasHand:
+    text: "Midas' Hand"
+    optional: "true"
+  robinsAvarice:
+    text: "Robin's Avarice"
+    optional: "true"
+  fredgarsResplendence:
+    text: "Fredgar's Resplendence"
+    optional: "true"
+  benedictsBenefactor:
+    text: "Benedict's Benefactor"
+    optional: "true"
+  wendrdansAbundance:
+    text: "Wendrdan's Abundance"
+    optional: "true"
+  adrotagiasDiligence:
+    text: "Adrotagias' Diligence"
+    optional: "true"
+  jujisBrush:
+    text: "Juji's Brush"
+    optional: "true"
+  nativsHospitality:
+    text: "Nativ's Hospitality"
+    optional: "true"
+  dibblesWares:
+    text: "Dibble's Wares"
+    optional: "true"
+  maiqsSkooma:
+    text: "Maiq's Skooma"
+    optional: "true"
+  shaysBlessing:
+    text: "Shay's Blessing"
+    optional: "true"
+  hirotsQuota:
+    text: "Hirot's Quota"
+    optional: "true"
+  gonzalelasVolume:
+    text: "Gonzalelas' Volume"
+    optional: "true"
+  coobiellasQuantity:
+    text: "Coobiella's Quantity"
+    optional: "true"
+  rosepopsLoad:
+    text: "Rosepop's Load"
+    optional: "true"
+  dantesInferno:
+    text: "Dante's Inferno"
+    optional: "true"
+  dumpstersFire:
+    text: "Dumpster's Fire"
+    optional: "true"
+  elonsBlaze:
+    text: "Elon's Blaze"
+    optional: "true"
+  smrettsChar:
+    text: "Smrett's Char"
+    optional: "true"
+  fogansKindle:
+    text: "Fogan's Kindle"
+    optional: "true"
+  guardiansProtection:
+    text: "Guardian's Protection"
+    optional: "true"
+  athomirsBulwark:
+    text: "Athomir's Bulwark"
+    optional: "true"
+  titansBlessing:
+    text: "Titan's Blessing"
+    optional: "true"
+  scottysHammer:
+    text: "Scotty's Hammer"
+    optional: "true"
+  dwarvenResilience:
+    text: "Dwarven Resilience"
+    optional: "true"
+  crowsBindings:
+    text: "Crow's Bindings"
+    optional: "true"
+  tiamatsChaos:
+    text: "Tiamat's Chaos"
+    optional: "true"
+  deadnesBalance:
+    text: "Deadnes' Balance"
+    optional: "true"
+  cheekybursConstancy:
+    text: "Cheekybur's Constancy"
+    optional: "true"
   patstricksAllurement:
     text: "Patstrick's Allurement"
     optional: "true"
@@ -1098,8 +1469,8 @@ perk:
   bloomsGlorification:
     text: "Bloom's Glorification"
     optional: "true"
-  acurasAccumulation:
-    text: "Acura's Accumulation"
+  acurasAcceleration:
+    text: "Acura's Acceleration"
     optional: "true"
   galmisExpansion:
     text: "Galmi's Expansion"
@@ -1124,6 +1495,693 @@ perk:
     optional: "true"
   redsPerpetuation:
     text: "Red's Perpetuation"
+    optional: "true"
+  patstricksAllurement:
+    text: "Patstrick's Allurement"
+    optional: "true"
+  divinationofAidos:
+    text: "Divination of Aidos"
+    optional: "true"
+  aronsAscension:
+    text: "Aron's Ascension"
+    optional: "true"
+  hughsGambit:
+    text: "Hugh's Gambit"
+    optional: "true"
+  vigorofAngerris:
+    text: "Vigor of Angerris"
+    optional: "true"
+  dalinarsTemerity:
+    text: "Dalinar's Temerity"
+    optional: "true"
+  theodoresGift:
+    text: "Theodore's Gift"
+    optional: "true"
+  arlaggsFaith:
+    text: "Arlagg's Faith"
+    optional: "true"
+  saratogasProphecy:
+    text: "Saratoga's Prophecy"
+    optional: "true"
+  kristathansAcclamation:
+    text: "Kristathan's Acclamation"
+    optional: "true"
+  baesRejection:
+    text: "Bae's Rejection"
+    optional: "true"
+  napoleonsVigor:
+    text: "Napoleon's Vigor"
+    optional: "true"
+  musksDismiss:
+    text: "Musk's Dismiss"
+    optional: "true"
+  kilosFatedBetrayal:
+    text: "Kilo's Fated Betrayal"
+    optional: "true"
+  deusVult:
+    text: "Deus' Vult"
+    optional: "true"
+  badbasExile:
+    text: "Badbas' Exile"
+    optional: "true"
+  returnedsFavor:
+    text: "Returned's Favor"
+    optional: "true"
+  yeetsCannon:
+    text: "Yeet's Cannon"
+    optional: "true"
+  jornkersReverse:
+    text: "Jornker's Reverse"
+    optional: "true"
+  emichosCharisma:
+    text: "Emicho's Charisma"
+    optional: "true"
+  petersReach:
+    text: "Peter's Reach"
+    optional: "true"
+  waltersVoid:
+    text: "Walter's Void"
+    optional: "true"
+  lazerusWrappings:
+    text: "Lazerus' Wrappings"
+    optional: "true"
+  zoroastersOrder:
+    text: "Zoroaster's Order"
+    optional: "true"
+  jornkersBidding:
+    text: "Jornker's Bidding"
+    optional: "true"
+  aphroditesBeauty:
+    text: "Aphrodite's Beauty"
+    optional: "true"
+  ushasLust:
+    text: "Usha's Lust"
+    optional: "true"
+  freyjasPerfection:
+    text: "Freyjas' Perfection"
+    optional: "true"
+  demetersWrath:
+    text: "Demeter's Wrath"
+    optional: "true"
+  amaterusHiding:
+    text: "Amaterus' Hiding"
+    optional: "true"
+  friggasImprisonment:
+    text: "Frigga's Imprisonment"
+    optional: "true"
+  hermesAuxiliary:
+    text: "Hermes' Auxiliary"
+    optional: "true"
+  underworldsMessenger:
+    text: "Underworld's Messenger"
+    optional: "true"
+  quicksQuips:
+    text: "Quick's Quips"
+    optional: "true"
+  foxsPerpetuation:
+    text: "Fox's Perpetuation"
+    optional: "true"
+  reksContinuity:
+    text: "Rek's Continuity"
+    optional: "true"
+  wallacesContinuation:
+    text: "Wallace's Continuation"
+    optional: "true"
+  bearsAmbit:
+    text: "Bear's Ambit"
+    optional: "true"
+  lyteniansReach:
+    text: "Lytenian's Reach"
+    optional: "true"
+  moosesSpan:
+    text: "Moose's Span"
+    optional: "true"
+  redbloomsExpenditure:
+    text: "Redbloom's Expenditure"
+    optional: "true"
+  rivarynsSqueeze:
+    text: "Rivaryn's Squeeze"
+    optional: "true"
+  veintidosValue:
+    text: "Veintido's Value"
+    optional: "true"
+  timsLuck:
+    text: "Tim's Luck"
+    optional: "true"
+  orbansMachinery:
+    text: "Orban's Machinery"
+    optional: "true"
+  cammysStuff:
+    text: "Cammy's Stuff"
+    optional: "true"
+  rinsAspiration:
+    text: "Rin's Aspiration"
+    optional: "true"
+  bobsFixing:
+    text: "Bob's Fixing"
+    optional: "true"
+  corbusiersInventiveness:
+    text: "Corbusier's Inventiveness"
+    optional: "true"
+  kvothesResolve:
+    text: "Kvothe's Resolve"
+    optional: "true"
+  hermesBlessing:
+    text: "Hermes' Blessing"
+    optional: "true"
+  gropiusCreativity:
+    text: "Gropius' Creativity"
+    optional: "true"
+  serenitysAugment:
+    text: "Serenity's Augment"
+    optional: "true"
+  wrightsPhilosophy:
+    text: "Wright's Philosophy"
+    optional: "true"
+  fastidiousFortitude:
+    text: "Fastidious' Fortitude"
+    optional: "true"
+  sejimasProficiency:
+    text: "Sejima's Proficiency"
+    optional: "true"
+  nishizawasExpertise:
+    text: "Nishizawa's Expertise"
+    optional: "true"
+  chompersArchitecture:
+    text: "Chomper's Architecture"
+    optional: "true"
+  cinthsVacate:
+    text: "Cinth's Vacate"
+    optional: "true"
+  joelsSolvent:
+    text: "Joel's Solvent"
+    optional: "true"
+  hydrasSolution:
+    text: "Hydra's Solution"
+    optional: "true"
+  melfsConduit:
+    text: "Melf's Conduit"
+    optional: "true"
+  jansFade:
+    text: "Jan's Fade"
+    optional: "true"
+  semoresCollapse:
+    text: "Semore's Collapse"
+    optional: "true"
+  verminsJudgement:
+    text: "Vermin's Judgement"
+    optional: "true"
+  ursasOrbit:
+    text: "Ursa's Orbit"
+    optional: "true"
+  vinceysLimit:
+    text: "Vincey's Limit"
+    optional: "true"
+  aridesSemidiameter:
+    text: "Aride's Semidiameter"
+    optional: "true"
+  edaisBoundary:
+    text: "Edai's Boundary"
+    optional: "true"
+  xaerysReach:
+    text: "Xaery's Reach"
+    optional: "true"
+  bibliosBalm:
+    text: "Biblio's Balm"
+    optional: "true"
+  clerothsLotion:
+    text: "Cleroth's Lotion"
+    optional: "true"
+  gildadsSalve:
+    text: "Gildad's Salve"
+    optional: "true"
+  actiosCerate:
+    text: "Actio's Cerate"
+    optional: "true"
+  madarasDressing:
+    text: "Madara's Dressing"
+    optional: "true"
+  zimsMedicine:
+    text: "Zim's Medicine"
+    optional: "true"
+  aquinasHubris:
+    text: "Aquina's Hubris"
+    optional: "true"
+  ziggysMetal:
+    text: "Ziggy's Metal"
+    optional: "true"
+  abomsRubble:
+    text: "Abom's Rubble"
+    optional: "true"
+  irasRage:
+    text: "Iras Rage"
+    optional: "true"
+  troglodeitysRedemption:
+    text: "Troglodeity's Redemption"
+    optional: "true"
+  aehansMineral:
+    text: "Aehan's Mineral"
+    optional: "true"
+  lozmeratesFlame:
+    text: "Lozmerate's Flame"
+    optional: "true"
+  alexandersInferno:
+    text: "Alexander's Inferno"
+    optional: "true"
+  davesCrust:
+    text: "Dave's Crust"
+    optional: "true"
+  zeldasLegend:
+    text: "Zelda's Legend"
+    optional: "true"
+  docksStronghold:
+    text: "Dock's Stronghold"
+    optional: "true"
+  hydesColumn:
+    text: "Hyde's Column"
+    optional: "true"
+  drewsFortification:
+    text: "Drew's Fortification"
+    optional: "true"
+  filiconsPillar:
+    text: "Filicon's Pillar"
+    optional: "true"
+  gehnsObelisk:
+    text: "Gehn's Obelisk"
+    optional: "true"
+  slysGatheringSwarm:
+    text: "Sly's Gathering Swarm"
+    optional: "true"
+  fizzordsAutumn:
+    text: "Fizzord's Autumn"
+    optional: "true"
+  gnusMoon:
+    text: "Gnu's Moon"
+    optional: "true"
+  jacksLumber:
+    text: "Jack's Lumber"
+    optional: "true"
+  hachisGathering:
+    text: "Hachi's Gathering"
+    optional: "true"
+  joeysSandwich:
+    text: "Joey's Sandwich"
+    optional: "true"
+  appletonsBounty:
+    text: "Appleton's Bounty"
+    optional: "true"
+  jonansYield:
+    text: "Jonan's Yield"
+    optional: "true"
+  kensOutput:
+    text: "Ken's Output"
+    optional: "true"
+  kinesCrop:
+    text: "Kine's Crop"
+    optional: "true"
+  lucasFruit:
+    text: "Lucas' Fruit"
+    optional: "true"
+  lugzansReaping:
+    text: "Lugzan's Reaping"
+    optional: "true"
+  alluringAlliteration:
+    text: "Alluring Alliteration"
+    optional: "true"
+  pepesSpice:
+    text: "Pepe's Spice"
+    optional: "true"
+  kibasSwathe:
+    text: "Kiba's Swathe"
+    optional: "true"
+  michkasTruss:
+    text: "Michkas' Truss"
+    optional: "true"
+  samsBindings:
+    text: "Sam's Bindings"
+    optional: "true"
+  skalvernsDressings:
+    text: "Skalvern's Dressings"
+    optional: "true"
+  divinitysReach:
+    text: "Divinity's Reach"
+    optional: "true"
+  hakimodosWrap:
+    text: "Hakimodo's Wrap"
+    optional: "true"
+  quacksOil:
+    text: "Quack's Oil"
+    optional: "true"
+  pyritesPharmaceuticals:
+    text: "Pyrite's Pharmaceuticals"
+    optional: "true"
+  samotsRemedy:
+    text: "Samot's Remedy"
+    optional: "true"
+  snakesOil:
+    text: "Snake's Oil"
+    optional: "true"
+  twentsYam:
+    text: "Twent's Yam"
+    optional: "true"
+  voidsTater:
+    text: "Void's Tater"
+    optional: "true"
+  mootsSpud:
+    text: "Moot's Spud"
+    optional: "true"
+  mylonsMischief:
+    text: "Mylon's Mischief"
+    optional: "true"
+  wakasPlants:
+    text: "Waka's Plants"
+    optional: "true"
+  voxsRoots:
+    text: "Vox's Roots"
+    optional: "true"
+  vitosStems:
+    text: "Vito's Stems"
+    optional: "true"
+  xylphosStock:
+    text: "Xylpho's Stock"
+    optional: "true"
+  zendarsGreens:
+    text: "Zendar's Greens"
+    optional: "true"
+  potatoMastersHarvest:
+    text: "Potato Master's Harvest"
+    optional: "true"
+  carrionsGluttony:
+    text: "Carrion's Gluttony"
+    optional: "true"
+  gillaugsSpread:
+    text: "Gillaug's Spread"
+    optional: "true"
+  biggusFiccus:
+    text: "Biggus Ficcus"
+    optional: "true"
+  wallasRaise:
+    text: "Walla's Raise"
+    optional: "true"
+  halightsLumber:
+    text: "Halight's Lumber"
+    optional: "true"
+  luxuriasLust:
+    text: "Luxuria's Lust"
+    optional: "true"
+  werotsCopse:
+    text: "Werot's Copse"
+    optional: "true"
+  rottoshersTrees:
+    text: "Rottosher's Trees"
+    optional: "true"
+  nichonsteinsSeeds:
+    text: "Nichonstein's Seeds"
+    optional: "true"
+  jazogsDuration:
+    text: "Jazog's Duration"
+    optional: "true"
+  gogmallersStamina:
+    text: "Gogmaller's Stamina"
+    optional: "true"
+  darkLordsFarsight:
+    text: "Dark Lord's Farsight"
+    optional: "true"
+  tendoninsPlayfulness:
+    text: "Tendonin's Playfulness"
+    optional: "true"
+  viserkellysRange:
+    text: "Viserkelly's Range"
+    optional: "true"
+  foxlafsKindle:
+    text: "Foxlaf's Kindle"
+    optional: "true"
+  lollirdonsShine:
+    text: "Lollirdon's Shine"
+    optional: "true"
+  russelamsBeacon:
+    text: "Russelam's Beacon"
+    optional: "true"
+  hamsCandle:
+    text: "Ham's Candle"
+    optional: "true"
+  badharsDaylight:
+    text: "Badhar's Daylight"
+    optional: "true"
+  ramosooksAurora:
+    text: "Ramosook's Aurora"
+    optional: "true"
+  merlinsAmbience:
+    text: "Merlin's Ambience"
+    optional: "true"
+  picardsLights:
+    text: "Picard's Lights"
+    optional: "true"
+  meksFlare:
+    text: "Mek's Flare"
+    optional: "true"
+  hufootsEffulgence:
+    text: "Hufoot's Effulgence"
+    optional: "true"
+  jonebielsLamp:
+    text: "Jonebiel's Lamp"
+    optional: "true"
+  corisLantern:
+    text: "Cori's Lantern"
+    optional: "true"
+  parionsWizardry:
+    text: "Parion's Wizardry"
+    optional: "true"
+  wabellsFulmination:
+    text: "Wabell's Fulmination"
+    optional: "true"
+  tinkerhamsBolts:
+    text: "Tinkerham's Bolts"
+    optional: "true"
+  kiufsJudgement:
+    text: "Kiuf's Judgement"
+    optional: "true"
+  cantripsKnowledge:
+    text: "Cantrip's Knowledge"
+    optional: "true"
+  merlinsSoul:
+    text: "Merlin's Soul"
+    optional: "true"
+  clabergsFix:
+    text: "Claberg's Fix"
+    optional: "true"
+  smwardsRepairs:
+    text: "Smward's Repairs"
+    optional: "true"
+  babimsMaintenance:
+    text: "Babim's Maintenance"
+    optional: "true"
+  dlaracrudsReforgement:
+    text: "Dlaracrud's Reforgement"
+    optional: "true"
+  malafiasMachine:
+    text: "Malafia's Machine"
+    optional: "true"
+  wiyasDevice:
+    text: "Wiya's Device"
+    optional: "true"
+  hendersContraption:
+    text: "Hender's Contraption"
+    optional: "true"
+  reelasTools:
+    text: "Reela's Tools"
+    optional: "true"
+  williaritasWidget:
+    text: "Williarita's Widget"
+    optional: "true"
+  titachusSteel:
+    text: "Titachus' Steel"
+    optional: "true"
+  rishusShootingstar:
+    text: "Rishu's Shootingstar"
+    optional: "true"
+  greenturnersComet:
+    text: "Greenturner's Comet"
+    optional: "true"
+  grabtharsHammer:
+    text: "Grabthar's Hammer"
+    optional: "true"
+  roadmansRedemption:
+    text: "Roadman's Redemption"
+    optional: "true"
+  royasDestruction:
+    text: "Roya's Destruction"
+    optional: "true"
+  dotoriasMotivation:
+    text: "Dotoria's Motivation"
+    optional: "true"
+  primsEncouragement:
+    text: "Prim's Encouragement"
+    optional: "true"
+  kingsCultivation:
+    text: "King's Cultivation"
+    optional: "true"
+  rileyinsExcitement:
+    text: "Rileyin's Excitement"
+    optional: "true"
+  firesuttonsSway:
+    text: "Firesutton's Sway"
+    optional: "true"
+  caropheliasGrowth:
+    text: "Carophelia's Growth"
+    optional: "true"
+  carphirasSpread:
+    text: "Carphira's Spread"
+    optional: "true"
+  jordeliasPullulation:
+    text: "Jordelia's Pullulation"
+    optional: "true"
+  surcollinsGains:
+    text: "Surcollin's Gains"
+    optional: "true"
+  naturesEvolution:
+    text: "Nature's Evolution"
+    optional: "true"
+  lofangsGermination:
+    text: "Lofang's Germination"
+    optional: "true"
+  kokafordsLength:
+    text: "Kokaford's Length"
+    optional: "true"
+  frasersTeleportation:
+    text: "Fraser's Teleportation"
+    optional: "true"
+  lollissellsBeam:
+    text: "Lollissell's Beam"
+    optional: "true"
+  killipsTransmission:
+    text: "Killip's Transmission"
+    optional: "true"
+  hunazzosSummon:
+    text: "Hunazzo's Summon"
+    optional: "true"
+  claricalsCall:
+    text: "Clarical's Call"
+    optional: "true"
+  rogersAssemble:
+    text: "Roger's Assemble"
+    optional: "true"
+  gongantasRepository:
+    text: "Gonganta's Repository"
+    optional: "true"
+  seramarsDepot:
+    text: "Seramar's Depot"
+    optional: "true"
+  danierysCache:
+    text: "Daniery's Cache"
+    optional: "true"
+  echinasForce:
+    text: "Echina's Force"
+    optional: "true"
+  teulmatisSay:
+    text: "Teulmati's Say"
+    optional: "true"
+  hermesBoots:
+    text: "Hermes' Boots"
+    optional: "true"
+  helraysReclamation:
+    text: "Helray's Reclamation"
+    optional: "true"
+  nuamesMetamorphosis:
+    text: "Nuame's Metamorphosis"
+    optional: "true"
+  ramogsReversal:
+    text: "Ramog's Reversal"
+    optional: "true"
+  lightsongsBoldness:
+    text: "Lightsong's Boldness"
+    optional: "true"
+  mirasReflection:
+    text: "Mira's Reflection"
+    optional: "true"
+  dakedesBlessing:
+    text: "Dakede's Blessing"
+    optional: "true"
+  eiwasDoppelganger:
+    text: "Eiwa's Doppelganger"
+    optional: "true"
+  linuxsIngenuity:
+    text: "Linux's Ingenuity"
+    optional: "true"
+  morazztsRebirth:
+    text: "Morazzt's Rebirth"
+    optional: "true"
+  gurwalsTrick:
+    text: "Gurwal's Trick"
+    optional: "true"
+  dezraysDefiance:
+    text: "Dezray's Defiance"
+    optional: "true"
+  bellasWitchery:
+    text: "Bella's Witchery"
+    optional: "true"
+  dovinsBan:
+    text: "Dovin's Ban"
+    optional: "true"
+  xanthidussTutorship:
+    text: "Xanthiduss' Tutorship"
+    optional: "true"
+  jedediahsPrayers:
+    text: "Jedediah's Prayers"
+    optional: "true"
+  yennefersGeralt:
+    text: "Yennefer's Geralt"
+    optional: "true"
+  aktzinsGrace:
+    text: "Aktzin's Grace"
+    optional: "true"
+  gothrogersDance:
+    text: "Gothroger's Dance"
+    optional: "true"
+  kennensMaelstrom:
+    text: "kennensMaelstrom"
+    optional: "true"
+  xolotlsIncarnation:
+    text: "xolotlsIncarnation"
+    optional: "true"
+  hospellsRain:
+    text: "Hospell's Rain"
+    optional: "true"
+  endersGame:
+    text: "Ender's Game"
+    optional: "true"
+  bloodstonesManifestation:
+    text: "Bloodstone's Manifestation"
+    optional: "true"
+  homunculusExpertise:
+    text: "Homunculus' Expertise"
+    optional: "true"
+  golletsCatching:
+    text: "Gollet's Catching"
+    optional: "true"
+  nimdoksEnchatments:
+    text: "Nimdok's Enchatments"
+    optional: "true"
+  cardinsCreations:
+    text: "Cardin's Creations"
+    optional: "true"
+  gizbensInsight:
+    text: "Gizben's Insight"
+    optional: "true"
+  artificersCompanion:
+    text: "Artificer's Companion"
+    optional: "true"
+  dwarvenGuidelines:
+    text: "Dwarven Guidelines"
+    optional: "true"
+  dakedesFirstWord:
+    text: "Dakede's FirstWord"
+    optional: "true"
+  clardazzlesIndustry:
+    text: "Clardazzle's Industry"
+    optional: "true"
+  twinkleyesDiligence:
+    text: "Twinkleye's Diligence"
     optional: "true"
   belindasRadius:
     text: "Belinda's Radius"
@@ -1588,7 +2646,7 @@ perk:
     text: "Robert's Unwrinkling"
     optional: "true"
   rugmuksIndelibility:
-    text: "Rugmuk's Indelibility "
+    text: "Rugmuk's Indelibility"
     optional: "true"
   austinsFiber:
     text: "Austin's Fiber"
@@ -1607,6 +2665,36 @@ perk:
     optional: "true"
   sungwoosPillages:
     text: "Sungwoo's Pillages"
+    optional: "true"
+  eitrisIngenuity:
+    text: "Eitris' Ingenuity"
+    optional: "true"
+  hephaestusSmithery:
+    text: "Hephaestus' Smithery"
+    optional: "true"
+  dresdinsWit:
+    text: "Dresdin's Wit"
+    optional: "true"
+  beepsGutsiness:
+    text: "Beep's Gutsiness"
+    optional: "true"
+  dwarvenDurability:
+    text: "Dwarven Durability"
+    optional: "true"
+  joesMeatloaf:
+    text: "Joe's Meatloaf"
+    optional: "true"
+  ardensHunger:
+    text: "Arden's Hunger"
+    optional: "true"
+  grandmasCookies:
+    text: "Grandmas' Cookies"
+    optional: "true"
+  duffmansBluff:
+    text: "Duffman's Bluff"
+    optional: "true"
+  distinctsMint:
+    text: "Distinct's Mint"
     optional: "true"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -3020,6 +4108,8 @@ mapEditorPlayRightPanel:
         text: "防禦"
       foodAndWater:
         text: "飲食"
+      gatesAndWalls:
+        text: "門牆"        
       harvesting:
         text: "收獲"
       housing:
@@ -3036,8 +4126,6 @@ mapEditorPlayRightPanel:
         text: "倉庫"
       trash:
         text: "垃圾"
-      walls:
-        text: "圍牆"
       special:
         text: "特殊"
       
@@ -3138,7 +4226,41 @@ mapEditorPlayRightPanel:
         text: "淨水器"
       well:
         text: "水井"
-      
+        
+    gatesAndWalls:
+      gates:
+        text: "門"
+      walls:
+        text: "牆"
+        
+    gates:
+      crylithiumWallGateNS:
+        text: "水晶大門 (北/南)"
+      crylithiumWallGateWE:
+        text: "水晶大門 (西/東)"
+      stoneWallGateNS:
+        text: "石造大門 (北/南)"
+      stoneWallGateWE:
+        text: "石造大門 (西/東)"
+      woodFenceGateNS:
+        text: "木造大門 (北/南)"
+      woodFenceGateWE:
+        text: "木造大門 (西/東)"
+        
+    walls:
+      crylithiumWall:
+        text: "水晶牆"
+      crylithiumCurtainWall:
+        text: "水晶城牆"
+      curtainWall:
+        text: "城牆"
+      stoneWall:
+        text: "石牆"
+      trashyCubeWall:
+        text: "垃圾方塊牆"
+      woodFence:
+        text: "木牆"
+         
     harvesting:
       crystalHarvestry:
         text: "水晶礦廠"
@@ -3222,24 +4344,6 @@ mapEditorPlayRightPanel:
         text: "垃圾筒"
       trashyCubePile:
         text: "垃圾堆"
-        
-    walls:
-      curtainWall:
-        text: "城牆"
-      stoneWallGateNS:
-        text: "石門(北/南)"
-      stoneWallGateWE:
-        text: "石門(西/東)"
-      stoneWall:
-        text: "石牆"
-      trashyCubeWall:
-        text: "垃圾方塊牆"
-      woodFence:
-        text: "木牆"
-      woodFenceGateNS:
-        text: "木門(北/南)"
-      woodFenceGateWE:
-        text: "木門(西/東)"
       
     special:
       camp:
@@ -3333,6 +4437,8 @@ mapEditorPlayRightPanel:
         text: "仙人掌"
       carrots:
         text: "胡蘿蔔"
+      holyPotatoes:
+        text: "神聖馬鈴薯"
       melons:
         text: "蜜瓜"
       potatoes:
@@ -3441,6 +4547,12 @@ mapEditorPlayRightPanel:
         text: "綠樹墩"
       greenTrees:
         text: "綠樹"
+      lavenderDeadTrees:
+        text: "紫枯樹"
+      lavenderStumps:
+        text: "紫樹墩"
+      lavenderTrees:
+        text: "紫樹"
       redDeadTrees:
         text: "紅枯樹"
       redStumps:
@@ -4422,6 +5534,10 @@ playPopulationListPanel:
       text: "全部孕婦"
     totalPregnant:
       text: "村莊中的孕婦總數。"
+    totalBlessedHeader:
+      text: "全部祝福"
+    totalBlessed:
+      text: "村莊內獲得祝福的村民總數。"
     totalMatesHeader:
       text: "有配偶"
     totalMates:
@@ -4446,6 +5562,10 @@ playPopulationListPanel:
       text: "孕婦"
     pregnant:
       text: "這 (充滿希望的女性) 會在幾天後分娩。"
+    blessedHeader:
+      text: "祝福"
+    blessed:
+      text: "這位村民受到神的祝福，他的下一代將會誕生一位拿非利人。"
     hasMateHeader:
       text: "有配偶"
     hasMate:
@@ -4746,6 +5866,10 @@ playSelectedMobPanel:
       text: "孕婦"
     pregnant:
       text: "這 (充滿希望的女性) 會在幾天後分娩。"
+    blessedHeader:
+      text: "祝福"
+    blessed:
+      text: "這位村民受到神的祝福，他的下一代將會誕生一位拿非利人。"
     levelHeader:
       text: "等級"
     level:
@@ -4820,6 +5944,8 @@ playSelectedMobPanel:
     text: "{mobJobName}"
   pregnant:
     text: "$BLU1孕婦"
+  blessed:
+    text: "$MAG1祝福"
   damageResistance:
     text: "傷害抗性"
   damageVulnerabilities:
@@ -5191,6 +6317,54 @@ playSpellBar:
     tooltip:
       text: "打開全部法術清單並更改在欄位 {slotNumber} 的法術。"
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Play State
+# Spell Description Panel
+# rtr.gui.states.playstate.SpellDescriptionPanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+playSpellDescriptionPanel:
+  comment: "Play State - Spell Description Panel"
+  javaClass: "rtr.gui.states.playstate.SpellDescriptionPanel.java"
+  
+  notEnoughMaximumInfluence:
+    text: "$RED1神力最大值不足"
+  duration:
+    text: "持續時間：$GRE1{amount} 秒"
+  radius:
+    text: "範圍：$GRE1{amount}"
+  castCost:
+    text: "施法消耗：$GRE1{amount} ({percentage}% 的神力)"
+  castCostCantCast:
+    text: "施法消耗：$RED1{amount} ({percentage}% 的神力)"
+  maintainCost:
+    text: "維持消耗：$GRE1{amount} ({percentage}% 的神力)"
+  maintainCostCantMaintain:
+    text: "維持消耗：$RED1{amount} ({percentage}% 的神力)"
+  cooldown:
+    text: "冷卻時間：$GRE1{amount} 秒"
+  continuousCast:
+    text: "$GRE1連續施法"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Play State
+# Spell Select Panel
+# rtr.gui.states.playstate.SpellSelectPanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+playSpellSelectPanel:
+  comment: "Play State - Spell Select Panel"
+  javaClass: "rtr.gui.states.playstate.SpellSelectPanel.java"
+  
+  aid:
+    text: "$GRE1急救"
+  defensive:
+    text: "$BLU1防禦"
+  offensive:
+    text: "$RED1攻擊"
+  utility:
+    text: "通用"
+   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
 # Statistics Panel
@@ -7167,6 +8341,10 @@ influence:
       text: "你不能在虛空中施法！"
     inCorruption:
       text: "你在這裡沒有力量！"
+    notCooledDown:
+      text: "尚未冷卻！"
+    canNotMaintain:
+      text: "無法維持！"
     noInfluence:
       text: "神力不足！"
       
@@ -7184,123 +8362,181 @@ spell:
     name:
       text: "驅逐"
     description:
-      text: "驅逐你的敵人到地圖上的隨機地點！"
-  dissolve:
+      text: "驅逐你的敵人到村莊外的隨機地點！小心，有時候它們會被傳送到一些不好的地方。"
+      revision: "1"      
+  charm:
     name:
-      text: "提取精華"
+      text: "迷魅"
     description:
-      text: "轉化在地圖上資源成為精華，像是水晶、木頭、屍體等。"
-  summonHolyGolem:
+      text: "迷魅一個怪物攻擊它們的友軍，但不會永遠有效，甚至可能再次攻擊你。"
+  coldAura:
     name:
-      text: "召喚神聖魔像"
+      text: "冰冷光環"
     description:
-      text: "召喚一個神聖魔像，它會盡力戰鬥保護你的村民。你的村莊越老，魔像就越強大！"
-  drop:
-    name:
-      text: "丟棄"
-    description:
-      text: "丟棄你手中的資源或生物。此魔法不能直接使用。"
-  meteor:
-    name:
-      text: "隕石"
-    description:
-      text: "降下一個隕石砸向某物！"
-  flame:
-    name:
-      text: "燃燒"
-    description:
-      text: "點燃一個區域(或是在路徑的東西)！"
-  grab:
-    name:
-      text: "抓起"
-    description:
-      text: "抓起地圖上的資源或生物。神力影響抓取的時間，但消耗完了它們會掉落。"
-  healingAura:
-    name:
-      text: "治療光環"
-    description:
-      text: "在短時間內穩定地治愈該地區的所有村民。"
-  motivateLand:
-    name:
-      text: "資源增生"
-    description:
-      text: "使一些自然資源增生。在春季與秋季效果最好，而在冬季效果最差。"
-  earthquake:
-    name:
-      text: "地震"
-    description:
-      text: "讓大地搖晃，傷害此區域的任何東西，有時會搖出石頭。"
-  recall:
-    name:
-      text: "召回"
-    description:
-      text: "傳送村民與資源安全的回到村莊。"
-  resurrect:
-    name:
-      text: "復活"
-    description:
-      text: "復活一個地圖上可見的幽魂。當心，有時候這個過程並沒有完全符合你的計劃！"
-  initialSpawnIn:
-    name:
-      text: "重生點"
-    description:
-      text: "這是在世界地圖模式，開始一場新遊戲時使用的特殊法術。玩家不能使此法術。"
-  storm:
-    name:
-      text: "風暴"
-    description:
-      text: "一個極度危險的法術，會召喚出一個巨型的閃電風暴，其次是整個區域的下雨與下雪。別在你的村莊施法。"
+      text: "使一個區域變得極度寒冷、緩慢與有時冰凍附近的生物。對大群怪物非常有效。"
+      revision: "1"
   conjureEssence:
     name:
       text: "吸收精華"
     description:
       text: "從空中吸收精華！請小心，被吸收的精華不能返還。"
-  lightningBolt:
-    name:
-      text: "閃電"
-    description:
-      text: "從天空落下閃電！在避雷針旁不是很好用。"
   conjureMaterial:
     name:
       text: "變出原料"
     description:
-      text: "變出一個原料，有時會於周圍的地形相似。"
-  mend:
+      text: "憑空變出一個原料，有時會與周圍的地形相似。"
+      revision: "1"
+  construct:
     name:
-      text: "修復"
+      text: "建造"
     description:
-      text: "在短時間內修復小範圍內的魔像與建築。"
-  summonLaborGolem:
+      text: "使用你的神力協助建造，但需要資源已經運送到指定的建築地點。"
+  dispelGodStructure:
     name:
-      text: "召喚工人魔像"
+      text: "解除神的建築"
     description:
-      text: "召喚一個低智商的魔像，它只會做一些村莊中的體力活，只到它死亡。"
+      text: "解除已召喚的建築，並回收一些神力。"
+  dispelGolem:
+    name:
+      text: "解除魔像"
+    description:
+      text: "解除一個已召喚或生產的魔像。作用於村民內任何魔像，包含不是你自己召喚的。通常用它來解除工人或神聖魔像來回收一些神力。"
+  dissolve:
+    name:
+      text: "提取精華"
+    description:
+      text: "轉化在地圖上資源成為精華，像是水晶、木頭、屍體等。"
+  divineBlessing:
+    name:
+      text: "神聖祝福"
+    description:
+      text: "祝福一位村民，他們的下一代會誕生出一位拿非利人，並非常的強壯、敏捷與長壽。"
+  drop:
+    name:
+      text: "丟棄"
+    description:
+      text: "丟棄你手中的資源或生物。此魔法不能直接使用。你怎麼還在讀這本書？"
+      revision: "1"
+  earthquake:
+    name:
+      text: "地震"
+    description:
+      text: "讓大地搖晃，傷害此區域的任何東西，有時會出現一些新石塊。在已開採的石礦區會產生更多石頭。"
+      revision: "1"
+  flame:
+    name:
+      text: "燃燒"
+    description:
+      text: "點燃一個區域(或是在路徑上的東西)！"
+  godTower:
+    name:
+      text: "神塔"
+    description:
+      text: "召喚一個有無限彈藥的魔法弓箭塔。需要你的神力來維持。可以用解除建築法術來解除它。"
+  godWall:
+    name:
+      text: "神牆"
+    description:
+      text: "召喚一個魔法牆來幫忙阻擋所有種類的怪物，包括可穿牆的邪靈。需要你的神力來維持。可以用解除建築法術來解除它。"
+  grab:
+    name:
+      text: "抓起"
+    description:
+      text: "抓起地圖上的資源或生物。神力影響抓取的時間，但消耗完了它們會掉落。"
+  harvest:
+    name:
+      text: "收獲"
+    description:
+      text: "自動收獲此區域的資源，並將它們放在地上讓你的村民能快速收集。確保村民在你施法範圍的附近，否則沒有人會來搬東西！"
+  healingAura:
+    name:
+      text: "治療光環"
+    description:
+      text: "短時間內治療一個區域內所有的村民。"
+  holyPotatoes:
+    name:
+      text: "神聖馬鈴薯"
+    description:
+      text: "從地上長出魔法馬領薯，如果你已經吃完食物或是想要在村莊創造一塊新農地時，這會相當有用！"
+  holyWood:
+    name:
+      text: "神木"
+    description:
+      text: "從地上長出巨大的樹木，如果你已經砍完了所有木材或是想要在村莊創造一片森林時，這會相當有用！"
   illuminate:
     name:
       text: "照明"
     description:
       text: "在地圖上創造一個長時間大範圍的光源。"
-  charm:
+  initialSpawnIn:
     name:
-      text: "迷魅"
+      text: "重生點"
     description:
-      text: "迷魅一個怪物攻擊它們的友軍，但可能會失敗，導致對你不利。"
+      text: "這是在世界地圖模式，開始一場新遊戲時使用的特殊法術。玩家不能使此法術。"
+  lightningBolt:
+    name:
+      text: "閃電"
+    description:
+      text: "從天空落下閃電！在避雷針旁不是很好用。"
+      revision: "1"
   magicBolts:
     name:
       text: "魔法球"
     description:
       text: "丟出一些球魔法球砸怪物滿臉。"
-  coldAura:
+  mend:
     name:
-      text: "冰冷光環"
+      text: "修復"
     description:
-      text: "使一個區域變得極度寒冷、緩慢與有時冰凍附近的生物。"
+      text: "在短時間內修復小範圍內的魔像與建築。"
+      revision: "1"
+  meteor:
+    name:
+      text: "隕石"
+    description:
+      text: "降下一個隕石砸向某物！請小心，有時候它也會降下一隻火元素。"
+      revision: "1"
+  motivateLand:
+    name:
+      text: "資源增生"
+    description:
+      text: "使一些自然資源增生。在春季與秋季效果最好，而在冬季效果最差。"
+      revision: "1"
+  recall:
+    name:
+      text: "召回"
+    description:
+      text: "傳送大量的村民與資源安全的回到村莊。"
+      revision: "1"
   regenerate:
     name:
       text: "恢復"
     description:
       text: "在短時間內治療單一生物。不能作用在魔像身上，但可以作用在怪物身上！施法時請小心。"
-            
+  resurrect:
+    name:
+      text: "復活"
+    description:
+      text: "復活一個地圖上可見的幽魂。當心，有時候這個過程並不會完全符合你的計劃！"
+  storm:
+    name:
+      text: "風暴"
+    description:
+      text: "一個極度危險的法術，會召喚出一個巨型的閃電風暴，其次是整個區域的下雨與下雪。別在你的村莊沒有避雷針時施放此法術。"
+      revision: "1"
+  summonHolyGolem:
+    name:
+      text: "召喚神聖魔像"
+    description:
+      text: "召喚一個神聖魔像，它會盡力戰鬥保護你的村民。你的村莊存在愈久，魔像就越強大！需要一定的神力來維持，它會永久的降低你的最大神力，但可以使用解除魔像法術來解除。"
+      revision: "1"
+  summonLaborGolem:
+    name:
+      text: "召喚工人魔像"
+    description:
+      text: "召喚一個低智商的魔像，它只會做一些村莊中的體力活，只到它死亡。需要一定的神力來維持，它會永久的降低你的最大神力，但可以使用解除魔像法術來解除。"
+      revision: "1"
+ 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Tile Set
 # Tooltips
@@ -7407,6 +8643,11 @@ tileSet:
     potatoes:
       name:
         text: "馬鈴薯"
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
+    potatoesHoly:
+      name:
+        text: "神聖馬鈴薯"
       description:
         text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     turnips:
@@ -7618,37 +8859,207 @@ mobName:
   article:
     comment: "This is used in a few rare cases where the game is referencing the mob as a common noun and not a proper noun. Like 'a Skeleton' instead of 'Bob Vance'. For example, 'Bob Vance is attacking a Skeleton' or 'a Skeleton is attacking Bob Vance'"
     text: "{mobName}"
-      
-  villageElder:
+ 
+  humanVillager:
     single:
-      text: "村民長者"
+      text: "人類村民"
     plural:
-      text: "村民長者"
-  villager:
+      text: "人類村民"
+  humanVillagerChild:
     single:
-      text: "村民"
+      text: "人類兒童"
     plural:
-      text: "村民"
-  child:
+      text: "人類兒童"
+  humanVillagerElder:
     single:
-      text: "兒童"
+      text: "人類長者"
     plural:
-      text: "兒童"
-  catjeetVillageElder:
+      text: "人類長者"
+  humanVillagerNephilim:
     single:
-      text: "貓人村民長者"
+      text: "拿非利人村民"
     plural:
-      text: "貓人村民長者"
+      text: "拿非利人村民"
+  humanVillagerChildNephilim:
+    single:
+      text: "拿非利人兒童"
+    plural:
+      text: "拿非利人兒童"
+  humanVillagerElderNephilim:
+    single:
+      text: "拿非利人長者"
+    plural:
+      text: "拿非利人長者"
+  humanNomad:
+    single:
+      text: "人類流浪者"
+    plural:
+      text: "人類流浪者"
+  humanNomadChild:
+    single:
+      text: "人類流浪者兒童"
+    plural:
+      text: "人類流浪者兒童"
+  humanNomadElder:
+    single:
+      text: "人類流浪者長者"
+    plural:
+      text: "人類流浪者長者"
+  humanNomadNephilim:
+    single:
+      text: "拿非利人流浪者"
+    plural:
+      text: "拿非利人流浪者"
+  humanNomadChildNephilim:
+    single:
+      text: "拿非利人流浪者兒童"
+    plural:
+      text: "拿非利人流浪者兒童"
+  humanNomadElderNephilim:
+    single:
+      text: "拿非利人流浪者長者"
+    plural:
+      text: "拿非利人流浪者長者"
+  humanMigrantDeparting:
+    single:
+      text: "出發的人類移民"
+    plural:
+      text: "出發的人類移民"
+  humanMigrantArriving:
+    single:
+      text: "到達的人類移民"
+    plural:
+      text: "到達的人類移民"
+  humanMigrantNephilimDeparting:
+    single:
+      text: "出發的拿非利人移民"
+    plural:
+      text: "出發的拿非利人移民"
+  humanMigrantNephilimArriving:
+    single:
+      text: "到達的拿非利人移民"
+    plural:
+      text: "到達的拿非利人移民"
+  humanVillagerGhost:
+    single:
+      text: "人類幽魂"
+    plural:
+      text: "人類幽魂"
+  humanVillagerGhostChild:
+    single:
+      text: "人類幽魂兒童"
+    plural:
+      text: "人類幽魂兒童"
+  humanVillagerGhostNephilim:
+    single:
+      text: "拿非利人幽魂"
+    plural:
+      text: "拿非利人幽魂"
+  humanVillagerGhostChildNephilim:
+    single:
+      text: "拿非利人幽魂兒童"
+    plural:
+      text: "拿非利人幽魂兒童"
   catjeetVillager:
     single:
       text: "貓人村民"
     plural:
       text: "貓人村民"
-  catjeetChild:
+  catjeetVillagerChild:
     single:
       text: "貓人兒童"
     plural:
       text: "貓人兒童"
+  catjeetVillagerElder:
+    single:
+      text: "貓人長者"
+    plural:
+      text: "貓人長者"
+  catjeetVillagerNephilim:
+    single:
+      text: "拿非利貓人村民"
+    plural:
+      text: "拿非利貓人村民"
+  catjeetVillagerChildNephilim:
+    single:
+      text: "拿非利貓人兒童"
+    plural:
+      text: "拿非利貓人兒童"
+  catjeetVillagerElderNephilim:
+    single:
+      text: "拿非利貓人長者"
+    plural:
+      text: "拿非利貓人長者"
+  catjeetNomad:
+    single:
+      text: "貓人流浪者"
+    plural:
+      text: "貓人流浪者"
+  catjeetNomadChild:
+    single:
+      text: "貓人流浪者兒童"
+    plural:
+      text: "貓人流浪者兒童"
+  catjeetNomadElder:
+    single:
+      text: "貓人流浪者長者"
+    plural:
+      text: "貓人流浪者長者"
+  catjeetNomadNephilim:
+    single:
+      text: "拿非利貓人流浪者"
+    plural:
+      text: "拿非利貓人流浪者"
+  catjeetNomadChildNephilim:
+    single:
+      text: "拿非利貓人流浪者兒童"
+    plural:
+      text: "拿非利貓人流浪者兒童"
+  catjeetNomadElderNephilim:
+    single:
+      text: "拿非利貓人流浪者長者"
+    plural:
+      text: "拿非利貓人流浪者長者"
+  catjeetMigrantDeparting:
+    single:
+      text: "出發的貓人移民"
+    plural:
+      text: "出發的貓人移民"
+  catjeetMigrantArriving:
+    single:
+      text: "到達的貓人移民"
+    plural:
+      text: "到達的貓人移民"
+  catjeetMigrantNephilimDeparting:
+    single:
+      text: "出發的拿非利貓人移民"
+    plural:
+      text: "出發的拿非利貓人移民"
+  catjeetMigrantNephilimArriving:
+    single:
+      text: "到達的拿非利貓人移民"
+    plural:
+      text: "到達的拿非利貓人移民"
+  catjeetGhost:
+    single:
+      text: "貓人幽魂"
+    plural:
+      text: "貓人幽魂"
+  catjeetGhostChild:
+    single:
+      text: "貓人幽魂兒童"
+    plural:
+      text: "貓人幽魂兒童"
+  catjeetGhostNephilim:
+    single:
+      text: "拿非利貓人幽魂"
+    plural:
+      text: "拿非利貓人幽魂"
+  catjeetGhostChildNephilim:
+    single:
+      text: "拿非利貓人幽魂兒童"
+    plural:
+      text: "拿非利貓人幽魂兒童"
   catjeetProvisioner:
     single:
       text: "貓人交易商"
@@ -7734,36 +9145,6 @@ mobName:
       text: "骷髏"
     plural:
       text: "骷髏"
-  ghost:
-    single:
-      text: "幽魂"
-    plural:
-      text: "幽魂"
-  ghostChild:
-    single:
-      text: "幽魂兒童"
-    plural:
-      text: "幽魂兒童"
-  ghostDoggo:
-    single:
-      text: "幽魂狗狗"
-    plural:
-      text: "幽魂狗狗"
-  ghostDoofyDoggo:
-    single:
-      text: "笨幽魂狗狗"
-    plural:
-      text: "笨幽魂狗狗"
-  ghostCatjeet:
-    single:
-      text: "貓人幽魂"
-    plural:
-      text: "貓人幽魂"
-  ghostCatjeetChild:
-    single:
-      text: "幽魂貓人兒童"
-    plural:
-      text: "幽魂貓人兒童"
   fireElemental:
     single:
       text: "火元素"
@@ -7779,56 +9160,6 @@ mobName:
       text: "邪靈兒童"
     plural:
       text: "邪靈兒童"
-  nomadElder:
-    single:
-      text: "流浪長者"
-    plural:
-      text: "流浪長者"
-  nomad:
-    single:
-      text: "流浪者"
-    plural:
-      text: "流浪者"
-  departingMigrant:
-    single:
-      text: "離開中的移民"
-    plural:
-      text: "離開中的移民"
-  arrivingMigrant:
-    single:
-      text: "到達中的移民"
-    plural:
-      text: "到達中的移民"
-  nomadChild:
-    single:
-      text: "流浪者兒童"
-    plural:
-      text: "流浪者兒童"
-  catjeetNomadElder:
-    single:
-      text: "貓人流浪者長者"
-    plural:
-      text: "貓人流浪者長者"
-  catjeetNomad:
-    single:
-      text: "貓人流浪者"
-    plural:
-      text: "貓人流浪者"
-  departingCatjeetMigrant:
-    single:
-      text: "離開中的貓人移民"
-    plural:
-      text: "離開中的貓人移民"
-  arrivingCatjeetMigrant:
-    single:
-      text: "到達中的貓人移民"
-    plural:
-      text: "到達中的貓人移民"
-  catjeetNomadChild:
-    single:
-      text: "貓人流浪者兒童"
-    plural:
-      text: "貓人流浪者兒童"
   doggo:
     single:
       text: "狗狗"
@@ -7849,6 +9180,16 @@ mobName:
       text: "野生笨狗狗"
     plural:
       text: "野生笨狗狗"
+  ghostDoggo:
+    single:
+      text: "狗狗幽魂"
+    plural:
+      text: "狗狗幽魂"
+  ghostDoofyDoggo:
+    single:
+      text: "笨狗狗幽魂"
+    plural:
+      text: "笨狗狗幽魂"
   beefalo:
     single:
       text: "牛牛"
@@ -9695,13 +11036,15 @@ object:
       name:
         text: "火坑"
       description:
-        text: "基礎光源。也增加可建造的範圍！怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
+        text: "基礎光源。也增加可建造的範圍！除非沒有其它方式可到達村壯，否則怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
+        revision: "1"
     
     largeFirePit:
       name:
         text: "大火坑"
       description:
-        text: "基礎光源，但照明範圍更廣！也會增加可建造的範圍！怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
+        text: "基礎光源，但照明範圍更廣！也會增加可建造的範圍！除非沒有其它方式可到達村壯，否則怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
+        revision: "1"
     
     fishingHut:
       makeshift:
@@ -9763,6 +11106,13 @@ object:
           text: "堅固鍛造廠"
         description:
           text: "增加所有礦物精煉速度，增加最大儲存量與鍛造工職缺。"
+
+    godTower:
+      base:
+        name:
+          text: "神塔"
+        description:
+          text: "一種有無限彈藥的魔法弓箭塔，但需要花費神力來維持。可使用解除神力建築法術來移除它。"
     
     goldStorage:
       small:
@@ -9846,7 +11196,7 @@ object:
         name:
           text: "高品質房屋"
         description:
-          text: "增加少量的居住與儲存空間，但增加大量的舒適度。如果你想要幸福有效率的村民，這是個好房屋。"
+          text: "增加少量的居住與儲存空間，但增加大量的舒適度。如果你想要幸福有效率的村民，這是個好選擇。"
       largeHighQuality:
         name:
           text: "大型高品質房屋"
@@ -9925,22 +11275,22 @@ object:
       name:
         text: "腐化的墓地"
       description:
-        text: "建築在腐化地深處的腐化建築。增加怪物在腐化區的生成速度。"
-        revision: "1"
+        text: "建築在腐化地深處的腐化建築。增加土地的腐化速度。"
+        revision: "2"
     
     corruptedGraveyardMedium:
       name:
         text: "腐化的墓地"
       description:
-        text: "建築在腐化地深處的腐化建築。增加怪物在腐化區的生成速度。"
-        revision: "1"
+        text: "建築在腐化地深處的腐化建築。增加土地的腐化速度。"
+        revision: "2"
     
     corruptedGraveyardLarge:
       name:
         text: "腐化的墓地"
       description:
-        text: "建築在腐化地深處的腐化建築。增加怪物在腐化區的生成速度。"
-        revision: "1"
+        text: "建築在腐化地深處的腐化建築。增加土地的腐化速度。"
+        revision: "2"
     
     corruptedFireBowTower:
       name:
@@ -10672,37 +12022,64 @@ object:
           text: "強化木倉庫"
         description:
           text: "增加木頭、木板的儲存量到最大值。"
+              
+    crylithiumWallGateNS:
+      name:
+        text: "水晶大門"
+      description:
+        text: "一個簡單的水晶門，村民可以通過，而怪物不行。邪靈也不行穿過。"
     
+    crylithiumWallGateWE:
+      name:
+        text: "水晶大門"
+      description:
+        text: "一個簡單的水晶門，村民可以通過，而怪物不行。邪靈也不行穿過。"
+            
     woodFenceGateNS:
       name:
-        text: "木門"
+        text: "木造大門"
       description:
         text: "一個簡單的木門，村民可以通過，而怪物不行。"
     
     woodFenceGateWE:
       name:
-        text: "石門"
+        text: "木造大門"
       description:
         text: "一個簡單的木門，村民可以通過，而怪物不行。"
     
     stoneWallGateNS:
       name:
-        text: "石門"
+        text: "石造大門"
       description:
         text: "一個簡單的石門，村民可以通過，而怪物不行。"
     
     stoneWallGateWE:
       name:
-        text: "石門"
+        text: "石造大門"
       description:
         text: "一個簡單的石門，村民可以通過，而怪物不行。"
   
   wall:
+    crylithiumCurtainWall:
+      name:
+        text: "水晶城牆"
+      description:
+        text: "一種大型圍牆，它很難跨越或射過。可阻擋邪靈穿牆而過！只有強弩塔可以射過這種圍牆。"
+    crylithiumWall:
+      name:
+        text: "水晶城牆"
+      description:
+        text: "一種堅固的圍牆，大多數的防禦塔與遠程攻擊都可以射過。可阻擋邪靈穿牆而過！怪物們只會在找不到路可以進入村莊時攻擊它們。"
     curtainWall:
       name:
         text: "城牆"
       description:
         text: "一種大型圍牆，它很難跨越或射過。只有強弩塔可以射過這種圍牆。"
+    godWall:
+      name:
+        text: "神牆"
+      description:
+        text: "一種魔法圍牆可阻擋任何東西穿過，但需要花費神力維持。可使用解除神力建築法術來移除它。"
     stoneWall:
       name:
         text: "石牆"
@@ -10850,6 +12227,14 @@ resource:
     description:
       text: "錢！可在市場裡買東西。"
 
+  godDust:
+    single:
+      text: "神塵"
+    plural:
+      text: "神塵"
+    description:
+      text: "摧毀神力建築留下的少量原料。"
+      
   crystallyTrash:
     single:
       text: "水晶垃圾"
