@@ -7245,6 +7245,12 @@ sharedSettingsPanel:
       text: "暫停物件"
     dismantleObject:
       text: "拆除物件"
+    upgrade:
+      text: "升級/開始升級 1"
+    startUpgrade2:
+      text: "開始升級 2"
+    startUpgrade3:
+      text: "開始升級 3"
     grabSpell:
       text: "捉取法術"
     activeSpell1:
@@ -8040,7 +8046,7 @@ helpTip:
     37:
       text: "多數建築需要精煉原料，在你建築造前請先確認需求！"
     38:
-      text: "遊戲提示你是的好朋友，請仔細閱讀！"
+      text: "遊戲提示是你的好朋友，請仔細閱讀！"
     39:
       text: "村民們被怪物包圍？施放召回或是驅逐法術！"
     40:
@@ -8703,7 +8709,7 @@ tileSet:
       name:
         text: "水"
       description:
-        text: "為村莊提供髒（不可飲用）水，農夫可以收集水來灌溉，而打水工可以運送水到淨水器生產飲用水。"
+        text: "為村莊提供髒水（不可飲用），農夫可以收集水來灌溉，而打水工可以運送水到淨水器生產飲用水。"
     mud:
       name:
         text: "泥漿"
@@ -9513,6 +9519,8 @@ damageCauseName:
     text: "兒童出生"
   beingSlaughtered:
     text: "被屠宰"
+  corruption:
+    text: "腐化"
     
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Mob AI
@@ -10823,7 +10831,7 @@ object:
           text: "增加能量池可召喚的水晶魔像數量，同時增加新生成魔像的等級與所消耗的能量。"
       established:
         name:
-          text: "堅固魔像能量池"
+          text: "堅固水晶魔像能量池"
         description:
           text: "增加能量池可召喚的水晶魔像數量，同時增加新生成魔像的等級與所消耗的能量。"
       lightning:
@@ -12067,7 +12075,7 @@ object:
         text: "一種大型圍牆，它很難跨越或射過。可阻擋邪靈穿牆而過！只有強弩塔可以射過這種圍牆。"
     crylithiumWall:
       name:
-        text: "水晶城牆"
+        text: "水晶牆"
       description:
         text: "一種堅固的圍牆，大多數的防禦塔與遠程攻擊都可以射過。可阻擋邪靈穿牆而過！怪物們只會在找不到路可以進入村莊時攻擊它們。"
     curtainWall:
@@ -12457,7 +12465,7 @@ resource:
     plural:
       text: "髒水桶"
     description:
-      text: "可用於灌溉農不可飲用的水，或是用淨水器中淨化。"
+      text: "可用於灌溉農田不可飲用的水，或是用淨水器中淨化。"
 
   waterBucket:
     single:
@@ -12529,7 +12537,7 @@ resource:
     plural:
       text: "皮革"
     description:
-      text: "皮革可以加功，像是製作箭袋。"
+      text: "皮革可以加工，像是製作箭袋。"
                
   egg:
     single:
