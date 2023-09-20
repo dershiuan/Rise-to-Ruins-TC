@@ -4,10 +4,10 @@
 # screen. For example "You have {amount} villagers", {amount} would be the villager count itself. These must remain
 # in the translated version as well, or the actual data will never be displayed.
 
-# Currently ONLY SUPPORTED IN DEATH MESSAGES there is a gender variable, for example a line you need to translate may
-# say "No one liked (him:her:them) anyway.", the variable inside is always formatting (male:female:none), and the correct 
-# gender will be picked based on (obviously) the gender of the mob that died. You can change the contents of the variables 
-# in any way you desire, as long as all three are there. You may also add or remove them as needed. Some languages 
+# Currently ONLY SUPPORTED IN DEATH MESSAGES AND SELLING EERIE VESSELS there is a gender variable, for example a line you
+# need to translate may say "No one liked (him:her:them) anyway.", the variable inside is always formatting (male:female:none),
+# and the correct gender will be picked based on (obviously) the gender of the mob that died. You can change the contents of
+# the variables in any way you desire, as long as all three are there. You may also add or remove them as needed. Some languages 
 # (particularly the romance languages) may require you to change the entire structure of the sentence based on the 
 # gender reporting the message. For now, there's a small work around for this. Because you can put anything you want in 
 # the variables, you can do something like this; "(No one liked him anyway.:No one liked her anyway.:No one liked them anyway.)"
@@ -156,12 +156,20 @@ godXP:
     text: "交易裝備"
   villagersImpregnated:
     text: "村民懷孕"
+  blessedVillagersImpregnated:
+    text: "懷孕的村民受到祝福"
   livedFullLife:
     text: "充實的生活"
   hunting:
     text: "狩獵"
   slaughteringAnimals:
     text: "屠宰動物"
+  praying:
+    text: "祈禱"
+  capturingSouls:
+    text: "捕捉靈魂"
+  terminatingAnimalPregnancies:
+    text: "終止動物妊娠"
   
   # God Intervention
   castingSpells:
@@ -253,6 +261,8 @@ module:
     text: "燈光"
   collision:
     text: "碰撞"
+  cloud:
+    text: "雲朵"
   depth:
     text: "深度"
   map:
@@ -320,6 +330,10 @@ perkType:
     text: "最大口渴度"
   thirstDecayRate:
     text: "口渴度衰減率"
+  maximumFaith:
+    text: "最大信仰值"
+  faithDecayRate:
+    text: "信仰衰減率"
   maximumEnergy:
     text: "最大能量值"
   energyDecayRate:
@@ -382,6 +396,12 @@ perkType:
     text: "治療工作速度"
   waterStorage:
     text: "清水儲存"
+  prayingSpeed:
+    text: "祈禱速度"
+  capturingSoulsSpeed:
+    text: "捕捉靈魂速度"
+  tendAnimalsSpeed:
+    text: "照顧動物"
   woodGolemLevel:
     text: "木頭魔像等級"
   woodGolemCapacity:
@@ -486,6 +506,10 @@ perkType:
     text: "神聖魔像速度"
   laborGolemMaximumCarriedResources:
     text: "工人魔像可搬運資源的最大值"
+  moreMinimumInfluence:
+    text: "更多最小神力值"
+  moreInfluencePerAnimal:
+    text: "每隻動物產生更多神力"
   moreInfluencePerVillager:
     text: "每個村民產生更多神力"
   increasedInfluenceGeneration:
@@ -540,6 +564,8 @@ perkType:
     text: "地震法術冷卻"
   flameSpellCost:
     text: "火炎法術花費"
+  godTowerSpellCooldown:
+    text: "神塔法術冷卻"
   godTowerSpellCost:
     text: "神塔法術花費"
   godWallSpellCost:
@@ -636,6 +662,8 @@ perkType:
     text: "工人魔像法術花費"
   laborGolemSpellCooldown:
     text: "工人魔像法術冷卻"
+  cometSpellCost:
+    text: "彗星法術花費"
   nomadAppearanceRate:
     text: "流浪者出現率"
   nomadAmount:
@@ -1496,6 +1524,36 @@ perk:
   redsPerpetuation:
     text: "Red's Perpetuation"
     optional: "true"
+  mittensIndignation:
+    text: "Mitten's Indignation"
+    optional: "true"
+  gregorysSlapdash:
+    text: "Gregory's Slapdash"
+    optional: "true"
+  selmasProvidence:
+    text: "Selma's Providence"
+    optional: "true"
+  shawnsShrimp:
+    text: "Shawn's Shrimp"
+    optional: "true"
+  wilmasNatural:
+    text: "Wilma's Natural"
+    optional: "true"
+  almasWhimsy:
+    text: "Alma's Whimsy"
+    optional: "true"
+  henrysHungering:
+    text: "Henry's Hungering"
+    optional: "true"
+  selinettesSanctity:
+    text: "Selinette's Sanctity"
+    optional: "true"
+  johnsVolition:
+    text: "John's Volition"
+    optional: "true"
+  delilahsDelight:
+    text: "Delilah's Delight"
+    optional: "true"
   patstricksAllurement:
     text: "Patstrick's Allurement"
     optional: "true"
@@ -2139,10 +2197,10 @@ perk:
     text: "Gothroger's Dance"
     optional: "true"
   kennensMaelstrom:
-    text: "kennensMaelstrom"
+    text: "Kennen's Maelstrom"
     optional: "true"
   xolotlsIncarnation:
-    text: "xolotlsIncarnation"
+    text: "Xolotl's Incarnation"
     optional: "true"
   hospellsRain:
     text: "Hospell's Rain"
@@ -2484,7 +2542,7 @@ perk:
     text: "Lorraina's Access"
     optional: "true"
   mckenziesattainanance:
-    text: "Mckenzie's attainanance"
+    text: "Mckenzie's Attainanance"
     optional: "true"
   parksSubservience:
     text: "Park's Subservience"
@@ -2696,6 +2754,102 @@ perk:
   distinctsMint:
     text: "Distinct's Mint"
     optional: "true"
+  elanofsCharisma:
+    text: "Elanof's Charisma"
+    optional: "true"
+  fredwardsFervor:
+    text: "Fredward's Fervor"
+    optional: "true"
+  yulasZeal:
+    text: "Yula's Zeal"
+    optional: "true"
+  raymondsReign:
+    text: "Raymond's Reign"
+    optional: "true"
+  annasAlacrity:
+    text: "Anna's Alacrity"
+    optional: "true"
+  cloftsMightySplendor:
+    text: "Cloft's Mighty Splendor"
+    optional: "true"
+  zoreksFilteredEssence:
+    text: "Zorek's Filtered Essence"
+    optional: "true"
+  babelsBlessing:
+    text: "Babel's Blessing"
+    optional: "true"
+  daniasDivineLongevity:
+    text: "Dania's Divine Longevity"
+    optional: "true"
+  terrysTabernac:
+    text: "Terry's Tabernac"
+    optional: "true"
+  dransDoubtfulBelief:
+    text: "Dran's Doubtful Belief"
+    optional: "true"
+  shivasDestructiveImparting:
+    text: "Shiva's Destructive Imparting"
+    optional: "true"
+  hallysPromptReturn:
+    text: "Hally's Prompt Return"
+    optional: "true"
+  dwaynesReturn:
+    text: "Dwayne's Return"
+    optional: "true"
+  hephaestusHammer:
+    text: "Hephaestus' Hammer"
+    optional: "true"
+  wurzburgsStoutfastness:
+    text: "Wzburg's Stoutfastness"
+    optional: "true"
+  elsasWreckingBall:
+    text: "Elsa's Wrecking Ball"
+    optional: "true"
+  galanahsWhisper:
+    text: "Galanah's Whisper"
+    optional: "true"
+  dransFoodPreparation:
+    text: "Dran's Food Preparation"
+    optional: "true"
+  raysBookOfLies:
+    text: "Ray's Book of Lies"
+    optional: "true"
+  raysEndlessLists:
+    text: "Ray's Endless Lists"
+    optional: "true"
+  pintOfDoubt:
+    text: "Pint of Doubt"
+    optional: "true"
+  saintsAmbition:
+    text: "Saint's Ambition"
+    optional: "true"
+  temptationsTransience:
+    text: "Temptation's Transience"
+    optional: "true"
+  demisesLoss:
+    text: "Demises' Loss"
+    optional: "true"
+  civilisationsGuidance:
+    text: "Civilisation's Guidance"
+    optional: "true"
+  elhaelsWisdom:
+    text: "Elhael's Wisdom"
+    optional: "true"
+  hayfathersGuidance:
+    text: "Hayfather's Guidance"
+    optional: "true"
+  hayfathersHumanity:
+    text: "Hayfather's Humanity"
+    optional: "true"
+  slimersCage:
+    text: "Slimer's Cage"
+    optional: "true"
+  rayParkerJrsStyle:
+    text: "Ray Parker Jr's Style"
+    optional: "true"
+  irwinsKhakis:
+    text: "Irwin's Khakis"
+    optional: "true"    
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Time Module
@@ -2754,6 +2908,10 @@ console:
       text: "{mobName} $WHI0與 {mateMobName} $WHI0交配！"
     isPregnant:
       text: "{mobName} $PIN1懷孕了！"
+    isPregnantBlessed:
+      text: "{mobName} $PIN1奇蹟般懷孕了！"
+    ghostLeave:
+      text: "{mobName} $RED1的靈魂已經永遠離開了這個世界…"
     object:
       destroyed:
         text: "{buildingName} $RED1被摧毀！"
@@ -2864,6 +3022,7 @@ console:
       born:
         subtitle:
           text: "出生了！"
+          revision: "1"
       hired:
         subtitle:
           text: "被顧用了！"
@@ -2881,7 +3040,8 @@ console:
           text: "加入你的村莊！"
       wildDoggoDomesticate:
         subtitle:
-          text: "狗狗加入你的村莊！"
+          text: "{mobType} 加入你的村莊！"
+          revision: "1"
           
     mobAI:
       childBirthDeath:
@@ -2949,6 +3109,10 @@ console:
             text: "{mobName}{mobTitle}$RED1 壽終正寢。"
           birth:
             text: "{mobName}{mobTitle}$RED1 難產而死！"
+          comet:
+            text: "{mobName}{mobTitle}$RED1 距離彗星太近了。"
+          terminatingPregnancy:
+            text: "{mobName}{mobTitle}$RED1 死於意外。"
             
         ageSubtitle:
           male:
@@ -2988,6 +3152,7 @@ console:
             text: "(他:她:他們)為團隊犧牲了…"
           13:
             text: "有時你吃了熊，有時熊吃了你。"
+            revision: "1"
           14:
             text: "另一個犧牲者！"
           15:
@@ -3034,6 +3199,100 @@ console:
             text: "別難過，死人是沒有任何感覺的。"
           36:
             text: "思想和祈禱可能無法解決這個問題…"
+          37:
+            text: "好吧，這是一種方法。"
+          38:
+            text: "死亡就像出生一樣自然。"
+          39:
+            text: "(他:她:他們)不會從那重生。"
+          40:
+            text: "我敢打賭(他:她:他們)沒看到那個即將來臨。"
+          41:
+            text: "也許沒有人注意到。"
+          42:
+            text: "有人度過的糟糕的一天。"
+          43:
+            text: "遊玩愚蠢的遊戲，贏得愚蠢的獎品。"
+          44:
+            text: "d00d 給上帝。"
+          45:
+            text: "(他:她:他們)榮獲達爾文獎第一名。"
+          46:
+            text: "字典裡沒有任何詞可以形容(他:她:他們)的死亡多麼值得讚揚。"
+          47:
+            text: "人生成功的失敗。"
+          48:
+            text: "死了，但他們真的活過嗎？"
+          49:
+            text: "這一定是業餘時間！"
+          50:
+            text: "誰寫下這些？"
+          51:
+            text: "恭喜你退休了！"
+          52:
+            text: "再做一次！"
+          53:
+            text: "你有一個工作。它會使你的健康保持在零以上。"
+          54:
+            text: "密技是上上下下左右左右 B A 開始，對嗎！？"
+          55:
+            text: "你很幸運，你是神，而且有復活法術。"
+          56:
+            text: "(他:她:他們)沒有讀那該死的手冊。"
+          57:
+            text: "(他:她:他們)生命歸零了。"
+      
+      sellEerieVessel:
+        title:
+          comment: "Some mobs, like the doggo, need their title inputted into the death messages. This string will be inputted where {mobTitle} is in all death strings under the death header category."
+          text: "$WHI0 the {mobType}"
+        header:
+          text: "{mobName}{mobTitle}$YEL1 已賣給了貓人！"
+        randomSubtitles:
+          comment: "These Easter Egg messages generate the correct gender pronouns when displayed based on the variable entries below. eg (malePronoun:femalePronoun:none). You may add or remove your own, or edit the contents of them. But they MUST remain in (malePronoun:femalePronoun:none) format. You can not add or remove from the entry, it must always have 3 values."
+          0:
+            text: "沒關係，反正沒人喜歡(他:她:他們)。"
+          1:
+            text: "貓人比你通尊重(他:她:他們)。"
+          2:
+            text: "如果他們死了呢，這就是奴隸制嗎？"
+          3:
+            text: "至少現在不用跟公婆打交道了。"
+          4:
+            text: "村民後悔出售，但(他:她:他們)的精神將會繼續。"
+          5:
+            text: "如果你只向巫師擲一枚硬幣，這事就不會發生了。"
+          6:
+            text: "噢，藤壺！"
+          7:
+            text: "(他:她:他們)確實與(his:her:their)的黃金等重。可惜是他們很輕。"
+          8:
+            text: "那又是誰？"
+          9:
+            text: "哦親愛的，看來貓人抓住(他:她:他們)了。"
+          10:
+            text: "(他:她:他們)現在是貓人的麻煩了！"
+          11:
+            text: "哎呀！"
+          12:
+            text: "名字在死了被採用。"
+          13:
+            text: "沒有人意識到你可以收養一個鬼魂？"
+          14:
+            text: "(他:她:他們)或許不會失誤。"
+          15:
+            text: "(他:她:他們)或許是應得的。"
+          16:
+            text: "現在是誰？"
+          17:
+            text: "甚至不值得填滿(他:她:他們)的酒杯。"
+          18:
+            text: "等等，(他:她:他們)死了？！"
+          19:
+            text: "我敢打賭(他:她:他們)從未看到那個來臨！"
+          20:
+            text: "一個人的垃圾是貓的寶藏！"
+
       
     migrantDepartBehavior:
       leaveRegion:
@@ -3049,8 +3308,16 @@ console:
             text: "{mobName} $WHI0被她的 $RED1上帝 $WHI0犧牲了！"
           none:
             text: "{mobName} $WHI0被它們的 $RED1上帝 $WHI0犧牲了！"
+          doofyDoggo:
+            text: "{mobName} $WHI0無辜又傻乎乎的狗狗被他們的 $RED1上帝 $WHI0犧牲了！"
+          doggo:
+            text: "{mobName} $WHI0無辜的狗狗被他們的 $RED1上帝 $WHI0犧牲了！"
         subtitle:
           text: "讓這成為一個教訓。"
+          doggo:
+            text: "你怎麼能？！"
+          doofyDoggo:
+            text: "$RED1你做了什麼！！？"
     
     spawn:
       nomadsArrived:
@@ -3071,6 +3338,8 @@ console:
             text: "$RED1地震！！"
           subtitle:
             text: "大地生氣了！"
+          subtitleEasterEgg:
+            text: "發出低音！"
         electricalStorm:
           header:
             text: "$RED1元素風暴！"
@@ -3086,270 +3355,725 @@ console:
             text: "$RED1流星雨！"
           subtitle:
             text: "小心你的頭！"
+        comet:
+          header:
+            text: "$RED1彗星逼近！"
+          subtitle:
+            text: "為什麼感覺更冷了？"
             
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Goals
 # Names and Descriptions
-# rtr.Goal.java
+# rtr.goal.goals.GoalBase.java
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 goal:
   comment: "Goals - Names and Descriptions"
-  javaClass: "rtr.Goal.java"
-  
-  unlockNewGoal:
-    header:
-      text: "解鎖新目標"
-    body:
-      days:
-        text: "生存 $GRE1{days} 天 $WHI0可 $GRE1解鎖一個目標 $WHI0！"
-      additionalDays:
-        text: "多生存 $GRE1{days} 天 $WHI0可 $GRE1解鎖一個目標 $WHI0！"
-   
-  win:
-    header:
-      text: "勝利"
-    body:
-      text: "在 $GRE1世界 $WHI0的 $GRE1每個區域 $WHI0生存 $GRE1一年 $WHI0。"
+  javaClass: "rtr.goal.goals.GoalBase.java"
 
-  harvest:
-    header:
-      text: "收獲 {resourceName}"
-    body:
-      any: 
-        text: "在 $GRE1任何區域 $WHI0收獲 $GRE1{amount} {resourceName} $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0收獲 $GRE1{amount} {resourceName} $WHI0！"
+  none:
+    name:
+      text: "沒有目標！"
+    description:
+      text: "點選一個新的目標開始奮鬥！"
+            
+  freeChest:
+    name:
+      text: "免費寶箱！"
+    description:
+      text: "點擊一個免費寶箱！"    
 
-  manufacture:
-    header:
-      text: "製作 {resourceName}"
-    body:
-      any:
-        text: "在 $GRE1任何區域 $WHI0製作 $GRE1{amount} {resourceName} $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0製作 $GRE1{amount} {resourceName} $WHI0！"
-
-  trash:
-    header:
-      text: "加工 {resourceName}"
-    body:
-      any:
-        text: "在 $GRE1任何區域 $WHI0加工 $GRE1{amount} {resourceName} $WHI0!"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0加工 $GRE1{amount} {resourceName} $WHI0!"
-         
   survive:
-    header:
-      text: "生存"
-    body:
-      text: "在 $GRE1{mapName} $WHI0生存 $GRE1{days} 天 $WHI0！"
-
-  migration:
-    header:
-      text: "遷移到新的居住地"
-    body:
-      single:
-        text: "遷移到 $GRE1一個新區域 $WHI0！"
-      multiple:
-        text: "遷移到 $GRE1{amount} 新區域 $WHI0！"
+    name:
+      text: "生存！"
+    description:
+      text: "在任何區域生存 $GRE1{amount} $WHI0天！"
       
-  sendVillagers:
-    header:
-      text: "派出村民"
-    body:
-      any:
-        text: "派出 $GRE1{amount} 村民 $WHI0到 $GRE1另一個區域 $WHI0。"
-      specific:
-        text: "派出 $GRE1{amount} 村民 $WHI0到 $GRE1{mapName} $WHI0！"
-      
-  sendCourierGolems:
-    header:
-      text: "派出運輸魔像"
-    body:
-      any:
-        text: "派出 $GRE1{amount} 運輸魔像 $WHI0到 $GRE1另一個區域 $WHI0。"
-      specific:
-        text: "派出 $GRE1{amount} 運輸魔像 $WHI0到 $GRE1{mapName} $WHI0！"
-      
-  sendResourcesGoal:
-    header:
-      text: "運送資源"
-    body:
-      any:
-        text: "派出運輸魔像，運送 $GRE1{amount} {resourceNamePlural} $WHI0到 $GRE1另一個區域 $WHI0。"
-      specific:
-        text: "派出運輸魔像，運送 $GRE1{amount} {resourceNamePlural} $WHI0到 $GRE1{mapName} $WHI0！"
-        
-  population:
-    header:
-      text: "人口"
-    body:
-      any:
-        text: "總人口到達 $GRE1{amount} $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0的人口到達 $GRE1{amount} $WHI0！"
-        
-  stockpile:
-    header:
-      text: "儲存 {resourceNamePlural}"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0儲存 $GRE1{amount} {resourceNamePlural} $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0儲存 $GRE1{amount} {resourceNamePlural} $WHI0！"
-      
-  killMonsters:
-    header:
-      any: 
-        text: "擊殺怪物"
-      specific:
-        text: "擊殺 {mobNamePlural}"
-    body:
-      any:
-        any:
-          text: "在 $GRE1任何地方 $WHI0擊殺 $GRE1{amount} 怪物 $WHI0！"
-        specific:
-          text: "在 $GRE1任何地方 $WHI0擊殺 $GRE1{amount} {mobNamePlural} $WHI0！"
-      specific:
-        any:
-          text: "在 $GRE1{mapName} $WHI0擊殺 $GRE1{amount} 怪物 $WHI0！"
-        specific:
-          text: "在 $GRE1{mapName} $WHI0擊殺 $GRE1{amount} {mobNamePlural} $WHI0！"
-      
-  castSpells:
-    header:
-      any: 
-        text: "施法"
-      specific:
-        text: "施放 {spellName}"
-    body:
-      any:
-        any:
-          text: "在 $GRE1任何地方 $WHI0施放 $GRE1{amount} 法術 $WHI0！"
-        specific:
-          text: "在 $GRE1任何地方 $WHI0施放 $GRE1{amount} {spellName} $WHI0！"
-      specific:
-        any:
-          text: "在 $GRE1{mapName} $WHI0施放 $GRE1{amount} 法術 $WHI0！"
-        specific:
-          text: "在 $GRE1{mapName} $WHI0施放 $GRE1{amount} {spellName} $WHI0！"
-      
-      
-  grabResources:
-    header:
-      text: "取得資源"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0取得 $GRE1{amount} 資源 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0取得 $GRE1{amount} 資源 $WHI0！"
-      
-  hireCatjeet:
-    header:
-      text: "顧用貓人"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0顧用 $GRE1{amount} 貓人 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0顧用 $GRE1{amount} 貓人 $WHI0！"
-      
-  immigrateNomads:
-    header:
-      text: "移民流浪者"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0移民 $GRE1{amount} 流浪者 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0移民 $GRE1{amount} 流浪者 $WHI0！"
-      
-  build:
-    header:
-      text: "建造"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0建造 $GRE1{amount} {buildingName} $WHI0！"
-      specific:
-        any:
-          text: "在 $GRE1任何地方 $WHI0建造 $GRE1{amount} 建築物 $WHI0！"
-        specific:
-          text: "在 $GRE1{mapName} $WHI0建造 $GRE1{amount} 建築物 $WHI0！"
+  youAlreadyLost:
+    name:
+      text: "你迷失了"
+    description:
+      text: "建造你的第一個營地？"
           
-  upgrade:
-    header:
-      any:
-        text: "升級"
-      specific:
-        text: "升級 {buildingName}"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0升級 $GRE1{amount} {buildingName} $WHI0！"
-      specific:
-        any:
-          text: "在 $GRE1任何地方 $WHI0升級 $GRE1{amount} 建築物 $WHI0！"
-        specific:
-          text: "在 $GRE1{mapName} $WHI0升級 $GRE1{amount} 建築物 $WHI0！"
-          
-  domestication:
-    header:
-      text: "馴服"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0馴服 $GRE1{amount} 狗狗 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0馴服 $GRE1{amount} 狗狗 $WHI0！"
+  weakestLinks:
+    name:
+      text: "最薄弱的環節"
+    description:
+      text: "有 $GRE1{amount} $WHI0個村民死於任何原因。"
       
-  levelUp:
-    header:
-      text: "升級"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0升級 $GRE1{amount} 村民 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0升級 $GRE1{amount} 村民 $WHI0！"
+  deforestation:
+    name:
+      text: "森林砍伐"
+    description:
+      text: "從森林採集 $GRE1{amount} $WHI0個原木。"
       
-  childBirth:
-    header:
-      text: "兒童出生"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0出生 $GRE1{amount} 兒童 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0出生 $GRE1{amount} 兒童 $WHI0！"
+  quarry:
+    name:
+      text: "採石場"
+    description:
+      text: "從山上採集 $GRE1{amount} $WHI0個石頭。"
       
-  openLootBoxes:
-    header:
-      text: "打開寶箱"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0打開 $GRE1{amount} 寶箱 $WHI0！"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0打開 $GRE1{amount} 寶箱 $WHI0！"
+  kylePowered:
+    name:
+      text: "晶體動力！"
+    description:
+      text: "從水晶礦中採集 $GRE1{amount} $WHI0個水晶。"
       
-  throwMonsterInCullisGate:
-    header:
-      text: "將怪物丟進庫里斯門"
-    body:
-      any:
-        any:
-          text: "在 $GRE1任何地方將 $GRE1{amount} 怪物 $WHI0丟進 $GRE1庫里斯門 $WHI0！"
-        specific:
-          text: "在 $GRE1任何地方將 $GRE1{amount} {mobNamePlural} $WHI0丟進 $GRE1庫里斯門 $WHI0！"
-      specific:
-        any:
-          text: "在 $GRE1{mapName} $WHI0將 $GRE1{amount} 怪物 $WHI0丟進 $GRE1庫里斯門 $WHI0！"
-        specific:
-          text: "在 $GRE1{mapName} $WHI0將 $GRE1{amount} {mobNamePlural} $WHI0丟進 $GRE1庫里斯門 $WHI0！"
+  theGrind:
+    name:
+      text: "採集"
+    description:
+      text: "在任何地方採集 $GRE1{amount} $WHI0個資源。"
       
-  resurrectGhosts:
-    header:
-      text: "復活幽魂"
-    body:
-      any:
-        text: "在 $GRE1任何地方 $WHI0復活 $GRE1{amount} 幽魂 $WHI0。"
-      specific:
-        text: "在 $GRE1{mapName} $WHI0復活 $GRE1{amount} 幽魂 $WHI0。"
+  foraging:
+    name:
+      text: "覓食"
+    description:
+      text: "採集 $GRE1{amount} $WHI0個水果，蔬菜或蘑菇。"
+      
+  factoryFarming:
+    name:
+      text: "工業化養殖"
+    description:
+      text: "在廚房宰殺 $GRE1{amount} $WHI0隻動物。"
      
+  catchItAll:
+    name:
+      text: "收集雨水"
+    description:
+      text: "使用雨水收集器取得 $GRE1{amount} $WHI0單位的水"
+       
+  nestledPureLifeWater:
+    name:
+      text: "淨化生活用水"
+    description:
+      text: "使用淨水器產生 $GRE1{amount} $WHI0單位的水。"
+
+  buildAllTheThings:
+    name:
+      text: "建造一切"
+    description:
+      text: "建造 $GRE1{amount} $WHI0個建築，除了圍牆之外。"
+            
+  godsVillage:
+    name:
+      text: "神的子民"
+    description:
+      text: "將 $GRE1{amount} $WHI0棟房子升級為高品質。"
+      
+  sardines:
+    name:
+      text: "沙丁魚"
+    description:
+      text: "將 $GRE1{amount} $WHI0棟房子升級為高容積。"
+      
+  theCostOfProgress:
+    name:
+      text: "進步的代價"
+    description:
+      text: "升級 $GRE1{amount} $WHI0個建築。"
+      
+  acropolis:
+    name:
+      text: "衛城"
+    description:
+      text: "升級 $GRE1{amount} $WHI0棟房子為強化高容積房屋。"
+      
+  allRoadsLeadToHome:
+    name:
+      text: "條條大路通家園"
+    description:
+      text: "建造 $GRE1{amount} $WHI0個石板道路。"
+       
+  animalRightsViolations:
+    name:
+      text: "侵犯動物權利"
+    description:
+      text: "有 $GRE1{amount} $WHI0隻狗狗死於任意原因。"
+      
+  firstWorldProblems:
+    name:
+      text: "首個世界問題"
+    description:
+      text: "升級 $GRE1{amount} $WHI0棟房子為強化高容積房屋。"  
+      
+  explosiveSideEffects:
+    name:
+      text: "副作用爆炸"
+    description:
+      text: "「突然」 引起一個庫里斯門爆炸。"  
+      
+  iveGotPrime:
+    name:
+      text: "我得到幫助！"
+    description:
+      text: "從任何區域收到 $GRE1{amount} $WHI0個資源。"    
+      
+  porter:
+    name:
+      text: "搬運工"
+    description:
+      text: "運送 $GRE1{amount} $WHI0個資源到任何區域。"
+      
+  helpfulDoggos:
+    name:
+      text: "樂於助人的狗狗"
+    description:
+      text: "有狗狗儲存 $GRE1{amount} $WHI0個資源。"
+      
+  diggyDiggyHole:
+    name:
+      text: "挖呀挖呀挖"
+    description:
+      text: "挖掘 $GRE1{amount} $WHI0方塊。"
+      
+  takeItBack:
+    name:
+      text: "奪回！"
+    description:
+      text: "轉化 $GRE1{amount} $WHI0個腐化的方塊。"    
+      
+  riseFromTheGrave:
+    name:
+      text: "從墳墓中復活"
+    description:
+      text: "復活 $GRE1{amount} $WHI0位村民。"  
+      
+  wasIAGoodBoy:
+    name:
+      text: "我是個好孩子嗎？"
+    description:
+      text: "復活 $GRE1{amount} $WHI0隻狗狗。"   
+
+  catjeetHasWares:
+    name:
+      text: "貓人有商品"
+    description:
+      text: "向貓人供應商，買或賣 $GRE1{amount} $WHI0個資源。"    
+          
+  migrantWorkers:
+    name:
+      text: "移民工人"
+    description:
+      text: "顧用 $GRE1{amount} $WHI0個貓人。"        
+         
+  catjeetastrophic:
+    name:
+      text: "貓人災難"
+    description:
+      text: "有 $GRE1{amount} $WHI0位貓人死於任意原因。"   
+
+  poorWeaponry:
+    name:
+      text: "簡陋武器"
+    description:
+      text: "用穿刺傷害擊殺一個骷髏。"
+
+  literalDumpsterFire:
+    name:
+      text: "焚化爐"
+    description:
+      text: "在焚化爐中燒掉 $GRE1{amount} $WHI0個垃圾。"
+      
+  letItSnowArrows:
+    name:
+      text: "讓箭矢沾雪"
+    description:
+      text: "建造 $GRE1{amount} $WHI0個冰強努塔。"
+      
+  toolsForAll:
+    name:
+      text: "各式各樣的工具"
+    description:
+      text: "在工具鐵匠鋪製造 $GRE1{amount} $WHI0個任何類型的工具。"
+      
+  wellProtected:
+    name:
+      text: "防護良好"
+    description:
+      text: "在防具鐵匠鋪製造 $GRE1{amount} $WHI0個任何類型的護甲。"
+      
+  lordOfTheArrows:
+    name:
+      text: "箭之王者"
+    description:
+      text: "村民裝備弓 $GRE1{amount} $WHI0次。"
+      
+  theLongestJourney:
+    name:
+      text: "最長的旅程"
+    description:
+      text: "派出 $GRE1{amount} $WHI0個移民到其它地區。"
+
+      
+  charmingDeity:
+    name:
+      text: "迷人的神"
+    description:
+      text: "迷魅 $GRE1{amount}$WHI0 怪物。"
+      
+  riseToRiches:
+    name:
+      text: "致富"
+    description:
+      text: "製作 $GRE1{amount} $WHI0金幣。"
+      
+  rosebud:
+    name:
+      text: "玫瑰花蕾"
+    description:
+      text: "用魔法或能量產生 $GRE1{amount}$WHI0 花。"
+      
+  lightTheWay:
+    name:
+      text: "照亮道路！"
+    description:
+      text: "點亮黑夜 $GRE1{amount}$WHI0 次。"
+      
+  towerDefense:
+    name:
+      text: "防禦塔"
+    description:
+      text: "建造 $GRE1{amount}$WHI0 塔。"
+      
+  retrofit:
+    name:
+      text: "改造"
+    description:
+      text: "升級 $GRE1{amount}$WHI0 塔至最高級。"
+      
+  fightTheCorruption:
+    name:
+      text: "抵抗腐化"
+    description:
+      text: "摧毀 $GRE1{amount}$WHI0 腐化建築。"
+      
+  wildGrowth:
+    name:
+      text: "瘋狂生長"
+    description:
+      text: "讓 $GRE1{amount}$WHI0 方塊的資源生長。"
+      
+  takeThat:
+    name:
+      text: "拿下它！"
+    description:
+      text: "淹死一個火元素。"
+      
+  waterJousting:
+    name:
+      text: "水中對決"
+    description:
+      text: "在水中擊殺 $GRE1{amount}$WHI0 怪物。"
+      
+  itNeverStops:
+    name:
+      text: "永不停止！"
+    description:
+      text: "擊殺 $GRE1{amount}$WHI0 怪物。"
+      
+  ecoTerrorist:
+    name:
+      text: "生態恐怖分子"
+    description:
+      text: "分解 $GRE1{amount}$WHI0 方塊。"
+      
+  electronicSharks:
+    name:
+      text: "子電鯊魚"
+    description:
+      text: "打開 $GRE1{amount}$WHI0 寶箱。"
+      
+  buriedTreasure:
+    name:
+      text: "埋藏起來的寶藏"
+    description:
+      text: "發現 $GRE1{amount}$WHI0 來自魔法圈的鑰匙或寶箱。"
+      
+  tyrant:
+    name:
+      text: "暴君"
+    description:
+      text: "用庫里斯門獻祭一個村民。"
+      
+  warCrimes:
+    name:
+      text: "戰爭罪"
+    description:
+      text: "不小心將一隻笨狗狗丟進庫里斯門。"
+      
+  omg:
+    name:
+      text: "天阿"
+    description:
+      text: "捨棄一切正派觀念，將一個孩童丟進庫里斯門。"
+      
+  praiseBeUntoThee:
+    name:
+      text: "讚美於你"
+    description:
+      text: "有 $GRE1{amount} $WHI0位神祕主義者完成祈禱活動。"
+      
+  itsHuntinSeason:
+    name:
+      text: "狩獵季節"
+    description:
+      text: "成功捕獲 $GRE1{amount}$WHI0 動物。"
+      
+  whatsThatSmell:
+    name:
+      text: "什麼味道？"
+    description:
+      text: "有 $GRE1{amount}$WHI0 垃圾史萊姆生成。"
+      
+  godOfLoveAndThunder:
+    name:
+      text: "愛與雷之神"
+    description:
+      text: "祝福 $GRE1{amount}$WHI0 女性。"
+      
+  hoarder:
+    name:
+      text: "囤積者"
+    description:
+      text: "產生 $GRE1{amount}$WHI0 來自腐敗資源的垃圾。"
+      
+  ghostTown:
+    name:
+      text: "鬼城"
+    description:
+      text: "將 $GRE1{amount}$WHI0 幽魂儲存在怪異容器中。"
+      
+  strays:
+    name:
+      text: "流浪者"
+    description:
+      text: "有 $GRE1{amount}$WHI0 貓人加入村莊。"
+      
+  immigrantSong:
+    name:
+      text: "移民之歌"
+    description:
+      text: "有 $GRE1{amount}$WHI0 移民加入村莊。"
+      
+  iLikeBigButtresses:
+    name:
+      text: "我喜歡大牆"
+    description:
+      text: "建造 $GRE1{amount}$WHI0 城牆。"
+      
+  theDoggoHouse:
+    name:
+      text: "狗屋"
+    description:
+      text: "建造 $GRE1{amount}$WHI0 狗屋。"
+      
+  theBigDoggoHouse:
+    name:
+      text: "大狗屋"
+    description:
+      text: "升級 $GRE1{amount}$WHI0 狗屋至為堅固的。"
+            
+  crumblingDefenses:
+    name:
+      text: "崩潰的防禦"
+    description:
+      text: "有 $GRE1{amount}$WHI0 城牆被摧毀。"
+      
+  burnedAlive:
+    name:
+      text: "活活燒死"
+    description:
+      text: "村民死於火焰傷害。"
+      
+  twentyEightSecondsLater:
+    name:
+      text: "28 秒後"
+    description:
+      text: "有 $GRE1{amount}$WHI0 村民或牲畜轉化成殭屍。"
+      
+  doooomed:
+    name:
+      text: "毀滅"
+    description:
+      text: "毀滅世界。"
+      
+  doomedJourney:
+    name:
+      text: "注定的旅程"
+    description:
+      text: "失去一個移民仍在途中的地區。"
+      
+  badAim:
+    name:
+      text: "準度不好"
+    description:
+      text: "不小心用流星或慧星擊中村民。"
+      
+  seriously:
+    name:
+      text: "嚴重？"
+    description:
+      text: "度過 $GRE1{amount}$WHI0 災難。"
+      
+  aWorthySacrifice:
+    name:
+      text: "值得的犧牲"
+    description:
+      text: "將一個拿非利人丟進庫里斯門。"
+      
+  theSoulTrade:
+    name:
+      text: "靈魂交易"
+    description:
+      text: "賣出一個裝滿的怪異容器。"
+      
+  ahhFreshMeat:
+    name:
+      text: "啊，新鮮的肉！"
+    description:
+      text: "毀滅至少有 $GRE1{amount}$WHI0 活躍區域的世界。"
+      
+  godDammit:
+    name:
+      text: "可惡…"
+    description:
+      text: "失去一個區域。"
+      
+  grandmasterSparkles:
+    name:
+      text: "閃光大師"
+    description:
+      text: "用閃電球擊殺一位村民。"
+      
+  dudeWthMan:
+    name:
+      text: "搞什麼鬼，兄弟？！"
+    description:
+      text: "將一位村民丟進危險的區域。"
+      
+  manaMillionaire:
+    name:
+      text: "魔力百萬富翁"
+    description:
+      text: "收集 $GRE1{amount}$WHI0 精華。"
+      
+  hospiceCare:
+    name:
+      text: "臨終關懷"
+    description:
+      text: "有 $GRE1{amount}$WHI0 村民壽終正寢。"
+      
+  theMoon:
+    name:
+      text: "月亮"
+    description:
+      text: "在滿月時擊殺 $GRE1{amount}$WHI0 敵人。"
+      
+  industry:
+    name:
+      text: "工業"
+    description:
+      text: "精煉 $GRE1{amount}$WHI0 原木或石頭成為木版或石板。"
+      
+  midgar:
+    name:
+      text: "中土"
+    description:
+      text: "有一個慧星掉落在你的營地或城堡。"
+      
+  ragnarok:
+    name:
+      text: "仙境"
+    description:
+      text: "血求時發生或引起一個地震。"
+      
+  theDustMustFlow:
+    name:
+      text: "塵埃必須流動！"
+    description:
+      text: "售出 $GRE1{amount}$WHI0 神塵給貓人供應商。"
+      
+  powerOverwhelming:
+    name:
+      text: "巨大能量"
+    description:
+      text: "隨著時間推移，在村莊中取得或產生 $GRE1{amount}$WHI0 能量。"
+      
+  whale:
+    name:
+      text: "鯨"
+    description:
+      text: "向貓人供應商買 $GRE1{amount}$WHI0 可疑的鑰匙。"
+      
+  deifiedFarmer:
+    name:
+      text: "神化農夫"
+    description:
+      text: "有 $GRE1{amount}$WHI0 神聖馬鈴薯成熟。"
+      
+  cluckNuggets:
+    name:
+      text: "雞塊"
+    description:
+      text: "製作 $GRE1{amount}$WHI0 熟肉。"
+      
+  prodigiousPlanner:
+    name:
+      text: "驚人的規劃者"
+    description:
+      text: "建造 $GRE1{amount}$WHI0 任何種類的儲存建築。"
+      
+  baptizedGolemancer:
+    name:
+      text: "受洗的魔像"
+    description:
+      text: "召喚 $GRE1{amount}$WHI0 神聖魔像。"
+      
+  holyDefense:
+    name:
+      text: "神聖防禦"
+    description:
+      text: "放置 $GRE1{amount}$WHI0 神塔。"
+      
+  godKing:
+    name:
+      text: "神王"
+    description:
+      text: "將營地升級成城堡。"
+      
+  angst:
+    name:
+      text: "焦慮"
+    description:
+      text: "有 $GRE1{amount}$WHI0 孩童長大。"
+
+  duggar:
+    name:
+      text: "孩子不嫌多"
+    description:
+      text: "生下 $GRE1{amount}$WHI0 孩童。"
+
+  golemsWillTakeOurJobs:
+    name:
+      text: "魔像會接手我們的工作"
+    description:
+      text: "召喚 $GRE1{amount}$WHI0 工人魔像。"
+        
+  obviousInHindsight:
+    name:
+      text: "事後諸葛"
+    description:
+      text: "讓避雷針誤導你的閃電法術。"
+      
+  whatIsMyPurpose:
+    name:
+      text: "我的目的是？"
+    description:
+      text: "建造 $GRE1{amount}$WHI0 方塊-E 魔像。"
+      
+  wellWellWell:
+    name:
+      text: "水井、水井、水井…"
+    description:
+      text: "建造 $GRE1{amount}$WHI0 水井。"
+      
+  handsOffMe:
+    name:
+      text: "放開我！"
+    description:
+      text: "抓起 $GRE1{amount}$WHI0 村民。"
+     
+  eggcellent:
+    name:
+      text: "蛋極了"
+    description:
+      text: "產下 $GRE1{amount}$WHI0 雞蛋。"
+      
+  iWantMyKeyBack:
+    name:
+      text: "我想要回我的鑰匙！！"
+    description:
+      text: "從寶箱拿到垃圾。"
+      
+  stopPokingMe:
+    name:
+      text: "別再戳我了了"
+    description:
+      text: "讓寶箱移動 $GRE1{amount}$WHI0 次。"
+      
+  attaboy:
+    name:
+      text: "做的好！"
+    description:
+      text: "狗狗自己拾起錀匙並打開寶箱。"
+      
+  neverGonnaGiveYouUp:
+    name:
+      text: "絕對不會放棄你…"
+    description:
+      text: "召回一位受傷並逃跑中的村民。"
+      
+  godOrMagician:
+    name:
+      text: "神或魔術師"
+    description:
+      text: "有 $GRE1{amount}$WHI0 村民對你的行為做出反應。"
+      
+  impatient:
+    name:
+      text: "不耐煩"
+    description:
+      text: "使用召回法術在 $GRE1{amount}$WHI0 移民身上。"
+      
+  whoopsSorry:
+    name:
+      text: "哎呀，報歉！"
+    description:
+      text: "村民因為你用光了魔力而掉落。"
+      
+  imDonePlayingWithYou:
+    name:
+      text: "我和你玩夠了…"
+    description:
+      text: "解除召喚建築或魔像 $GRE1{amount}$WHI0 次。"
+      
+  fineIllDoItMyself:
+    name:
+      text: "好吧，我自己來！"
+    description:
+      text: "使用抓取法術 $GRE1{amount}$WHI0 資源放進建築物。"
+      
+  theRedSunRises:
+    name:
+      text: "血月來臨"
+    description:
+      text: "進入血月。"
+      
+  whoTurnedOffTheSun:
+    name:
+      text: "誰關了日光？"
+    description:
+      text: "進入日蝕。"
+      
+  chill:
+    name:
+      text: "放鬆"
+    description:
+      text: "進入滿月。"
+      
+  popcorn:
+    name:
+      text: "爆米花"
+    description:
+      text: "用分解魔法，分解 $GRE1{amount}$WHI0 屍體。"
+      
+  touchGrass:
+    name:
+      text: "觸摸草地"
+    description:
+      text: "用你的手觸摸草 $GRE1{amount}$WHI0 次。"      
+    
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Main Menu State
 # Map and Map Pack List Buttons
@@ -3569,6 +4293,9 @@ mainMenuMainMenuPanel:
     generateMobSheet:
       text: "產生村民數據檔"
       optional: "true"
+    generateMobSheetOverwrite:
+      text: "產生村民數據檔（覆寫）"
+      optional: "true"
     runLineCounter:
       text: "運行線路計數器"
       optional: "true"
@@ -3580,6 +4307,8 @@ mainMenuMainMenuPanel:
         text: "追隨 Twitch!"
       twitter:
         text: "追隨 Twitter!"
+      x:
+        text: "追隨以前稱為 Twitter 的平台！"
       discord:
         text: "加入 Discord!" 
       announcement:
@@ -3709,6 +4438,10 @@ mapEditorNewMapPanel:
       text: "草地(黃褐色)"
     grassEmeraldGreen:
       text: "草地(翠綠色)"
+    grassTeal:
+      text: "草地(青色)"
+    snowWhite:
+      text: "雪地(白色)"
     dirtLightBrown:
       text: "泥土(淺褐色)"
     dirtBrown:
@@ -4276,6 +5009,10 @@ mapEditorPlayRightPanel:
         text: "房屋"
       
     lighting:
+      crylithiumFirePit:
+        text: "水晶火坑"
+      largeCrylithiumFirePit:
+        text: "大水晶火坑"
       firePit:
         text: "火坑"
       largeFirePit:
@@ -4286,8 +5023,12 @@ mapEditorPlayRightPanel:
         text: "水晶增生器"
       cullisGate:
         text: "庫里斯門"
+      essenceAltar:
+        text: "精華際壇"
       essenceCollector:
         text: "精華收集器"
+      reliquary:
+        text: "聖物箱"
       
     manufacturing:
       armorsmithy:
@@ -4387,6 +5128,8 @@ mapEditorPlayRightPanel:
         text: "沙子"
       sandstone:
         text: "沙石"
+      snow:
+        text: "雪"
       tar:
         text: "焦油"
       trees:
@@ -4441,6 +5184,8 @@ mapEditorPlayRightPanel:
         text: "神聖馬鈴薯"
       melons:
         text: "蜜瓜"
+      mushrooms:
+        text: "蘑菇"
       potatoes:
         text: "馬鈴薯"
       turnips:
@@ -4451,6 +5196,8 @@ mapEditorPlayRightPanel:
         text: "翠綠草地"
       greenGrass:
         text: "綠草地"
+      tealGrass:
+        text: "青草地"
       yellowBrownGrass:
         text: "黃褐草地"
       
@@ -4517,7 +5264,11 @@ mapEditorPlayRightPanel:
         text: "紅沙石"
       tanSandstone:
         text: "褐沙石"
-      
+        
+    snow:
+      whiteSnow:
+        text: "白雪"
+       
     tar:
       tar:
         text: "焦油"
@@ -4553,6 +5304,12 @@ mapEditorPlayRightPanel:
         text: "紫樹墩"
       lavenderTrees:
         text: "紫樹"
+      paleBlueDeadTrees:
+        text: "淡藍枯樹"
+      paleBlueStumps:
+        text: "淡藍樹墩"
+      paleBlueTrees:
+        text: "淡藍樹"
       redDeadTrees:
         text: "紅枯樹"
       redStumps:
@@ -4601,6 +5358,8 @@ mapEditorPlayRightPanel:
         text: "恢復生命"
       fireMissile:
         text: "射出飛行物"
+      generateCloud:
+        text: "產生雲朵"
         
   header:
     time:
@@ -4909,32 +5668,99 @@ playResourceListPanel:
       text: "資源數量/儲存量"
     resourceCountAndStorage:
       text: "基於排序方式，顯示村莊中 {resourceNamePlural} 的數量，及還有多少剩餘空間可儲存 {resourceName}。"
+
+
     totalGoldCoinsHeader:
       text: "全部金幣"
     totalGoldCoins:
-      text: "整個村莊擁有的金幣總數。"
+      text: "整個村莊擁有的金幣總數。滑鼠移動可看到最大容量。如果儲存條變亮綠色，表示你擁有的金幣比儲存容量更多。"
+      revision: "1"
     totalWaterHeader:
       text: "全部清水"
     totalWater:
-      text: "儲存在所有建築中可飲用的清水總數，像是雨水收集器、房屋與水井。不包括髒水。"
+      text: "整個村莊中可飲用的清水總數。滑鼠停留可看見最大容量。如果儲存條變成亮綠色，表示所擁有的比可儲存的多，而村民身上會攜帶一些。"
+      revision: "1"
     totalDirtyWaterHeader:
       text: "全部髒水"
     totalDirtyWater:
-      text: "儲存在所有建築中不可飲用的髒水總數，像是農場與淨水器。不包括可飲用的清水。"
+      text: "整個村莊中不可飲用的髒水總數。滑鼠停留可看見最大容量。如果儲存條變成亮綠色，表示所擁有的比可儲存的多。"
+    totalFoodHeader:
+      text: "全部食物"
+    totalFood:
+      text: "整個村莊中的食物總數。 如果儲存條變成亮綠色，表示所擁有的比可儲存的多，而村民身上會攜帶一些。"
+    totalEnergyHeader:
+      text: "全部能量"
+    totalEnergy:
+      text: "全部建築可儲存的能量總數，像是精華收集器，魔像能量池與魔法防禦塔…等。滑鼠停留可看見最大容量。"
+      revision: "1"
+    totalFaithHeader:
+      text: "全部信仰"
+    totalFaith:
+      text: "整個村莊的信仰。提高信仰會增加神力條的最大值，同時會減少村民因為你的行動而感到疑惑或恐慌的程度。滑鼠停留可看見最大信仰。"
     totalResourcesHeader:
       text: "全部資源"
     totalResources:
       text: "整個村莊擁有的資源總數，基於左側面板的排序方式顯示。"
+    showResourceOnBarGoldHeader:
+      text: "顯示金幣"
+    showResourceOnBarGold:
+      text: "在上方資源列的右側顯示金幣數量。"
+    showResourceOnBarWaterHeader:
+      text: "顯示清水"
+    showResourceOnBarWater:
+      text: "在上方資源列的右側顯示清水數量。"
+    showResourceOnBarDirtyWaterHeader:
+      text: "顯示髒水"
+    showResourceOnBarDirtyWater:
+      text: "在上方資源列的右側顯示髒水數量。"
+    showResourceOnBarFoodHeader:
+      text: "顯示食物"
+    showResourceOnBarFood:
+      text: "在上方資源列的右側顯示食物數量。"
+    showResourceOnBarEnergyHeader:
+      text: "顯示能量"
+    showResourceOnBarEnergy:
+      text: "在上方資源列的右側顯示能量數量。"
+    showResourceOnBarFaithHeader:
+      text: "顯示信仰"
+    showResourceOnBarFaith:
+      text: "在上方資源列的右側顯示信仰數量。"
+    hideResourceOnBarGoldHeader:
+      text: "隱藏數量"
+    hideResourceOnBarGold:
+      text: "在上方資源列的右側隱藏信仰數量。"
+    hideResourceOnBarWaterHeader:
+      text: "隱藏清水"
+    hideResourceOnBarWater:
+      text: "在上方資源列的右側隱藏清水數量。"
+    hideResourceOnBarDirtyWaterHeader:
+      text: "隱藏髒水"
+    hideResourceOnBarDirtyWater:
+      text: "在上方資源列的右側隱藏髒水數量。"
+    hideResourceOnBarFoodHeader:
+      text: "隱藏食物"
+    hideResourceOnBarFood:
+      text: "在上方資源列的右側隱藏食物數量。"
+    hideResourceOnBarEnergyHeader:
+      text: "隱藏能量"
+    hideResourceOnBarEnergy:
+      text: "在上方資源列的右側隱藏能量數量。"
+    hideResourceOnBarFaithHeader:
+      text: "隱藏信仰"
+    hideResourceOnBarFaith:
+      text: "在上方資源列的右側隱藏信仰數量。"
     showResourceOnBarHeader:
       text: "顯示 {resourceName}"
     showResourceOnBar:
-      text: "顯示 {resourceName} 並將它的資源數顯示在上方面板。"
+      text: "在主畫面上方的面板，顯示 {resourceName} 及其資源數量。"
+      revision: "1"
     fullResourceOnBarHeader:
       text: "面板塞滿了！"
     hideResourceOnBarHeader:
       text: "隱藏 {resourceName}"
     hideResourceOnBar:
-      text: "隱藏 {resourceName} 並將資源數量顯示在上面的面板。"
+      text: "在主畫面上方的面板，隱藏 {resourceName} 及其資源數量。"
+      revision: "1"
       
   sort:
     total:
@@ -4947,6 +5773,8 @@ playResourceListPanel:
       text: "地上"
     stored:
       text: "庫存"
+    rate:
+      text: "速度"
       
   header:
     text: "資源清單"
@@ -4985,11 +5813,35 @@ playCastlePanel:
 playConsolePanel:
   comment: "Play State - Console Panel"
   javaClass: "rtr.gui.states.playstate.ConsolePanel.java"
+
+  completedGoal:
+    text: "$YEL1目標完成－{goalName}"
+  newGoalUnlocked:
+    text: "$GRE1解鎖新目標－{goalName}"
   
   button:
+    completedGoalBanner:
+      text: "$YEL1完成！"
+    claimOnGoalsPanel:
+      text: "$YEL1在目標面版索取！"
+    unlockedGoalBanner:
+      text: "$GRE1解鎖新目標！"
     tooltip:
       hidePanelHeader:
         text: "切換面板顯示"
+        
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Play State
+# Console Panel
+# rtr.gui.states.playstate.ConsolePanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+playGoalPopup:
+  comment: "Play State - Goal Popup"
+  javaClass: "rtr.gui.states.playstate.GoalPopup.java"
+  
+  godXP:
+    text: "神的經驗值"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -5176,6 +6028,14 @@ playLeftPanel:
           text: "減少工人"
         reduceWorkers:
           text: "減少工人數，讓他們可以做其它工作。"
+        jobColorBaseHeader:
+          text: "基本工作顏色"
+        jobColorBase:
+          text: "點擊設定此項工作的基本顏色。"
+        jobColorAccentHeader:
+          text: "強調工作顏色"
+        jobColorAccent:
+          text: "點擊設定此項工作的強調顏色。"
         requestWorkersHeader:
           text: "增加工人"
         requestWorkers:
@@ -5199,6 +6059,67 @@ playLeftPanel:
       totalAndEnRouteVillagers:
         text: "目前已分配了多少村民，加上有多少人受顧或離開此工作。"
 
+  workforceColorSelect:
+    selectBaseColor:
+      text: "基本顏色"
+    selectAccentColor:
+      text: "強調顏色"
+    current:
+      text: "目前"
+    default:
+      text: "預設"
+    red:
+      text: "紅色"
+    green:
+      text: "綠色"
+    blue:
+      text: "藍色"
+    alpha:
+      text: "透明"
+      
+    button:
+      tooltip:
+        defaultBaseHeader:
+          text: "預設基本顏色"
+        defaultBase:
+          text: "此工作預設的基本顏色。點擊重設此顏色。"
+        defaultAccentHeader:
+          text: "預設強調顏色"
+        defaultAccent:
+          text: "此工作預設的強調顏色。點擊重設此顏色。"
+        currentBaseHeader:
+          text: "目前基本顏色"
+        currentBase:
+          text: "此工作目前的基本顏色。點擊設定此顏色。"
+        currentAccentHeader:
+          text: "目前強調顏色"
+        currentAccent:
+          text: "此工作目前的強調顏色。點擊設定此顏色。"
+        presetBaseColorHeader:
+          text: "{mobJobName} 基本顏色"
+        presetBaseColor:
+          text: "點擊設定為此顏色。"
+        presetAccentColorHeader:
+          text: "{mobJobName} 強調顏色"
+        presetAccentColor:
+          text: "點擊設定為此顏色。"
+        decreaseRed:
+          text: "減少紅色"
+        increaseRed:
+          text: "增加紅色"
+        decreaseGreen:
+          text: "減少綠色"
+        increaseGreen:
+          text: "增加綠色"
+        decreaseBlue:
+          text: "減少藍色"
+        increaseBlue:
+          text: "增加藍色"
+        decreaseAlpha:
+          text: "減少透明"
+        increaseAlpha:
+          text: "增加透明"
+          
   resourceManagement:
     button:
       tooltip:
@@ -5258,9 +6179,13 @@ playLeftPanel:
         text: "地上"
       stored:
         text: "庫存"
+      rate:
+        text: "速度"
         
     producedByWaterSource:
       text: "$BLA2生產水資源"
+    createdByOccultists:
+      text: "$BLA2由神祕主義者製作"
     rareDrop:
       text: "$YEL2稀有 {resourceOrMonsterType} 掉落物"
     monsterDrop:
@@ -5372,6 +6297,8 @@ playLeftPanel:
         text: "地上"
       stored:
         text: "庫存"
+      rate:
+        text: "速度"
         
     regionLost:
       text: "$RED0區域已淪陷腐化！~不能送出資源。"
@@ -5389,8 +6316,12 @@ playMainMenuPanel:
   button:
     settings:
       text: "設置"
-    saveAndExit:
-      text: "存檔並退出"
+    exitGame:
+      text: "離開遊戲"
+    goToWorldMap:
+      text: "回到世界地圖"
+    returnToMenu:
+      text: "回到主選單"
     'yes':
       text: "是的！"
       
@@ -5563,9 +6494,14 @@ playPopulationListPanel:
     pregnant:
       text: "這 (充滿希望的女性) 會在幾天後分娩。"
     blessedHeader:
-      text: "祝福"
+      text: "受到祝福"
     blessed:
-      text: "這位村民受到神的祝福，他的下一代將會誕生一位拿非利人。"
+      text: "這位村民受到神的祝福，會使他們更容易受孕。"
+      revision: "1"
+    blessedChildHeader:
+      text: "受祝福的孩童"
+    blessedChild:
+      text: "此村民懷著受到祝福的孩童。"
     hasMateHeader:
       text: "有配偶"
     hasMate:
@@ -5748,9 +6684,11 @@ playProblemPanel:
     noAmmoPlural:
       text: "* $ORA1{amount} 防禦塔沒有能量或彈藥。"
     noFood:
-      text: "* $ORA1{amount} 家裡沒有食物。"
+      text: "* $ORA1{amount} 家裡或牧場沒有食物。"
+      revision: "1"
     noFoodPlural:
-      text: "* $ORA1{amount} 家裡沒有食物。"
+      text: "* $ORA1{amount} 家裡或牧場沒有食物。"
+      revision: "1"
     buildingsDamaged:
       text: "* $ORA1{amount} 建築受損。"
     buildingsDamagedPlural:
@@ -5789,19 +6727,35 @@ playResourceAndInfluenceBar:
     totalGoldCoinsHeader:
       text: "全部金幣"
     totalGoldCoins:
-      text: "整個村莊擁有的金幣總數。"
+      text: "整個村莊擁有的金幣總數。滑鼠停留可看見最大容量。如果儲存條變亮綠色，表示你擁有的金幣比儲存容量更多。"
+      revision: "1"
     totalWaterHeader:
       text: "全部清水"
     totalWater:
-      text: "所有建築儲存的飲用水總數，像是雨水收集器與水井。不包括髒水。"
+      text: "所有建築儲存的飲用水總數。滑鼠停留可看見最大容量。如果儲存條變成亮綠色，表示所擁有的比可儲存的多，而村民身上會攜帶一些。"
+      revision: "1"
+    totalDirtyWaterHeader:
+      text: "全部髒水"
+    totalDirtyWater:
+      text: "整個村莊擁有的髒水總數。滑鼠停留可看見最大容量。如果儲存條變亮綠色，表示你擁有的髒水比儲存容量更多。"
+    totalFoodHeader:
+      text: "全部食物"
+    totalFood:
+      text: "整個村莊擁有的食物總數。滑鼠停留可看見最大容量。如果儲存條變亮綠色，表示你擁有的食物比儲存容量更多，而村民身上會攜帶一些。"
     totalEnergyHeader:
       text: "全部能量"
     totalEnergy:
-      text: "全部建築儲存的能量總數，像是精華收集器，魔像能量池，與魔法防禦塔。"
+      text: "全部建築儲存的能量總數，像是精華收集器，魔像能量池，與魔法防禦塔。滑鼠停留可看見最大容量。"
+      revision: "1"
+    totalFaithHeader:
+      text: "全部信仰"
+    totalFaith:
+      text: "提高信仰會增加神力條的最大值，同時會減少村民因為你的行動而感到疑惑或恐慌的程度。滑鼠停留可看見最大信仰。"
     totalInfluenceHeader:
       text: "神力"
     totalInfluence:
-      text: "全部可用來施法的神力。神力隨著時間會緩慢恢復，或是透過手動收集遺失在世界中的精華。增加村莊的人口數可以提高神力上限。"
+      text: "全部可用來施法的神力。神力隨著時間會緩慢恢復，或是透過手動收集遺失在世界中的精華。增加村莊的人口數可以提高神力上限，並增加對你的信仰。"
+      revision: "1"
     corruptionThreatHeader:
       text: "腐化威脅"
     corruptionThreat:
@@ -5818,6 +6772,8 @@ playResourceAndInfluenceBar:
       text: "地上"
     stored:
       text: "庫存"
+    rate:
+      text: "速度"
       
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -5842,6 +6798,10 @@ playSelectedMobPanel:
       text: "口渴度"
     thirst:
       text: "口渴度過低，會受傷並脫水而死。在鬥戰、工作或是中暑時會耗消的更快。"
+    faithHeader:
+      text: "信仰"
+    faith:
+      text: "對於他們的神總體的信仰。信仰越高，他們看到神與世界互動時感到驚訝或做出負面反應的可能性就越小。信仰也會影響村民提供神力的最大值。"
     trashHeader:
       text: "垃圾量"
     trash:
@@ -5867,9 +6827,18 @@ playSelectedMobPanel:
     pregnant:
       text: "這 (充滿希望的女性) 會在幾天後分娩。"
     blessedHeader:
-      text: "祝福"
+      text: "受到祝福"
     blessed:
-      text: "這位村民受到神的祝福，他的下一代將會誕生一位拿非利人。"
+      text: "這位村民受到神的祝福，會使他們更容易受孕。"
+      revision: "1"
+    blessedChildHeader:
+      text: "受祝福的孩童"
+    blessedChild:
+      text: "此村民懷著受到祝福的孩童。"
+    killsHeader:
+      text: "擊殺"
+    kills:
+      text: "此生物擊殺的生物與建築數。~~$GRE1最近擊殺：~"
     levelHeader:
       text: "等級"
     level:
@@ -5945,7 +6914,9 @@ playSelectedMobPanel:
   pregnant:
     text: "$BLU1孕婦"
   blessed:
-    text: "$MAG1祝福"
+    text: "$MAG1受到祝福"
+  blessedChild:
+    text: "$MAG1受祝福的孩童"
   damageResistance:
     text: "傷害抗性"
   damageVulnerabilities:
@@ -6046,6 +7017,10 @@ playSelectedObjectPanel:
       text: "金幣"
     goldCoins:
       text: "此建築儲存的金幣。"
+    killsHeader:
+      text: "擊殺"
+    kills:
+      text: "此生物擊殺的生物與建築數。~~$GRE1最近擊殺：~"
     dirtyWaterHeader:
       text: "髒水"
     dirtyWater:
@@ -6169,6 +7144,12 @@ playSelectedObjectPanel:
     text: "$GRE0{amount}% $WHI0耕作速度"
   medicWorkSpeed:
     text: "$GRE0{amount}% $WHI0治療速度"
+  prayingSpeed:
+    text: "$GRE0{amount}% $WHI0祈禱速度"
+  capturingSoulsSpeed:
+    text: "$GRE0{amount}% $WHI0捕捉靈魂速度"
+  tendingAnimalsSpeed:
+    text: "$GRE0{amount}% $WHI0馴服動物速度"
   harvestingSpeed:
     text: "$YEL1收獲速度"
   refiningSpeed:
@@ -6179,6 +7160,8 @@ playSelectedObjectPanel:
     text: "$GRE0{amount}% $WHI0睡眠速度"
   healthRegenerationBoost:
     text: "$GRE0{amount} $WHI0生命恢復"
+  faithBonus:
+    text: "$GRE0{amount} $WHI0訪問期間信仰"
   reclaimMessage:
     text: "點擊 $GRE1占領 $WHI0可重新建造~並使用此建築。"
   reclaimMessageNoSlotsNoCamp:
@@ -6243,6 +7226,12 @@ playSelectedObjectUpgradePanel:
     text: "$GRE0+{amount}% $WHI0耕作速度"
   medicWorkSpeed:
     text: "$GRE0+{amount}% $WHI0治療速度"
+  prayingSpeed:
+    text: "$GRE0+{amount}% $WHI0祈禱速度"
+  capturingSoulsSpeed:
+    text: "$GRE0+{amount}% $WHI0捕捉靈魂速度"
+  tendingAnimalsSpeed:
+    text: "$GRE0+{amount}% $WHI0馴服動物速度"
   harvestSpeed:
     text: "$YEL1收獲速度"
   refineSpeed:
@@ -6255,6 +7244,10 @@ playSelectedObjectUpgradePanel:
     text: "$GRE0+{amount} $WHI0生命恢復"
   healthRegenerationMinus:
     text: "$RED0{amount} $WHI0生命恢復"
+  faithBonusPlus:
+    text: "$GRE0+{amount} $WHI0訪問期間信仰"
+  faithBonusMinus:
+    text: "$RED0{amount} $WHI0訪問期間信仰"
   staticTowerDamageOverride:
     text: "傷害：$GRE1電 (3-8)"
     revision: "1"
@@ -6291,7 +7284,7 @@ playSelectedObjectUpgradePanel:
   workersSlots:
     text: "工人數：$GRE1+{amount} {mobJobName}"
   buildingSlotsProvided:
-    text: "可提供的建築數：$GRE1+{amount}"
+    text: "提供建築數：$GRE1+{amount}"
   acceptsEssence:
     text: "從收集器接受精華"
   canCollectRawEssence:
@@ -6749,6 +7742,10 @@ playSystemAndDataBar:
         text: "音樂"
       music:
         text: "檢視所有可用的曲目清單，如何想要可更改目前曲目。"
+      goalsHeader:
+        text: "目標"
+      goals:
+        text: "查看目標網。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Play State
@@ -6814,6 +7811,12 @@ playVillageEfficiencyPanel:
     text: "耕作"
   medicWork:
     text: "治療工作"
+  praying:
+    text: "祈禱"
+  capturingSouls:
+    text: "捕捉靈魂"    
+  tendingAnimals:
+    text: "馴服動物"    
   clearing:
     text: "清理"
   dismantling:
@@ -6915,6 +7918,96 @@ playYouLosePanel:
     text: "$WHI0此村莊存活了 $GRE1{days}$WHI0 天！"
   acceptFate:
     text: "$RED0接受命運…"
+  
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Shared
+# Right Object Description Panel
+# rtr.gui.states.shared.RightObjectDescriptionPanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+playRightObjectDescriptionPanel:
+  comment: "Shared - Right Object Description Panel"
+  javaClass: "rtr.gui.states.shared.RightObjectDescriptionPanel.java"
+  
+  header:
+    constructionRequirements:
+      text: "建造需求"
+    requiredSupport:
+      text: "需要輔助"
+    recommendedSupport:
+      text: "建議輔助"
+    canStore:
+      text: "可儲存"
+    canRefineOrManufacture:
+      text: "可精練/製作"
+    canSlaughter:
+      text: "可宰殺"
+    defensiveTower:
+      text: "防禦塔"
+    
+  constructionRequirements:
+    text: "$RED1{buildingName}$WHI0 需要 $RED1{resourceName}"
+  supportConjuntion:
+    text: "$WHI0 或 $RED0"
+  maximumStorage:
+    text: "最大儲存：$GRE1{amount}"
+  canStoreMoreOverflow:
+    text: "…更多"
+  energy:
+    text: "$YEL1{amount} 能量"
+  staticTowerDamageOverride:
+    text: "傷害：$GRE1電(10-50)"
+    revision: "1"
+  chargedDamage:
+    text: "充能傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
+  damage:
+    text: "傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
+  unchargedDamage:
+    text: "未充能傷害：{damageType} $RED0({damageMinimum}-{damageMaximum})"
+  fires:
+    text: "射出：$GRE1{ammoName}"
+  ammo:
+    text: "每包彈藥$GRE1{amount}"
+  energyPerShot:
+    text: "每發能量：$GRE1{amount}"
+  reloadTime:
+    text: "裝彈時間：$GRE1{amount}"
+  firingRange:
+    text: "攻擊距離：$GRE1{amount}"
+  canSpawnGolems:
+    text: "可召喚魔像"
+  spawnsGolems:
+    text: "召喚 $GRE1{mobName}"
+  maximumGolems:
+    text: "最大魔像：$GRE1{amount}"
+  combobulatorNeedsResourcesAndEnergy:
+    text: "需要 $GRE1{resourceName}$WHI0 與 $GRE1{amount} 能量$WHI0 才能召喚"
+  rangeGenerated:
+    text: "建築範圍：$GRE1{amount}"
+  desirability:
+    text: "宜居：$GRE1{amount}"
+  providedMigrationsPerDay:
+    text: "每天可提供移民：$GRE1{amount}"
+  rangerHousingCapacity:
+    text: "遊俠居住空間：$GRE1{amount}"
+  housingCapacity:
+    text: "居住空間：$GRE1{amount}"
+  workersSlots:
+    text: "工人數：$GRE1{amount} {mobJobName}"
+  buildingSlotsProvided:
+    text: "可建築數量：$GRE1{amount}"
+  acceptsEssence:
+    text: "從收集器接受精華"
+  canCollectRawEssence:
+    text: "可收集未加工的精華"
+  canPowerStructures:
+    text: "可充能建築"
+  canDeliverEssenceToCollectors:
+    text: "可運送精華給 {buildingName}"
+  consumesCrylithium:
+    text: "消耗水晶錠作為燃料"
+  canBuildRoads:
+    text: "可建造道路"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Shared (Used in multiple states)
@@ -6935,6 +8028,8 @@ sharedDataViewsPanel:
       text: "地圖方塊"
     range:
       text: "營地範圍"
+    essenceBuildupMap:
+      text: "精華。聚集"
     corruptionResistance:
       text: "腐化抗性"
     desirability:
@@ -6963,10 +8058,25 @@ sharedDataViewsPanel:
       text: "地圖的村莊威脅度"
     threatenedTileMap:
       text: "被腐化的。地圖方塊"
+    corruptedTiles:
+      text: "腐化方塊"
       
   header:
     text: "顯示數據"
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Shared (Used in multiple states)
+# Goals Panel
+# rtr.gui.states.shared.GoalsPanel.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+sharedGoalsPanel:
+  comment: "Shared - Goals Panel"
+  javaClass: "rtr.gui.states.shared.GoalsPanel.java"
+  
+  goalsWeb:
+    text: "目標網"
+      
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Shared (Used in multiple states)
 # Debug Data
@@ -7068,93 +8178,7 @@ sharedMusicPanel:
       
   header:
     text: "音樂"
-    
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Shared
-# Right Object Description Panel
-# rtr.gui.states.shared.RightObjectDescriptionPanel.java
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-playRightObjectDescriptionPanel:
-  comment: "Shared - Right Object Description Panel"
-  javaClass: "rtr.gui.states.shared.RightObjectDescriptionPanel.java"
-  
-  header:
-    constructionRequirements:
-      text: "建造需求"
-    requiredSupport:
-      text: "需要補助"
-    recommendedSupport:
-      text: "建議補助"
-    canStore:
-      text: "可儲存"
-    canRefineOrManufacture:
-      text: "可精煉/製造"
-    canSlaughter:
-      text: "可屠宰"
-    defensiveTower:
-      text: "防禦塔"
-    
-  constructionRequirements:
-    text: " $RED1{buildingName} $WHI0需要 $RED1{resourceName}"
-  supportConjuntion:
-    text: "$WHI0 或 $RED0"
-  maximumStorage:
-    text: "最大儲存量：$GRE1{amount}"
-  canStoreMoreOverflow:
-    text: "..與更多"
-  energy:
-    text: "$YEL1{amount} 能量"
-  staticTowerDamageOverride:
-    text: "傷害：$GRE1電(10-50)"
-    revision: "1"
-  chargedDamage:
-    text: "充能傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
-  damage:
-    text: "傷害：$GRE1{damageType} ({damageMinimum}-{damageMaximum})"
-  unchargedDamage:
-    text: "未充能傷害：{damageType} $RED0({damageMinimum}-{damageMaximum})"
-  fires:
-    text: "射出：$GRE1{ammoName}"
-  ammo:
-    text: "每包彈藥量：$GRE1{amount}"
-  energyPerShot:
-    text: "每發能量：$GRE1{amount}"
-  reloadTime:
-    text: "裝彈時間：$GRE1{amount}"
-  firingRange:
-    text: "射程：$GRE1{amount}"
-  canSpawnGolems:
-    text: "可生成魔像數"
-  spawnsGolems:
-    text: "生成 $GRE1{mobName}"
-  maximumGolems:
-    text: "最大魔像數：$GRE1{amount}"
-  combobulatorNeedsResourcesAndEnergy:
-    text: "需要 $GRE1{resourceName} $WHI0與 $GRE1{amount} 能量 $WHI0生成"
-  rangeGenerated:
-    text: "建築範圍：$GRE1{amount}"
-  desirability:
-    text: "宜居：$GRE1{amount}"
-  providedMigrationsPerDay:
-    text: "每天可提供移民：$GRE1{amount}"
-  rangerHousingCapacity:
-    text: "遊俠居住空間：$GRE1{amount}"
-  housingCapacity:
-    text: "居住空間：$GRE1{amount}"
-  workersSlots:
-    text: "人力需求：$GRE1{amount} {mobJobName}"
-  buildingSlotsProvided:
-    text: "提供建築數：$GRE1{amount}"
-  acceptsEssence:
-    text: "從收集器接受精華"
-  canCollectRawEssence:
-    text: "可收集未加工的精華"
-  consumesCrylithium:
-    text: "使用水晶錠作為燃料"
-  canBuildRoads:
-    text: "可建造道路"
-    
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Shared
 # Settings Panel
@@ -7177,6 +8201,8 @@ sharedSettingsPanel:
     comment: "Key list column."
     header:
       text: "$ORA1地圖熱鍵"
+    setOnMainMenu:
+      text: "$ORA0可在主選單設定"
     notSet:
       text: "未設置"
     mapUp:
@@ -7407,7 +8433,28 @@ sharedTipsPanel:
   button:
     ok:
       text: "好的！"
-      
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# World Map State
+# Active Goals List
+# rtr.gui.states.worldmap.ActiveGoalsList.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+worldMapActiveGoalsList:
+  comment: "World Map State - Active Goals List"
+  javaClass: "rtr.gui.states.worldmap.ActiveGoalsList.java"
+    
+  button:
+    tooltip:
+      pageUp:
+        text: "上一頁"
+      pageDown:
+        text: "下一頁"
+      openGoalPanelHeader:
+        text: "目標"
+      openGoalPanel:
+        text: "查看目標網。"
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # Chest Open Panel
@@ -7421,7 +8468,7 @@ worldMapChestOpenPanel:
   button:
     takeIt:
       text: "接受！"
-      
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # Doom World Panel
@@ -7444,7 +8491,7 @@ worldMapDoomWorldPanel:
   instructions:
     comment: "This should remain in all-caps if it can, because the {reset} variable is also in all-caps."
     text: "$ORA1在輸入框輸入 {reset} 確認你要執行此動作！"
-  
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # Game Mode Config Panel
@@ -7792,7 +8839,7 @@ worldMapGameModeSelectPanel:
       text: "沒有規則！可遊玩遊戲機制，更改一天的時間，生成資源與怪物，產生粒子。作任何想做的事與開心遊玩！~~如果你喜歡研究遊戲機制，建議遊玩此模式。~~不適合認真玩遊戲的玩家。"
     selectGameMode:
       text: "在左邊選擇六種遊戲模式之一。每種模式都是獨立的，你可以隨時更改你想玩的模式。如果你犯了太多錯誤，或想要重新開始任何模式，你可以透過點擊毀滅世界來重置遊戲模式。~~$GRE0如果你是新手，建議先遊玩傳統模式。"
-  
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # Goal Claim Panel
@@ -7811,28 +8858,7 @@ worldMapGoalClaimPanel:
     text: "神力：$YEL0{amount}"
   morePerks:
     text: "$YEL0加 {amount} ！"
-    
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# World Map State
-# Goals Panel
-# rtr.gui.states.worldmap.GoalsPanel.java
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-worldMapGoalsPanel:
-  comment: "World Map State - Goals Panel"
-  javaClass: "rtr.gui.states.worldmap.GoalsPanel.java"
-  
-  button:
-    'yes':
-      text: "是"
-    'no':
-      text: "否"
-    reset:
-      text: "重置"
-    
-  warning: 
-    text: "$GRE1你確定嗎？這將會移除~目標，並必須重新解鎖。"
-   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # Map Select Panel
@@ -7902,7 +8928,24 @@ worldMapMapSelectPanel:
     text: "$YEL1全部：{amount}"
   none:
     text: "$YEL1無！"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# World Map State
+# Perks List
+# rtr.gui.states.worldmap.PerksList.java
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+worldMapPerksList:
+  comment: "World Map State - Perks List"
+  javaClass: "rtr.gui.states.worldmap.PerksList.java"
     
+  button:
+    tooltip:
+      pageUp:
+        text: "上一頁"
+      pageDown:
+        text: "下一頁"
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # Reward Chest Panel
@@ -7923,7 +8966,7 @@ worldMapRewardChestPanel:
     text: "進度條滿可獲得另一個寶箱。當你的村民活著時候寶箱進度條會慢慢增加。需要使用神力才能打開。"
   chestGrantProgressFull:
     text: "你的寶箱獎勵條已滿，必須打開先打一個才能獲得另一個。"
-    
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # World Map State
 # System Panel
@@ -8032,7 +9075,8 @@ helpTip:
     30:
       text: "石材加工廠可以製作石板，可用於多種高級建築。"
     31:
-      text: "水晶加工廠可以製作水晶錠，是一種很重要的燃料。"
+      text: "水晶加工廠可以製作水晶錠，是一種很重要建築材料。"
+      revision: "1"
     32:
       text: "你可以在設置選單內關閉遊戲提示。"
     33:
@@ -8150,7 +9194,8 @@ helpTip:
     energyHeader:
       text: "能量"
     energy:
-      text: "你的村民剛剛建造完成的 {buildingName} $WHI0需要能量才能運作。使用能量的建築物通常需要精華作為燃料。你可以使用 $GRE1水晶錠 $WHI0補充 $YEL1精華收集器 $WHI0來產生能量，可在 $YEL1水晶加工廠 $WHI0精煉。活物被擊殺時也會掉落一些精華，像是怪物、動物與村民，此時如果你有一個 $YEL1精華收集器 $WHI0收集掉落的能量，就能將能量輸送給建築物使用。"
+      text: "你的村民剛剛建造完成的 {buildingName} $WHI0需要能量才能運作。使用能量的建築物通常需要精華充能。你可以建造 $YEL1祈禱祭禱 $WHI0並指派村民成為 $YEL1O神祕主義者 $WHI0來產生能量儲存在 $YEL1精華收集器 $WHI0，並轉為供應給 {buildingName}$WHI0。怪物、動物與村民也會掉落一些精華，此時如果你有一個 $YEL1精華收集器 $WHI0收集掉落的能量，就能將能量輸送給建築物使用。"
+      revision: "1"
     ammoHeader:
       text: "彈藥"
     ammo:   
@@ -8379,8 +9424,13 @@ spell:
     name:
       text: "冰冷光環"
     description:
-      text: "使一個區域變得極度寒冷、緩慢與有時冰凍附近的生物。對大群怪物非常有效。"
-      revision: "1"
+      text: "讓施法區域立即變得極度寒冷與略微降低該區域的溫度。緩速與有時冰凍附近的生物。對大群怪物非常有效。"
+      revision: "2"
+  comet:
+    name:
+      text: "慧星"
+    description:
+      text: "從天上召喚一顆冰慧星對擊中的任何目標造成嚴重傷害，並留下水、水晶與降低環境溫度。"
   conjureEssence:
     name:
       text: "吸收精華"
@@ -8416,7 +9466,8 @@ spell:
     name:
       text: "神聖祝福"
     description:
-      text: "祝福一位村民，他們的下一代會誕生出一位拿非利人，並非常的強壯、敏捷與長壽。"
+      text: "祝福一位村民，他們會更容易受孕。保證下次交配時懷孕。"
+      revision: "1"
   drop:
     name:
       text: "丟棄"
@@ -8433,7 +9484,8 @@ spell:
     name:
       text: "燃燒"
     description:
-      text: "點燃一個區域(或是在路徑上的東西)！"
+      text: "點燃一個區域(或是在路徑上的東西)！也會輕微的提高此區域的溫度"
+      revision: "1"
   godTower:
     name:
       text: "神塔"
@@ -8494,14 +9546,14 @@ spell:
     name:
       text: "修復"
     description:
-      text: "在短時間內修復小範圍內的魔像與建築。"
+      text: "在短時間內修復小範圍內的魔像與建築。立即撲滅建築的火災。"
       revision: "1"
   meteor:
     name:
       text: "隕石"
     description:
-      text: "降下一個隕石砸向某物！請小心，有時候它也會降下一隻火元素。"
-      revision: "1"
+      text: "降下一個隕石砸向某物！請小心，有時候它也會降下一隻火元素，同時略微提高此區域的溫度。"
+      revision: "2"
   motivateLand:
     name:
       text: "資源增生"
@@ -8676,6 +9728,11 @@ tileSet:
         text: "蜜瓜"
       description:
         text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
+    mushrooms:
+      name:
+        text: "蘑菇 "
+      description:
+        text: "為村莊提供食物，農夫可以收獲並儲存，或是種在農場開始或增加村莊的食物產量。"
     bricks:
       name:
         text: "磚塊"
@@ -8702,6 +9759,9 @@ tileSet:
         text: "焦油"
       description:
         text: "不能移除，並會大大降低移動速度。"
+    snow:
+      name:
+        text: "雪"
     tiles:
       name:
         text: "地板"
@@ -9263,9 +10323,9 @@ mobName:
       text: "石頭魔像"
   roggoGolem:
     single:
-      text: "Roggo 魔像"
+      text: "石頭狗狗魔像"
     plural:
-      text: "Roggo 魔像"
+      text: "石頭狗狗魔像"
   woodGolem:
     single:
       text: "木頭魔像"
@@ -9273,9 +10333,9 @@ mobName:
       text: "木頭魔像"
   loggoGolem:
     single:
-      text: "Loggo 魔像"
+      text: "木頭狗狗魔像"
     plural:
-      text: "Loggo 魔像"
+      text: "木頭狗狗魔像"
   crystalGolem:
     single:
       text: "水晶魔像"
@@ -9283,9 +10343,9 @@ mobName:
       text: "水晶魔像"
   cryggoGolem:
     single:
-      text: "Cryggo 魔像"
+      text: "水晶狗狗魔像"
     plural:
-      text: "Cryggo 魔像"
+      text: "水晶狗狗魔像"
   holyGolem:
     single:
       text: "神聖魔像"
@@ -9293,9 +10353,9 @@ mobName:
       text: "神聖魔像"
   goddoGolem:
     single:
-      text: "Goddo 魔像"
+      text: "上帝魔像"
     plural:
-      text: "Goddo 魔像"
+      text: "上帝魔像"
   courierGolem:
     single:
       text: "運輸魔像"
@@ -9318,9 +10378,9 @@ mobName:
       text: "毒木頭魔像"
   poisonLoggoGolem:
     single:
-      text: "毒 Loggo 魔像"
+      text: "毒木頭狗狗魔像"
     plural:
-      text: "毒 Loggo 魔像"
+      text: "毒木頭狗狗魔像"
   fireStoneGolem:
     single:
       text: "火石頭魔像"
@@ -9328,9 +10388,9 @@ mobName:
       text: "火石頭魔像"
   fireRoggoGolem:
     single:
-      text: "火 Roggo 魔像"
+      text: "火石頭狗狗魔像"
     plural:
-      text: "火 Roggo 魔像"
+      text: "火石頭狗狗魔像"
   fireCrystalGolem:
     single:
       text: "火水晶魔像"
@@ -9338,9 +10398,9 @@ mobName:
       text: "火水晶魔像"
   fireCryggoGolem:
     single:
-      text: "火 Cryggo 魔像"
+      text: "火水晶狗狗魔像"
     plural:
-      text: "火 Cryggo 魔像"
+      text: "火水晶狗狗魔像"
   iceStoneGolem:
     single:
       text: "冰石頭魔像"
@@ -9348,9 +10408,9 @@ mobName:
       text: "冰石頭魔像"
   iceRoggoGolem:
     single:
-      text: "冰 Roggo 魔像"
+      text: "冰石頭狗狗魔像"
     plural:
-      text: "冰 Roggo 魔像"
+      text: "冰石頭狗狗魔像"
   iceWoodGolem:
     single:
       text: "冰木頭魔像"
@@ -9358,9 +10418,9 @@ mobName:
       text: "冰木頭魔像"
   iceLoggoGolem:
     single:
-      text: "冰 Loggo 魔像"
+      text: "冰木頭狗狗魔像"
     plural:
-      text: "冰 Loggo 魔像"
+      text: "冰木頭狗狗魔像"
   iceCrystalGolem:
     single:
       text: "冰水晶魔像"
@@ -9368,9 +10428,9 @@ mobName:
       text: "冰水晶魔像"
   iceCryggoGolem:
     single:
-      text: "冰 Cryggo 魔像"
+      text: "冰水晶狗狗魔像"
     plural:
-      text: "冰 Cryggo 魔像"
+      text: "冰水晶狗狗魔像"
   lightningStoneGolem:
     single:
       text: "電石頭魔像"
@@ -9378,9 +10438,9 @@ mobName:
       text: "電石頭魔像"
   lightningRoggoGolem:
     single:
-      text: "電 Roggo 魔像"
+      text: "電石頭狗狗魔像"
     plural:
-      text: "電 Roggo 魔像"
+      text: "電石頭狗狗魔像"
   lightningWoodGolem:
     single:
       text: "電木頭魔像"
@@ -9388,9 +10448,9 @@ mobName:
       text: "電木頭魔像"
   lightningLoggoGolem:
     single:
-      text: "電 Loggo 魔像"
+      text: "電木頭狗狗魔像"
     plural:
-      text: "電 Loggo 魔像"
+      text: "電木頭狗狗魔像"
   lightningCrystalGolem:
     single:
       text: "電水晶魔像"
@@ -9398,9 +10458,9 @@ mobName:
       text: "電水晶魔像"
   lightningCryggoGolem:
     single:
-      text: "電 Cryggo 魔像"
+      text: "電水晶狗狗魔像"
     plural:
-      text: "電 Cryggo 魔像"
+      text: "電水晶狗狗魔像"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Mob Module
@@ -9521,6 +10581,10 @@ damageCauseName:
     text: "被屠宰"
   corruption:
     text: "腐化"
+  comet:
+    text: "慧星"
+  terminatingPregnancy:
+    text: "終止懷孕"
     
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Mob AI
@@ -9571,6 +10635,26 @@ aiTask:
   captureAnimalsInHand:  
     pathfindToBuilding:
       text: "將 {mobName} 捉到 {buildingName}"    
+
+  captureSoul:  
+    pathfindToResourceOnGround:
+      text: "拾起地上的 {resourceName} 來捕捉 {mobName}"
+    pathfindToBuilding:
+      text: "前往 {buildingName} 拾起 {resourceName} 來捕捉 {mobName}！"
+         
+  captureSoulInHand:  
+    pathfindToDead:
+      text: "向 {mobName} 使用 {resourceName} 來捕捉他們的靈魂"
+    captureSoul:
+      text: "捕捉 {mobName} 的靈魂"
+      
+  placeVessel:  
+    pathfindToResourceOnGround:
+      text: "拾起地上的 {resourceName} 前往容器地點。"
+         
+  placeVesselInHand:  
+    pathfindToBuilding:
+      text: 帶著 {resourceName} 前往容器地點。"
         
   birth:  
     findSafeLocation:
@@ -9928,6 +11012,12 @@ aiTask:
       text: "在農場種植作物"
     pathfindToExtraResource:
       text: "拾起額外的植物資源"
+
+  pray:
+    pathfindToPraySpot:
+      text: "前往 {buildingName} 進行祈禱"
+    pray:
+      text: "在 {buildingName} 進行祈禱"
   
   processTrash:
     pathfindToWork:
@@ -10016,7 +11106,7 @@ aiTask:
       text: "運送資源給 $YEL1貓人交易商"
     pathfindToExtraResource:
       text: "拾起額外的植物資源"
-      
+          
   slaughterAnimal:
     chaseAnimal:
       text: "將 {mobName} 捉去屠宰！"
@@ -10074,6 +11164,12 @@ aiTask:
       text: "走向農場開始照料。"
     tendFarmland:
       text: "照料農場。"
+
+  terminateAnimalPregnancy:
+    pathfindToHurtVillager:
+      text: "走向 {mobName}$WHI0 終止她們懷孕"
+    terminatingPregnancy:
+      text: "終止 {mobName}$WHI0 的懷孕"
       
   trade:
     pathfindToTradePartner:
@@ -10230,6 +11326,14 @@ mobJob:
       text: "採石工"
     description:
       text: "收集地圖上的石頭存到村莊裡。不管村莊是否有需要，他們都會持續的收集。"
+
+  occultist:
+    single:
+      text: "神祕主義者"
+    plural:
+      text: "神祕主義者"
+    description:
+      text: "在祭壇祈禱產生精華供收集器使用。反過來，供應村莊的各種魔力需求。"
 
   organizer:
     single:
@@ -10817,6 +11921,18 @@ object:
         description:
           text: "增加雞舍容量到最大值。"
 
+    crylithiumFirePit:
+      name:
+        text: "水晶火坑"
+      description:
+        text: "更好的光源。增加建築範圍並阻擋邪靈！除非沒有其它方式可到達村壯，否則怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
+        
+    largeCrylithiumFirePit:
+      name:
+        text: "大水晶火坑"
+      description:
+        text: "更好的光源。增加建築範圍並阻擋邪靈！除非沒有其它方式可到達村壯，否則怪物們不會攻擊它，所以可隨意的當作圍牆建造。"
+        
     crystalGolemCombobulator:
       makeshift:
         name:
@@ -10905,7 +12021,8 @@ object:
         name:
           text: "簡易水晶加工廠"
         description:
-          text: "工人可以將水晶精煉成水晶錠，可以當作燃料補充精華收集器與使用在其它建築。"
+          text: "工人可以將水晶精煉成水晶錠，提純過的水晶可以用在許多魔法建築的建造上。"
+          revision: "1"
       base:
         name:
           text: "水晶加工廠"
@@ -10942,10 +12059,21 @@ object:
         text: "一種祭祀池塘，當將物品與活物丟進裡面時，會將其轉化為精華。如果使用太快，它會超載！"
     
     doggoHouse:
-      name:
-        text: "狗屋"
-      description:
-        text: "讓狗狗們恢復的小屋！如果有狗狗住在你的房屋中，它們會搬到狗屋中，空出來給村民。"
+      makeshift:
+        name:
+          text: "簡易狗屋"
+        description:
+          text: "讓狗狗們恢復的小屋！如果有狗狗住在你的房屋中，它們會搬到狗屋中，空出來給村民。"
+      base:
+        name:
+          text: "狗屋"
+        description:
+          text: "增加此狗屋的居住空間，同時增加生命與能量的恢復速度。"
+      established:
+        name:
+          text: "堅固的狗屋"
+        description:
+          text: "增加此狗屋的居住空間，同時增加生命與能量的恢復速度。"
     
     equipmentStorage:
       small:
@@ -10973,23 +12101,44 @@ object:
           text: "強化裝備倉庫"
         description:
           text: "增加工具、護甲、武器與其它裝備的儲存量到最大值。"
+
+    essenceAltar:
+      makeshift:
+        name:
+          text: "簡易祈禱祭壇"
+        description:
+          text: "村民可以指派到此祭壇進行祈禱，緩慢的產生精華給收集器使用，為村莊提供能源。"
+      base:
+        name:
+          text: "祈禱祭壇"
+        description:
+          text: "增加祭壇的儲存量，並增加祈禱速度。"
+      established:
+        name:
+          text: "堅固的祈禱祭壇"
+        description:
+          text: "增加祭壇的儲存量，並增加祈禱速度。"
     
     essenceCollector:
       makeshift:
         name:
           text: "簡易精華收集器"
         description:
-          text: "收集並儲存地圖上的精華供其它建築使用，水晶提煉工也可以使用水晶錠補充它。你的手可以在收集器上晃動吸收精華。"
+          text: "收集並儲存地圖上的精華供其它建築使用。在緊要關頭，你可以用手在收集器上晃動吸收精華。"
+          revision: "1"
       base:
         name:
           text: "精華收集器"
         description:
-          text: "增加精華收集器的儲存量，同時增加使用水晶錠補充時的能量恢復速度。"
+          text: "增加精華收集器的儲存量。"
+          revision: "1"
       established:
         name:
           text: "堅固精華收集器"
+          revision: "1"
         description:
-          text: "增加精華收集器的儲存量，同時增加使用水晶錠補充時的能量恢復速度。"
+          text: "增加精華收集器的儲存量。"
+          revision: "1"
     
     elementalBoltTower:
       makeshift:
@@ -11253,6 +12402,7 @@ object:
         text: "大噴水池"
       description:
         text: "村民可以飲水的地方。最好與水井、雨水收集器或淨水器與打水工一起補助此噴水池。"
+        revision: "1"
     
     lootBox:
       clicked:
@@ -11692,6 +12842,7 @@ object:
         text: "小噴水池"
       description:
         text: "村民可以飲水的地方。最好與水井、雨水收集器或淨水器與打水工一起補助此噴水池。"
+        revision: "1"
     
     sprayTower:
       makeshift:
@@ -11785,6 +12936,25 @@ object:
           text: "強化充能塔"
         description:
           text: "增加最大能量值，射速與射程，並減少能量消耗。"
+
+    reliquary:
+      makeshift:
+        name:
+          text: "簡易聖物箱"
+        description:
+          text: "神祕主義者可以製作怪異容器，在屍體分解前捕捉他們的靈魂。這些容器會歸還且儲存在聖物箱中，並用能量來維護它們。"
+      base:
+        name:
+          text: "聖物箱"
+        description:
+          text: "增加 2 個額外的怪異容器儲存點，並加速祈禱與捕捉靈魂的速度。"
+          revision: "1"
+      established:
+        name:
+          text: "堅固的聖物箱"
+        description:
+          text: "增加 2 個額外的怪異容器儲存點，並加速祈禱與捕捉靈魂的速度。"
+          revision: "1"
     
     rockStorage:
       small:
@@ -12241,7 +13411,16 @@ resource:
     plural:
       text: "神塵"
     description:
-      text: "摧毀神力建築留下的少量原料。"
+      text: "摧毀神力建築留下的原料。可以出售給貓人供應商。"
+      revision: "1"
+
+  ghostDust:
+    single:
+      text: "魂塵"
+    plural:
+      text: "魂塵"
+    description:
+      text: "鬼魂留下精華，由於某些原因受到貓人供應用的喜愛。"
       
   crystallyTrash:
     single:
@@ -12265,7 +13444,8 @@ resource:
     plural:
       text: "水晶錠"
     description:
-      text: "純化水晶用來作為多數魔法建築的能量來源，或是精華收集器的燃料。"
+      text: "純化水晶用來作為多數魔法建築的能量來源。"
+      revision: "1"
 
   organicyTrash:
     single:
@@ -12433,7 +13613,8 @@ resource:
     plural:
       text: "絲線"
     description:
-      text: "用於製作繃帶。"
+      text: "用於製作繃帶、弓弦等物品。"
+      revision: "1"
 
   bandage:
     single:
@@ -12570,6 +13751,23 @@ resource:
       text: "熟肉"
     description:
       text: "美味的熟肉。"
+
+      
+  emptyEerieVessel:
+    single:
+      text: "空的怪異容器"
+    plural:
+      text: "空的怪異容器"
+    description:
+      text: "用來儲存靈魂。神祕主義者會抽取死亡村民的精華並儲存在容器中，永遠將他們的靈魂與世界和容器綁定在一起，直到被復活或容器被摧毀。"
+         
+  eerieVessel:
+    single:
+      text: "怪異容器"
+    plural:
+      text: "怪異容器s"
+    description:
+      text: "用來儲存靈魂，永遠將他們的靈魂與世界和容器綁定在一起，直到被復活或容器被摧毀。"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Game Mode
