@@ -5024,7 +5024,7 @@ mapEditorPlayRightPanel:
       cullisGate:
         text: "庫里斯門"
       essenceAltar:
-        text: "精華際壇"
+        text: "祈禱祭壇"
       essenceCollector:
         text: "精華收集器"
       reliquary:
